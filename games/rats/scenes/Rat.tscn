@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://games/rats/sprites/rodent-1.0/PNG/32x32/mouse.png" type="Texture" id=1]
+[ext_resource path="res://games/rats/scripts/Rat.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 5 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "run"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachine" id=9]
+states/idle/node = SubResource( 5 )
+states/idle/position = Vector2( 335.5, 81.5 )
+states/run/node = SubResource( 6 )
+states/run/position = Vector2( 613.5, 81.5 )
+transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ) ]
+start_node = "idle"
+graph_offset = Vector2( 10, -27 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=10]
+
+[node name="Rat" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 13.5, -52 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 3
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, -9 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 30, -16 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 3 )
+anims/run = SubResource( 4 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 9 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -19.0273
+margin_top = -61.9874
+margin_right = 20.9727
+margin_bottom = -47.9874
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}

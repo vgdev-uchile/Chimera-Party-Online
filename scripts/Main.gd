@@ -156,7 +156,7 @@ func choose_random_game():
 			games = games_1v3
 		Party.GameType.TWO_VS_TWO:
 			games = games_2v2
-	
+
 	var weight_total = 0
 	for game in games:
 		weight_total += weights[game]

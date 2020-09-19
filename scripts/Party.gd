@@ -9,7 +9,7 @@ func get_colors():
 
 var _color_names = ["Verde", "Rojo", "Amarillo", "Azul"]
 func get_color_names():
-	return _color_names 
+	return _color_names
 
 # Game types
 enum GameType {
@@ -110,7 +110,7 @@ func _set_teams_data(teams_data):
 			team.push_back(player)
 		_teams.push_back(team)
 
-remote func update_game_data(current_game, teams_data):
+remote func _update_game_data(current_game, teams_data):
 	_current_game = current_game
 	_set_teams_data(teams_data)
 	Main.rpc_id(1, "confirm", 0.5)
@@ -119,7 +119,7 @@ func _next_game():
 	Main.choose_random_game()
 	_make_teams()
 	Main.confirmations += 0.5
-	rpc("update_game_data", Party._current_game, Party._get_teams_data())
+	rpc("_update_game_data", Party._current_game, Party._get_teams_data())
 
 # [{player, points}]
 func end_game(score):
