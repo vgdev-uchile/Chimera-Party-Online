@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.ogg-2ea462eab1a27b78b3fdefdd364ab5bf.oggstr"
+
+[deps]
+
+source_file="res://games/hexfall/music/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.ogg"
+dest_files=[ "res://.import/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.ogg-2ea462eab1a27b78b3fdefdd364ab5bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,444 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://games/hexfall/sprites/Hex/fantasyhextiles_v3.png" type="Texture" id=1]
+[ext_resource path="res://games/hexfall/scripts/TileMap.gd" type="Script" id=2]
+[ext_resource path="res://games/hexfall/scripts/index.gd" type="Script" id=3]
+[ext_resource path="res://games/hexfall/fonts/FjallaOne-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://games/hexfall/scripts/Tiles.gd" type="Script" id=5]
+[ext_resource path="res://games/hexfall/music/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.ogg" type="AudioStream" id=6]
+
+[sub_resource type="TileSet" id=1]
+0/name = "fantasyhextiles_v3.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "fantasyhextiles_v3.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "fantasyhextiles_v3.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 32, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "fantasyhextiles_v3.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 96, 0, 32, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "fantasyhextiles_v3.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 0, 32, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "fantasyhextiles_v3.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 160, 0, 32, 48 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "fantasyhextiles_v3.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 32, 240, 32, 48 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "fantasyhextiles_v3.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 224, 48, 32, 48 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "fantasyhextiles_v3.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 64, 240, 32, 48 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 150
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.345098, 0.701961, 0.721569, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 32, -32 )
+scale = Vector2( 4, 4 )
+mode = 1
+tile_set = SubResource( 1 )
+cell_size = Vector2( 48, 28 )
+format = 1
+tile_data = PoolIntArray( -393210, 0, 0, -393209, 0, 0, -393208, 0, 0, -393207, 0, 0, -393206, 0, 0, -393205, 0, 0, -327675, 0, 0, -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -327671, 0, 0, -327670, 0, 0, -327669, 0, 0, -327668, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262134, 0, 0, -262133, 0, 0, -262132, 0, 0, -262131, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -196595, 0, 0, -196594, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0 )
+script = ExtResource( 2 )
+tiles = NodePath("../Tiles")
+index_to_node = {
+0: "res://games/hexfall/scenes/Tile.tscn"
+}
+
+[node name="Tiles" type="YSort" parent="."]
+position = Vector2( 0, 96 )
+script = ExtResource( 5 )
+
+[node name="Dinos" type="YSort" parent="."]
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="2" type="Node2D" parent="Positions"]
+visible = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="Positions/2"]
+position = Vector2( 672.5, 542 )
+
+[node name="Position2D2" type="Position2D" parent="Positions/2"]
+position = Vector2( 1247.5, 542 )
+
+[node name="3" type="Node2D" parent="Positions"]
+visible = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="Positions/3"]
+position = Vector2( 384, 654 )
+
+[node name="Position2D2" type="Position2D" parent="Positions/3"]
+position = Vector2( 960, 206 )
+
+[node name="Position2D3" type="Position2D" parent="Positions/3"]
+position = Vector2( 1536, 654 )
+
+[node name="4" type="Node2D" parent="Positions"]
+visible = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="Positions/4"]
+position = Vector2( 384, 542 )
+
+[node name="Position2D2" type="Position2D" parent="Positions/4"]
+position = Vector2( 960, 206 )
+
+[node name="Position2D3" type="Position2D" parent="Positions/4"]
+position = Vector2( 1536, 542 )
+
+[node name="Position2D4" type="Position2D" parent="Positions/4"]
+position = Vector2( 960, 878 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Finish" type="Label" parent="UI"]
+visible = false
+anchor_right = 1.0
+margin_bottom = 512.0
+custom_fonts/font = SubResource( 2 )
+text = "Terminó"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -672.0
+margin_top = -156.0
+margin_right = 688.0
+margin_bottom = 360.0
+mouse_filter = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Scores" type="VBoxContainer" parent="UI/CenterContainer"]
+margin_left = 680.0
+margin_top = 256.0
+margin_right = 680.0
+margin_bottom = 260.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/CenterContainer/Scores"]
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/CenterContainer/Scores/HBoxContainer"]
+visible = false
+margin_right = 680.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 680, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer/VBoxContainer"]
+margin_right = 680.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "Name"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 680.0
+margin_bottom = 258.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/CenterContainer/Scores/HBoxContainer"]
+visible = false
+margin_left = 684.0
+margin_right = 1364.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 680, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer/VBoxContainer2"]
+margin_right = 680.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "Name"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer/VBoxContainer2"]
+margin_top = 68.0
+margin_right = 680.0
+margin_bottom = 258.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/CenterContainer/Scores"]
+margin_top = 4.0
+margin_bottom = 4.0
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="UI/CenterContainer/Scores/HBoxContainer2"]
+visible = false
+margin_right = 680.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 680, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer2/VBoxContainer3"]
+margin_right = 680.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "Name"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer2/VBoxContainer3"]
+margin_top = 68.0
+margin_right = 680.0
+margin_bottom = 258.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="UI/CenterContainer/Scores/HBoxContainer2"]
+visible = false
+margin_left = 342.0
+margin_right = 1022.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 680, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer2/VBoxContainer4"]
+margin_right = 680.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "Name"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="UI/CenterContainer/Scores/HBoxContainer2/VBoxContainer4"]
+margin_top = 68.0
+margin_right = 680.0
+margin_bottom = 258.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -5.0

@@ -1,0 +1,274 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://games/hexfall/sprites/Dino/DinoSprites - vita.png" type="Texture" id=1]
+[ext_resource path="res://games/hexfall/sprites/Dino/shadow_2.png" type="Texture" id=2]
+[ext_resource path="res://games/hexfall/scripts/Dino.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "dead"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 14, 16 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fall"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 7, 6 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "jump"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "jump_loop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "dead"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "fall"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "hurt"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "jump_loop"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "kick"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "run"
+
+[sub_resource type="AnimationNodeTimeScale" id=17]
+
+[sub_resource type="AnimationNodeBlendTree" id=18]
+graph_offset = Vector2( -401, 146 )
+nodes/Animation/node = SubResource( 16 )
+nodes/Animation/position = Vector2( -180, 200 )
+nodes/TimeScale/node = SubResource( 17 )
+nodes/TimeScale/position = Vector2( 20, 180 )
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+advance_condition = "falling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachine" id=34]
+states/dead/node = SubResource( 9 )
+states/dead/position = Vector2( 458, 285 )
+states/fall/node = SubResource( 10 )
+states/fall/position = Vector2( 631, 201 )
+states/hurt/node = SubResource( 11 )
+states/hurt/position = Vector2( 199, 343 )
+states/idle/node = SubResource( 12 )
+states/idle/position = Vector2( 165, 76 )
+states/jump/node = SubResource( 13 )
+states/jump/position = Vector2( 408, -89 )
+states/jump_loop/node = SubResource( 14 )
+states/jump_loop/position = Vector2( 631, -89 )
+states/kick/node = SubResource( 15 )
+states/kick/position = Vector2( 287, 210 )
+states/run/node = SubResource( 18 )
+states/run/position = Vector2( 408, 76 )
+transitions = [ "idle", "run", SubResource( 19 ), "run", "idle", SubResource( 20 ), "run", "kick", SubResource( 21 ), "idle", "kick", SubResource( 22 ), "kick", "run", SubResource( 23 ), "kick", "idle", SubResource( 24 ), "jump", "jump_loop", SubResource( 25 ), "jump_loop", "fall", SubResource( 26 ), "fall", "idle", SubResource( 27 ), "fall", "run", SubResource( 28 ), "run", "jump", SubResource( 29 ), "idle", "jump", SubResource( 30 ), "run", "dead", SubResource( 31 ), "kick", "dead", SubResource( 32 ), "idle", "dead", SubResource( 33 ) ]
+start_node = "idle"
+end_node = "dead"
+graph_offset = Vector2( -110, 120 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
+
+[node name="Dino" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="Shadow" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 96 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -12, -36 )
+hframes = 24
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 20 )
+polygon = PoolVector2Array( 16, 6.627, 6.627, 16, -6.627, 16, -16, 6.627, -16, -6.627, -6.627, -16, 6.627, -16, 16, -6.627 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/dead = SubResource( 1 )
+anims/fall = SubResource( 2 )
+anims/hurt = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/jump = SubResource( 5 )
+anims/jump_loop = SubResource( 6 )
+anims/kick = SubResource( 7 )
+anims/run = SubResource( 8 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 34 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 35 )
+parameters/conditions/falling = false
+parameters/run/TimeScale/scale = 1.0
+
+[node name="FloorCheckLeft" type="Position2D" parent="."]
+position = Vector2( -15.928, 36 )
+
+[node name="FloorCheckRight" type="Position2D" parent="."]
+position = Vector2( 16, 36 )

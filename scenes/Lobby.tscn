@@ -1,0 +1,196 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/PlayerSelection.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/m6x11.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Lobby.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.137255, 0.12549, 0.12549, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 128
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "count_down"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "3", "2", "1" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "go"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Empieza!" ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "go"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "waiting"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Esperando" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "count_down"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "go"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "waiting"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=12]
+states/count_down/node = SubResource( 6 )
+states/count_down/position = Vector2( 316, 95 )
+states/go/node = SubResource( 7 )
+states/go/position = Vector2( 607, 95 )
+states/waiting/node = SubResource( 8 )
+states/waiting/position = Vector2( 108, 90 )
+transitions = [ "waiting", "count_down", SubResource( 9 ), "count_down", "waiting", SubResource( 10 ), "count_down", "go", SubResource( 11 ) ]
+start_node = "waiting"
+end_node = "go"
+graph_offset = Vector2( -63, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[node name="Lobby" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerSelection" type="Node2D" parent="Panel"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="1" parent="Panel/PlayerSelection" instance=ExtResource( 1 )]
+position = Vector2( 300, 1000 )
+lobby = NodePath("../../..")
+
+[node name="2" parent="Panel/PlayerSelection" instance=ExtResource( 1 )]
+position = Vector2( 740, 1000 )
+lobby = NodePath("../../..")
+
+[node name="3" parent="Panel/PlayerSelection" instance=ExtResource( 1 )]
+position = Vector2( 1180, 1000 )
+lobby = NodePath("../../..")
+
+[node name="4" parent="Panel/PlayerSelection" instance=ExtResource( 1 )]
+position = Vector2( 1620, 1000 )
+lobby = NodePath("../../..")
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 1.0
+margin_right = 0.00012207
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 2 )
+text = "Esperando"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/count_down = SubResource( 3 )
+anims/go = SubResource( 4 )
+anims/waiting = SubResource( 5 )
+next/count_down = "go"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 12 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 13 )
