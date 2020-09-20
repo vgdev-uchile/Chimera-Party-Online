@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://games/rats/scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=2]
 [ext_resource path="res://games/rats/scripts/Main.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1500, 200 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -61,3 +65,17 @@ position = Vector2( 1100.12, 745.739 )
 
 [node name="Position2D4" type="Position2D" parent="Positions/4"]
 position = Vector2( 1560.35, 743.361 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 867.349, 537.716 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="Area2D"]
+texture = ExtResource( 2 )
