@@ -68,21 +68,12 @@ master func load_state():
 	LobbyManager.update_slots_id(id)
 	Party.update_players_id(id)
 
-func _process(delta):
+func _process(_delta):
 	if current_state == State.WAITING:
 		for i in range(3):
 			var is_joy = i == 0 and (abs(Input.get_joy_axis(0,0)) > 0.5 or abs(Input.get_joy_axis(0,1)) > 0.5)
 			if (Input.is_action_just_pressed("keyset_" + str(i)) or is_joy) and not i in keysets_taken:
 					assign_slot(i)
-#	if $AnimationPlayer.current_animation == "go":
-#		current_state = State.GO
-#	match current_state:
-#		State.WAITING:
-#			for i in range(3):
-
-#		State.COUNT_DOWN:
-#				pass
-#		State.GO:
 
 
 func go():

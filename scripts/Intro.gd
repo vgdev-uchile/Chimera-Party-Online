@@ -99,7 +99,7 @@ func _ready():
 func on_timeout():
 	Party._next()
 	
-func _process(delta):
+func _process(_delta):
 	for i in range(player_dinos.size()):
 		var player_dino = player_dinos[i]
 		var player: Player = player_dino.player

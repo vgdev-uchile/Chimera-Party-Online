@@ -120,7 +120,7 @@ sync func on_ColorSelect_selected_sync(option):
 	for i in range($ColorSelect.options.size()):
 		$Panel/Avatars.get_child(i).visible = i == option
 
-func _process(delta):
+func _process(_delta):
 	if _player and focused:
 		var ks = str(_player.keyset)
 		if Input.is_action_just_pressed("move_down_"+ ks):

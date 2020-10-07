@@ -159,7 +159,7 @@ animation = "run"
 [sub_resource type="AnimationNodeTimeScale" id=17]
 
 [sub_resource type="AnimationNodeBlendTree" id=18]
-graph_offset = Vector2( -401, 146 )
+graph_offset = Vector2( -515, 89 )
 nodes/Animation/node = SubResource( 16 )
 nodes/Animation/position = Vector2( -180, 200 )
 nodes/TimeScale/node = SubResource( 17 )
@@ -223,7 +223,7 @@ states/run/position = Vector2( 408, 76 )
 transitions = [ "idle", "run", SubResource( 19 ), "run", "idle", SubResource( 20 ), "run", "kick", SubResource( 21 ), "idle", "kick", SubResource( 22 ), "kick", "run", SubResource( 23 ), "kick", "idle", SubResource( 24 ), "jump", "jump_loop", SubResource( 25 ), "jump_loop", "fall", SubResource( 26 ), "fall", "idle", SubResource( 27 ), "fall", "run", SubResource( 28 ), "run", "jump", SubResource( 29 ), "idle", "jump", SubResource( 30 ), "run", "dead", SubResource( 31 ), "kick", "dead", SubResource( 32 ), "idle", "dead", SubResource( 33 ) ]
 start_node = "idle"
 end_node = "dead"
-graph_offset = Vector2( -110, 120 )
+graph_offset = Vector2( -160, 24 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 

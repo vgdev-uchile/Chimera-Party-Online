@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://games/hexfall/sprites/Hex/fantasyhextiles_v3.png" type="Texture" id=1]
 [ext_resource path="res://games/hexfall/scripts/TileMap.gd" type="Script" id=2]
@@ -142,19 +142,22 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://games/hexfall/fonts/FjallaOne-Regular.ttf"
+
 [sub_resource type="DynamicFont" id=3]
 size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
-font_data = ExtResource( 4 )
+font_data = SubResource( 5 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 150
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
-font_data = ExtResource( 4 )
+font_data = SubResource( 5 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )

@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 var sprites = [
 	preload("res://games/hexfall/sprites/Dino/DinoSprites - vita.png"),
 	preload("res://games/hexfall/sprites/Dino/DinoSprites - mort.png"),
@@ -22,8 +21,8 @@ func set_dead(value):
 		$CollisionPolygon2D.disabled = true
 		$Shadow.hide()
 		emit_signal("died", _player)
-var stopped = false
 signal died
+var stopped = false
 
 # networking
 puppet var puppet_pos = Vector2()
@@ -47,13 +46,12 @@ var action_b = "action_b"
 
 var _player
 
-func _ready():
+func _ready() -> void:
 	puppet_pos = position
 
 func init(player: Player):
 	_player = player
 	set_network_master(player.nid)
-	name = str("%s - %s" % [player.nid, player.local])
 	$Sprite.texture = sprites[player.color]
 	var ks = str(player.keyset)
 	move_left = "move_left_" + ks
@@ -62,9 +60,7 @@ func init(player: Player):
 	move_down = "move_down_" + ks
 	action_a = "action_a_" + ks
 	action_b = "action_b_" + ks
-	
-	puppet_pos = position
-#	set_physics_process(true)
+	name = "%d - %d" % [player.nid, player.local]
 	
 func check_death():
 	var space_state = get_world_2d().direct_space_state
@@ -89,7 +85,7 @@ func _physics_process(delta):
 				rset("dead", true)
 				return
 		
-		# movement
+		# Movement
 		var target_vel
 		if is_network_master():
 			target_vel = Vector2(
@@ -116,7 +112,7 @@ func _physics_process(delta):
 			position = lerp(position, puppet_pos, 0.5)
 			puppet_pos = position
 		
-		# actions
+		# Actions
 	#	var jump = Input.is_action_just_pressed(action_a)
 		var kick = Input.is_action_just_pressed(action_a)
 		

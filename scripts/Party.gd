@@ -21,8 +21,6 @@ enum GameType {
 # Current game info
 var _current_game = ""
 
-signal _game_chosen
-
 var _game_type = GameType.FREE_FOR_ALL setget , get_game_type
 func get_game_type():
 	return _game_type

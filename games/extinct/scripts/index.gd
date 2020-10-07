@@ -1,8 +1,10 @@
 extends Node2D
 
-var Dino = preload("res://games/hexfall/scenes/Dino.tscn")
 
-var players: Array
+var Dino = preload("res://games/extinct/scenes/Dino.tscn")
+
+#var players = Party.get_players()
+var players
 var dead_players = []
 var tied_players = []
 
@@ -14,20 +16,22 @@ func _ready():
 	players = Party.get_players().duplicate()
 	var players_size = players.size()
 	
-	for i in range(players_size):
+	for i in players_size:
 		var dino = Dino.instance()
 		dino.init(players[i])
 		dino.global_position = $Positions.get_child(players_size - 2).get_child(i).global_position
 		dino.connect("died", self, "on_dino_died")
 		$Dinos.add_child(dino)
 	
+	$Area2D.connect("body_exited", self, "on_body_exited")
 	$ScoreTimer.connect("timeout", self, "on_score_timeout")
+
 
 sync func finish():
 	$UI/Finish.show()
-	$Tiles.stop_all()
 	for dino in $Dinos.get_children():
-		dino.stop()
+		if not dino.dead:
+			dino.stop()
 
 func on_dino_died(player: Player):
 	if is_network_master():
@@ -67,7 +71,6 @@ sync func show_scores(end_scores):
 		player_ui.get_node("Name").modulate = Party.get_colors()[player.color]
 		player_ui.get_node("Score").text = str(points)
 		player_ui.show()
-
 
 func on_score_timeout():
 	var players_size = players.size()
@@ -110,3 +113,8 @@ func on_score_timeout():
 	yield($EndTimer, "timeout")
 	
 	Party.end_game(end_scores)
+
+func on_body_exited(body: Node):
+	print("owo")
+	if body.is_in_group("Dino"):
+		body.dead = true

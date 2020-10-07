@@ -79,7 +79,7 @@ func on_finished_fading():
 		_:
 			pass
 
-func _process(delta):
+func _process(_delta):
 	if ResourceQueue.is_ready(loading_world):
 		loading_state = LoadingStates.BLACK_2
 		var new_world = ResourceQueue.get_resource(loading_world)
@@ -124,6 +124,7 @@ func _ready():
 	start_game()
 
 func load_games():
+	var games = []
 	var directory: Directory = Directory.new()
 	if directory.open("res://games/") == OK:
 		directory.list_dir_begin(true)
@@ -140,14 +141,19 @@ func load_games():
 						games_2v2.push_back(game)
 					elif mode is GameModeFFA:
 						games_ffa.push_back(game)
-				weights[game] = 1
+				games.push_back(game)
 			else:
 				print(game, " found. There shouldn't be a file here")
 			game = directory.get_next()
 	else:
 		print("Error opening directory")
+	
+	var game_weight = 1.0 / games.size()
+	for game in games:
+		weights[game] = game_weight
 
 func choose_random_game():
+	randomize()
 	var games = []
 	match Party._game_type:
 		Party.GameType.FREE_FOR_ALL:
@@ -157,18 +163,26 @@ func choose_random_game():
 		Party.GameType.TWO_VS_TWO:
 			games = games_2v2
 
-	var weight_total = 0
-	for game in games:
-		weight_total += weights[game]
-	var choosen = randf() * weight_total
+	var choosen = randf()
 	var weight_sum = 0
 	for game in games:
 		weight_sum += weights[game]
 		if weight_sum >= choosen:
-			weights[game] /= 2
+			var old_game_weigth = weights[game]
+			weights[game] /= 4.0
+			
+			var total_weight = 1.0 - old_game_weigth + weights[game]
+			# normalize weights
+			
+			for g in weights:
+				weights[g] /= total_weight
+			
+			
 			Party._current_game = game
 			return
 	print("No game found, this should never happened")
+
+
 
 func next():
 	match game_state:
