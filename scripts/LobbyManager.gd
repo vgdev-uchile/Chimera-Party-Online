@@ -2,6 +2,7 @@ extends Node
 
 # Default game port. Can be any number between 1024 and 49151.
 const DEFAULT_PORT = 10724
+#const DEFAULT_PORT = 10726
 
 # Max number of client players.
 const MAX_PEERS = 3
@@ -18,6 +19,7 @@ signal player_updated(player)
 signal player_added(player)
 signal player_removed(player)
 
+var upnp
 
 # Connect all functions
 
@@ -83,6 +85,12 @@ func host_game(name, testing=false):
 	var res = host.create_server(DEFAULT_PORT, 1 if testing else MAX_PEERS)
 	if res == OK:
 		get_tree().set_network_peer(host)
+#		upnp = UPNP.new()
+#		upnp.discover()
+#		res = upnp.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "UDP")
+#		print(res)
+#		res = upnp.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "TCP")
+#		print(res)
 	return res
 
 func join_game(name, ip):

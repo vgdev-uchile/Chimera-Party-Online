@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://games/rats/scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=2]
@@ -9,6 +9,9 @@ extents = Vector2( 1500, 200 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 73.04, 4.34399 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -34,37 +37,82 @@ region_rect = Rect2( 0, 0, 3000, 400 )
 [node name="2" type="Node2D" parent="Positions"]
 visible = false
 
-[node name="Position2D" type="Position2D" parent="Positions/2"]
+[node name="Node2D" type="Node2D" parent="Positions/2"]
+
+[node name="Position2D" type="Position2D" parent="Positions/2/Node2D"]
 position = Vector2( 226.056, 764.767 )
 
-[node name="Position2D2" type="Position2D" parent="Positions/2"]
+[node name="Position2D2" type="Position2D" parent="Positions/2/Node2D"]
+position = Vector2( 302.383, 764.767 )
+
+[node name="Node2D2" type="Node2D" parent="Positions/2"]
+
+[node name="Position2D2" type="Position2D" parent="Positions/2/Node2D2"]
 position = Vector2( 1766.08, 792.118 )
 
+[node name="Position2D3" type="Position2D" parent="Positions/2/Node2D2"]
+position = Vector2( 1858, 790.704 )
+
 [node name="3" type="Node2D" parent="Positions"]
-
-[node name="Position2D" type="Position2D" parent="Positions/3"]
-position = Vector2( 258.165, 710.063 )
-
-[node name="Position2D2" type="Position2D" parent="Positions/3"]
-position = Vector2( 877.741, 739.793 )
-
-[node name="Position2D3" type="Position2D" parent="Positions/3"]
-position = Vector2( 1600.78, 731.469 )
-
-[node name="4" type="Node2D" parent="Positions"]
 visible = false
 
-[node name="Position2D" type="Position2D" parent="Positions/4"]
+[node name="Node2D" type="Node2D" parent="Positions/3"]
+
+[node name="Position2D" type="Position2D" parent="Positions/3/Node2D"]
 position = Vector2( 258.165, 710.063 )
 
-[node name="Position2D2" type="Position2D" parent="Positions/4"]
+[node name="Position2D2" type="Position2D" parent="Positions/3/Node2D"]
+position = Vector2( 419.385, 710.063 )
+
+[node name="Node2D2" type="Node2D" parent="Positions/3"]
+
+[node name="Position2D2" type="Position2D" parent="Positions/3/Node2D2"]
+position = Vector2( 877.741, 739.793 )
+
+[node name="Position2D3" type="Position2D" parent="Positions/3/Node2D2"]
+position = Vector2( 1061.59, 724.237 )
+
+[node name="Node2D3" type="Node2D" parent="Positions/3"]
+
+[node name="Position2D3" type="Position2D" parent="Positions/3/Node2D3"]
+position = Vector2( 1600.78, 731.469 )
+
+[node name="Position2D4" type="Position2D" parent="Positions/3/Node2D3"]
+position = Vector2( 1709.67, 731.469 )
+
+[node name="4" type="Node2D" parent="Positions"]
+
+[node name="Node2D" type="Node2D" parent="Positions/4"]
+
+[node name="Position2D" type="Position2D" parent="Positions/4/Node2D"]
+position = Vector2( 258.165, 710.063 )
+
+[node name="Position2D2" type="Position2D" parent="Positions/4/Node2D"]
+position = Vector2( 396.758, 711.477 )
+
+[node name="Node2D2" type="Node2D" parent="Positions/4"]
+
+[node name="Position2D2" type="Position2D" parent="Positions/4/Node2D2"]
 position = Vector2( 749.307, 725.523 )
 
-[node name="Position2D3" type="Position2D" parent="Positions/4"]
+[node name="Position2D3" type="Position2D" parent="Positions/4/Node2D2"]
+position = Vector2( 863.858, 728.352 )
+
+[node name="Node2D3" type="Node2D" parent="Positions/4"]
+
+[node name="Position2D3" type="Position2D" parent="Positions/4/Node2D3"]
 position = Vector2( 1100.12, 745.739 )
 
-[node name="Position2D4" type="Position2D" parent="Positions/4"]
+[node name="Position2D4" type="Position2D" parent="Positions/4/Node2D3"]
+position = Vector2( 1235.88, 744.325 )
+
+[node name="Node2D4" type="Node2D" parent="Positions/4"]
+
+[node name="Position2D4" type="Position2D" parent="Positions/4/Node2D4"]
 position = Vector2( 1560.35, 743.361 )
+
+[node name="Position2D5" type="Position2D" parent="Positions/4/Node2D4"]
+position = Vector2( 1706.01, 758.917 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 867.349, 537.716 )
@@ -79,3 +127,13 @@ shape = SubResource( 2 )
 
 [node name="icon" type="Sprite" parent="Area2D"]
 texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 1399.96, 722.299 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 3 )
+one_way_collision = true
