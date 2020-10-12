@@ -1,8 +1,8 @@
 extends Node
 
 # Default game port. Can be any number between 1024 and 49151.
-const DEFAULT_PORT = 10724
-#const DEFAULT_PORT = 10726
+#const DEFAULT_PORT = 10724
+const DEFAULT_PORT = 10726
 
 # Max number of client players.
 const MAX_PEERS = 3
@@ -19,7 +19,11 @@ signal player_updated(player)
 signal player_added(player)
 signal player_removed(player)
 
-var upnp
+signal port_opened(result)
+
+var upnp = UPNP.new()
+
+var thread = Thread.new()
 
 # Connect all functions
 
@@ -29,7 +33,7 @@ func _ready():
 	get_tree().connect("connected_to_server", self, "_connected_ok")
 	get_tree().connect("connection_failed", self, "_connected_fail")
 	get_tree().connect("server_disconnected", self, "_server_disconnected", [], 1)
-
+	
 func _player_connected(id):
 	print(id)
 	# Called on both clients and server when a peer connects. Send my info to it.
@@ -85,13 +89,31 @@ func host_game(name, testing=false):
 	var res = host.create_server(DEFAULT_PORT, 1 if testing else MAX_PEERS)
 	if res == OK:
 		get_tree().set_network_peer(host)
-#		upnp = UPNP.new()
-#		upnp.discover()
-#		res = upnp.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "UDP")
-#		print(res)
-#		res = upnp.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "TCP")
-#		print(res)
 	return res
+
+func open_port():
+	thread.start(self, "thread_open_port")
+#	thread.wait_to_finish()
+
+func thread_open_port(userdata):
+	var res = upnp.discover()
+	if res != UPNP.UPNP_RESULT_SUCCESS:
+		emit_signal("port_opened", false)
+		return
+	var gateway = upnp.get_gateway()
+	res = gateway.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "UDP")
+	print(res)
+	if res != UPNP.UPNP_RESULT_SUCCESS:
+		emit_signal("port_opened", false)
+		return
+	gateway.add_port_mapping(DEFAULT_PORT, 0, "ChimeraParty", "TCP")
+	print(res)
+	if res != UPNP.UPNP_RESULT_SUCCESS:
+		emit_signal("port_opened", false)
+		return
+	emit_signal("port_opened", true)
+	thread.call_deferred("wait_to_finish")
+
 
 func join_game(name, ip):
 	player_name = name
@@ -133,3 +155,6 @@ sync func update_player(nid, local, properties, values):
 
 func game_over():
 	get_tree().network_peer = null
+
+#func _exit_tree():
+#	thread.wait_to_finish()

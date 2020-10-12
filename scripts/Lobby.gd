@@ -3,6 +3,9 @@ extends CanvasLayer
 # to keep on loading until all is ready
 signal show
 
+# returns to menu screen if error during loading
+signal error
+
 # called when this screen is already visible
 func on_show():
 	print("owo")
@@ -32,8 +35,9 @@ func _ready():
 	LobbyManager.connect("player_added", self, "on_player_added")
 	LobbyManager.connect("player_removed", self, "on_player_removed")
 	LobbyManager.connect("player_disconnected", self, "player_disconnected")
+	LobbyManager.connect("port_opened", self, "on_port_opened")
 	if is_network_master():
-		emit_signal("show")
+		LobbyManager.open_port()
 	else:
 		print("ready ", Party._players)
 		if Party._players == []:
@@ -46,6 +50,13 @@ func _ready():
 			ps.connect("remote_init_completed", self, "on_remote_init_completed")
 			ps.remote_init(player)
 			remote_player_waiting += 1
+
+func on_port_opened(result):
+#	LobbyManager.thread.wait_to_finish()
+	if result:
+		emit_signal("show")
+	else:
+		call_deferred("emit_signal", "error")
 
 func on_remote_init_completed():
 	remote_player_waiting -= 1

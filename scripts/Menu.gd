@@ -3,8 +3,6 @@ extends CanvasLayer
 var testing = false
 
 func _ready():
-	LobbyManager.connect("client_connected", self, "_on_client_connected")
-	
 	$Panel/CenterContainer/Main/Start.grab_focus()
 	$Panel/CenterContainer/Main/Start.connect("pressed", self, "_on_start_pressed")
 	$Panel/CenterContainer/Main/Settings.connect("pressed", self, "_on_settings_pressed")

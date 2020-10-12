@@ -64,13 +64,15 @@ _global_script_class_icons={
 
 config/name="ChimeraPartyOnline"
 run/main_scene="res://scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://android-chrome-512x512.png"
+config/windows_native_icon="res://favicon.ico"
 
 [autoload]
 
 ResourceQueue="*res://scripts/ResourceQueue.gd"
 Party="*res://scripts/Party.gd"
 LobbyManager="*res://scripts/LobbyManager.gd"
+Debug="*res://scripts/Debug.gd"
 
 [display]
 

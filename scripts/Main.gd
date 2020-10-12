@@ -87,6 +87,8 @@ func _process(_delta):
 		
 		if current_world.has_signal("show"):
 			current_world.connect("show", fade, "fade_out")
+			if current_world.has_signal("error"):
+				current_world.connect("error", self, "on_error")
 			
 		if game_state == GameState.INTRO:
 			#Delay adding the word until all know the current game and teams
@@ -109,6 +111,12 @@ sync func add_world():
 	if not current_world.has_signal("show"):
 		fade.fade_out()
 
+func on_error():
+	first_time = true
+	set_game_state(GameState.MENU)
+	fade.fade_out()
+	LobbyManager.game_over()
+
 func start_game():
 	set_game_state(GameState.MENU)
 
@@ -117,6 +125,7 @@ func start_game():
 #	load_games()
 
 func _ready():
+	var meh = IP.get_local_addresses()
 	set_process(false)
 	fade.connect("finished_fading", self, "on_finished_fading")
 	ResourceQueue.start()
@@ -153,6 +162,8 @@ func load_games():
 		weights[game] = game_weight
 
 func choose_random_game():
+#	Party._current_game = "rats"
+#	return
 	randomize()
 	var games = []
 	match Party._game_type:
@@ -169,7 +180,7 @@ func choose_random_game():
 		weight_sum += weights[game]
 		if weight_sum >= choosen:
 			var old_game_weigth = weights[game]
-			weights[game] /= 4.0
+			weights[game] /= 10.0
 			
 			var total_weight = 1.0 - old_game_weigth + weights[game]
 			# normalize weights
