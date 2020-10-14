@@ -3,6 +3,8 @@ extends Node
 var rat_a
 var rat_b
 
+var cheese = 0
+
 # Inputs
 
 var move_left = "move_left"
@@ -34,5 +36,3 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed(action_a) or Input.is_action_just_pressed(action_b):
 			rat_a.rset("stopped", !rat_a.stopped)
 			rat_b.rset("stopped", !rat_b.stopped)
-
-

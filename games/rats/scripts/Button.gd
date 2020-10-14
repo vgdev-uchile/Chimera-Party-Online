@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 			bi.scale.y -= dir * move_rate * delta
 		else:
 			bi.scale.y = target_scale
+			$Label.text = "%d/%d" % [get_rats_clamped(), counter]
 			if is_network_master():
 				if get_rats_clamped() == counter:
 					emit_signal("pushed")
@@ -69,6 +70,7 @@ sync func release(rat):
 	var rat_node = get_node(rat)
 	rat_node.normal()
 	target_scale = lerp(1, min_scale, 1.0 * get_rats_clamped()/counter)
+	$Label.text = "%d/%d" % [get_rats_clamped(), counter]
 
 func get_rats_clamped():
 	return min(counter, rats.size())

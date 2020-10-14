@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-34bd8aee636bbef8316b93b4f939857c.stex"
+path="res://.import/mouse_run.png-1e62a475dd7afe4788561fe4395d4e7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://games/rats/sprites/icon.png"
-dest_files=[ "res://.import/icon.png-34bd8aee636bbef8316b93b4f939857c.stex" ]
+source_file="res://games/rats/sprites/rodent-1.0/PNG/32x32/mouse_run.png"
+dest_files=[ "res://.import/mouse_run.png-1e62a475dd7afe4788561fe4395d4e7d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

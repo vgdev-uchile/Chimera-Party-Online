@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var _player
+var rats
 
 onready var playback = $AnimationTree.get("parameters/playback")
 
@@ -51,8 +52,9 @@ var action_b = "action_b"
 func _ready():
 	puppet_pos = position
 
-func init(player: Player, index):
+func init(player: Player, index, rats):
 	_player = player
+	self.rats = rats
 	set_network_master(player.nid)
 #	$Sprite.texture = sprites[player.color]
 	$Sprite.modulate = Party.get_colors()[player.color]
@@ -70,7 +72,7 @@ func init(player: Player, index):
 	
 
 sync func jump():
-	linear_vel.y = -SPEED
+	linear_vel.y = -1.5 * SPEED
 
 sync func crushed():
 	dead = true
@@ -98,7 +100,7 @@ func move(delta):
 			target_vel = 0
 		
 		linear_vel.x = lerp(linear_vel.x, target_vel * SPEED, 0.5)
-		linear_vel.y += 2 * SPEED * delta
+		linear_vel.y += 3 * SPEED * delta
 		linear_vel = move_and_slide(linear_vel, Vector2.UP)
 
 		
@@ -178,3 +180,8 @@ func move_sticked(delta):
 	
 	animation()
 			
+func teleport(pos):
+	position = pos
+	puppet_pos = pos
+	puppet_target_vel = 0
+	normal()

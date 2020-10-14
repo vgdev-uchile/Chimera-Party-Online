@@ -1,11 +1,212 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://games/rats/sprites/rodent-1.0/PNG/32x32/mouse_run.png" type="Texture" id=1]
+[ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=2]
 [ext_resource path="res://games/rats/scripts/Main.gd" type="Script" id=3]
-[ext_resource path="res://games/rats/scenes/Level1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://games/rats/fonts/FjallaOne-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.392157, 0.243137, 0.192157, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=4]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1080, 1 )
+flag_disable_z = true
+spread = 10.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1200.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 8.0
+anim_speed = 8.0
+anim_offset_random = 1.0
+
+[sub_resource type="Animation" id=6]
+length = 1.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 100.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ProgressBar:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Particles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ProgressBar:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Particles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [node name="Main" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 3 )
 
-[node name="Level1" parent="." instance=ExtResource( 4 )]
+[node name="Level" type="Node2D" parent="."]
 
 [node name="Rats" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="CenterContainer" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -192.0
+margin_top = 32.0
+margin_right = -64.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer/Timer"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/Timer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 32, 32 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+max_value = 20.0
+step = 0.001
+value = 20.0
+texture_progress = ExtResource( 2 )
+fill_mode = 5
+nine_patch_stretch = true
+stretch_margin_right = 64
+stretch_margin_bottom = 64
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Timer"]
+margin_left = 32.0
+margin_top = 23.0
+margin_right = 96.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 1 )
+text = "20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( 960, 540 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+percent_visible = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="CanvasLayer"]
+material = SubResource( 4 )
+position = Vector2( -96, 540 )
+emitting = false
+amount = 500
+lifetime = 2.0
+visibility_rect = Rect2( 0, -100, 500, 200 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 5 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 6 )
+anims/fade_out = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true

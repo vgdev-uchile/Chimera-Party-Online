@@ -162,8 +162,8 @@ func load_games():
 		weights[game] = game_weight
 
 func choose_random_game():
-#	Party._current_game = "rats"
-#	return
+	Party._current_game = "rats"
+	return
 	randomize()
 	var games = []
 	match Party._game_type:
