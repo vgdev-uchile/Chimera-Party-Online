@@ -8,3 +8,6 @@ func _ready() -> void:
 
 func on_collected():
 	emit_signal("next")
+
+func start():
+	$Cheese.enable()

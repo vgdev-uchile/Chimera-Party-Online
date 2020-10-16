@@ -27,3 +27,6 @@ sync func add_rat(rat):
 	if counter == 0:
 		emit_signal("collected")
 		queue_free()
+
+func enable():
+	$CollisionShape2D.disabled = false

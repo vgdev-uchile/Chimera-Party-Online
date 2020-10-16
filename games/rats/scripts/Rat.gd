@@ -31,8 +31,11 @@ var facing_right = true
 
 sync var stopped = true
 
-
 var dead = false
+
+var can_jump = false
+var MAX_JUMP_TIME = 0.1
+var jump_time = 0
 
 # networking
 puppet var puppet_pos = Vector2()
@@ -58,7 +61,7 @@ func init(player: Player, index, rats):
 	set_network_master(player.nid)
 #	$Sprite.texture = sprites[player.color]
 	$Sprite.modulate = Party.get_colors()[player.color]
-	$Label.text = player.name
+#	$Label.text = player.name
 	var ks = str(player.keyset)
 	move_left = "move_left_" + ks
 	move_right = "move_right_" + ks
@@ -67,6 +70,7 @@ func init(player: Player, index, rats):
 	action_a = "action_a_" + ks
 	action_b = "action_b_" + ks
 	name = str("%d - %d - %d" % [player.nid, player.local, index])
+	$Label.text = name
 	
 	puppet_pos = position
 	
@@ -76,7 +80,14 @@ sync func jump():
 
 sync func crushed():
 	dead = true
+	rats.dead(self)
 	playback.travel("crushed")
+
+sync func spiked(height):
+	dead = true
+	rats.dead(self)
+	global_position.y = height
+	playback.travel("spiked")
 
 func test():
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
@@ -134,9 +145,16 @@ func move(delta):
 			puppet_pos = position
 		
 		if is_network_master():
+			jump_time += delta
 			var on_floor = is_on_floor()
-			if on_floor and Input.is_action_just_pressed(move_up) and not stopped:
+			if on_floor:
+				can_jump = true
+				jump_time = 0
+			if jump_time > MAX_JUMP_TIME:
+				can_jump = false
+			if can_jump and Input.is_action_just_pressed(move_up) and not stopped:
 				rpc("jump")
+				can_jump = false
 		
 		if dead:
 			return
@@ -153,10 +171,10 @@ func animation():
 	
 	if target_vel < 0 and facing_right:
 		facing_right = false
-		scale.x = -1
+		$Sprite.scale.x *= -1
 	if target_vel > 0 and not facing_right:
 		facing_right = true
-		scale.x = -1
+		$Sprite.scale.x *= -1
 
 func move_sticked(delta):
 	if is_network_master():
@@ -179,9 +197,31 @@ func move_sticked(delta):
 			normal()
 	
 	animation()
-			
+
 func teleport(pos):
+	stop()
+	normal()
 	position = pos
 	puppet_pos = pos
+	reset()
+	dead = false
+
+func stop():
+	target_vel = 0
 	puppet_target_vel = 0
-	normal()
+	linear_vel = Vector2()
+
+func reset():
+	$Sprite.position = Vector2(0, -13)
+	$Sprite.scale = Vector2(4, 4)
+	$Sprite.frame = 3
+	if not facing_right:
+		facing_right = true
+	playback.travel("idle")
+	
+
+func disable_collision(value):
+	$CollisionShape2D.disabled = value
+	$CollisionShape2D2.disabled = value
+
+

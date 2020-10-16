@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://games/rats/scripts/Spike.gd" type="Script" id=2]
+
+[node name="Spike" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( 0, -32, 32, 32, -32, 32 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, -32, 32, 32, -32, 32 )
+
+[node name="Top" type="Position2D" parent="."]
+position = Vector2( 0, -16 )

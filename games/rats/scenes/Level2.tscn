@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=1]
 [ext_resource path="res://games/rats/scripts/Level2.gd" type="Script" id=2]
-[ext_resource path="res://games/rats/scenes/Goal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://games/rats/scenes/Cheese.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -65,7 +64,6 @@ position = Vector2( 576, 944 )
 position = Vector2( 640, 944 )
 
 [node name="3" type="Node2D" parent="Positions"]
-visible = false
 
 [node name="Node2D" type="Node2D" parent="Positions/3"]
 
@@ -92,6 +90,7 @@ position = Vector2( 704, 944 )
 position = Vector2( 768, 944 )
 
 [node name="4" type="Node2D" parent="Positions"]
+visible = false
 
 [node name="Node2D" type="Node2D" parent="Positions/4"]
 
@@ -124,9 +123,6 @@ position = Vector2( 704, 944 )
 
 [node name="Position2D5" type="Position2D" parent="Positions/4/Node2D4"]
 position = Vector2( 768, 944 )
-
-[node name="Goal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 112, 368 )
 
 [node name="Cheese" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1792, 896 )

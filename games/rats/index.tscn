@@ -119,6 +119,7 @@ pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Level" type="Node2D" parent="."]
+pause_mode = 1
 
 [node name="Rats" type="Node2D" parent="."]
 pause_mode = 1
@@ -179,6 +180,7 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_scale = Vector2( -1, 1 )
@@ -192,6 +194,7 @@ __meta__ = {
 }
 
 [node name="Particles2D" type="Particles2D" parent="CanvasLayer"]
+visible = false
 material = SubResource( 4 )
 position = Vector2( -96, 540 )
 emitting = false
@@ -209,4 +212,10 @@ anims/fade_out = SubResource( 7 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 20.0
+one_shot = true
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="ShuffleTimer" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true
