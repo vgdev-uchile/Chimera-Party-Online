@@ -20,13 +20,13 @@ func on_body_entered(body: Node):
 		rpc("add_rat", body.get_path())
 
 sync func add_rat(rat):
+
 	rats.push_back(rat)
 	self.counter -= 1
 	var rat_node = get_node(rat)
 	rat_node.rats.cheese += 1
+	rat_node.cheese_collected = true
 	if counter == 0:
-		emit_signal("collected")
 		queue_free()
-
-func enable():
-	$CollisionShape2D.disabled = false
+	if is_network_master():
+		emit_signal("collected")

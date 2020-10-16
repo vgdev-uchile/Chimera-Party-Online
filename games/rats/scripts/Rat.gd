@@ -33,6 +33,8 @@ sync var stopped = true
 
 var dead = false
 
+var cheese_collected = false
+
 var can_jump = false
 var MAX_JUMP_TIME = 0.1
 var jump_time = 0
@@ -133,6 +135,10 @@ func move(delta):
 						collision.collider.stomp(self)
 			
 		
+		# TODO? the case where a pile of rats is crushed is missing
+		# If this is addressed, the death animation must be changed
+		# now it only plays the animation and stops physics
+		# so the rats on top will not fall
 		# check crushed
 		if is_network_master():
 			var ss = get_world_2d().direct_space_state
@@ -213,6 +219,7 @@ func teleport(pos):
 	position = pos
 	puppet_pos = pos
 	reset()
+	cheese_collected = false
 	dead = false
 
 func stop():

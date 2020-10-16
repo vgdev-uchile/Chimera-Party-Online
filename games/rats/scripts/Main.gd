@@ -18,8 +18,6 @@ var players
 # used to sync the level loading
 var confirmations = 0
 
-var dead_count = 0
-
 func on_show():
 	print("show owo")
 	get_tree().paused = false
@@ -36,7 +34,7 @@ func _ready():
 	print("ready owo")
 	get_tree().paused = true
 	level = Levels[0].instance()
-	level.connect("next", self, "next")
+	level.connect("check_next", self, "check_next")
 	$Level.add_child(level)
 	$Timer.connect("timeout", self, "on_timeout")
 	$CanvasLayer/Timer/Control/TextureProgress.max_value = $Timer.wait_time
@@ -45,7 +43,7 @@ func _ready():
 	players = Party.get_players()
 	for i in players.size():
 		var rats = Rats.instance()
-		rats.connect("dead", self, "on_dead")
+		rats.connect("dead", self, "check_next")
 		$Controllers.add_child(rats)
 		
 		var rat_a = init_rat(i, 0, rats)
@@ -53,12 +51,6 @@ func _ready():
 		rats.init(players[i], rat_a, rat_b)
 	
 	shuffle_rats()
-
-func on_dead():
-	dead_count += 1
-	if dead_count == $Controllers.get_child_count():
-		dead_count = 0
-		rpc("next")
 
 func init_rat(player_index, index, rats):
 	var rat = Rat.instance()
@@ -77,6 +69,12 @@ func on_timeout():
 	update_timer_display(0)
 	if is_network_master():
 		rpc("next")
+
+func check_next():
+	for rat in $Rats.get_children():
+		if not rat.dead and not rat.cheese_collected:
+			return
+	rpc("next")
 
 sync func next():
 	call_deferred("next_deferred")
@@ -108,7 +106,7 @@ func next_deferred():
 	level.queue_free()
 	current += 1
 	level = Levels[current].instance()
-	level.connect("next", self, "next")
+	level.connect("check_next", self, "check_next")
 	$Level.add_child(level)
 	shuffle_rats()
 	update_timer_display($Timer.wait_time)

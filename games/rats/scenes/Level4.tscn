@@ -130,10 +130,7 @@ position = Vector2( 768, 944 )
 position = Vector2( 1792, 896 )
 
 [node name="DeathArea" parent="." instance=ExtResource( 3 )]
-position = Vector2( 520, 968 )
-
-[node name="CollisionShape2D" parent="DeathArea" index="0"]
-position = Vector2( 568, 192 )
+position = Vector2( 1088, 1184 )
 
 [node name="Platforms" type="Node2D" parent="."]
 
