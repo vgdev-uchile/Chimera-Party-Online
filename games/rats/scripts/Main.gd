@@ -7,6 +7,7 @@ var Levels = [
 	preload("res://games/rats/scenes/Level1.tscn"),
 	preload("res://games/rats/scenes/Level2.tscn"),
 	preload("res://games/rats/scenes/Level3.tscn"),
+	preload("res://games/rats/scenes/Level4.tscn"),
 ]
 
 var level
@@ -26,11 +27,11 @@ func on_show():
 	for rat in $Rats.get_children():
 		rat.set_physics_process(true)
 
-func _enter_tree() -> void:
-	LobbyManager.host_game("elixs")
+#func _enter_tree() -> void:
+#	LobbyManager.host_game("elixs")
 
 func _ready():
-	$Rat.stopped = false
+#	$Rat.stopped = false
 	
 	print("ready owo")
 	get_tree().paused = true

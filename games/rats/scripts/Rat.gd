@@ -89,6 +89,13 @@ sync func spiked(height):
 	global_position.y = height
 	playback.travel("spiked")
 
+sync func death():
+	dead = true
+	rats.dead(self)
+	set_physics_process(false)
+	call_deferred("disable_collision", true)
+
+
 func test():
 	linear_vel = move_and_slide(linear_vel, Vector2.UP)
 
@@ -119,6 +126,8 @@ func move(delta):
 		if is_network_master():
 			for i in get_slide_count():
 				var collision = get_slide_collision(i)
+				if collision.collider.has_method("bump"):
+					collision.collider.bump()
 				if Vector2.UP.dot(collision.normal) == 1:
 					if collision.collider.has_method("stomp"):
 						collision.collider.stomp(self)
