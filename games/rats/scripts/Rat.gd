@@ -63,7 +63,7 @@ func init(player: Player, index, rats):
 	set_network_master(player.nid)
 #	$Sprite.texture = sprites[player.color]
 	$Sprite.modulate = Party.get_colors()[player.color]
-#	$Label.text = player.name
+	$Label.text = player.name
 	var ks = str(player.keyset)
 	move_left = "move_left_" + ks
 	move_right = "move_right_" + ks
@@ -72,7 +72,7 @@ func init(player: Player, index, rats):
 	action_a = "action_a_" + ks
 	action_b = "action_b_" + ks
 	name = str("%d - %d - %d" % [player.nid, player.local, index])
-	$Label.text = name
+#	$Label.text = name
 	
 	puppet_pos = position
 	
