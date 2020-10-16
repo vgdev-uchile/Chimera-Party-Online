@@ -214,7 +214,6 @@ func stop():
 func reset():
 	$Sprite.position = Vector2(0, -13)
 	$Sprite.scale = Vector2(4, 4)
-	$Sprite.frame = 3
 	if not facing_right:
 		facing_right = true
 	playback.travel("idle")

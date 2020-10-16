@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://games/rats/sprites/rodent-1.0/PNG/32x32/mouse_run.png" type="Texture" id=1]
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=2]
 [ext_resource path="res://games/rats/scripts/Main.gd" type="Script" id=3]
 [ext_resource path="res://games/rats/fonts/FjallaOne-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://games/rats/scenes/Level4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://games/rats/scenes/Rat.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -122,7 +124,6 @@ script = ExtResource( 3 )
 pause_mode = 1
 
 [node name="Rats" type="Node2D" parent="."]
-pause_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -219,3 +220,8 @@ one_shot = true
 [node name="ShuffleTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="Level4" parent="." instance=ExtResource( 5 )]
+
+[node name="Rat" parent="." instance=ExtResource( 6 )]
+position = Vector2( 208, 824 )

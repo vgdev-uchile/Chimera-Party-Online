@@ -5,6 +5,8 @@ var rat_b
 
 var cheese = 0
 
+signal dead
+
 # Inputs
 
 var move_left = "move_left"
@@ -49,4 +51,5 @@ func dead(rat):
 		rat_b.rset("stopped", false)
 	if rat == rat_b and not rat_a.dead:
 		rat_a.rset("stopped", false)
-		
+	if rat_a.dead and rat_b.dead and is_network_master():
+		emit_signal("dead")

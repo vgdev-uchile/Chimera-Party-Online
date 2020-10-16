@@ -5,8 +5,8 @@ var Rats = preload("res://games/rats/scenes/Rats.tscn")
 
 var Levels = [
 	preload("res://games/rats/scenes/Level1.tscn"),
-	preload("res://games/rats/scenes/Level3.tscn"),
 	preload("res://games/rats/scenes/Level2.tscn"),
+	preload("res://games/rats/scenes/Level3.tscn"),
 ]
 
 var level
@@ -14,21 +14,24 @@ var current = 0
 
 var players
 
-#onready var a = $Rat
-#onready var b = $Rat2
-
 # used to sync the level loading
 var confirmations = 0
+
+var dead_count = 0
 
 func on_show():
 	print("show owo")
 	get_tree().paused = false
 	$Timer.start()
+	for rat in $Rats.get_children():
+		rat.set_physics_process(true)
 
-#func _enter_tree() -> void:
-#	LobbyManager.host_game("elixs")
+func _enter_tree() -> void:
+	LobbyManager.host_game("elixs")
 
 func _ready():
+	$Rat.stopped = false
+	
 	print("ready owo")
 	get_tree().paused = true
 	level = Levels[0].instance()
@@ -41,6 +44,7 @@ func _ready():
 	players = Party.get_players()
 	for i in players.size():
 		var rats = Rats.instance()
+		rats.connect("dead", self, "on_dead")
 		$Controllers.add_child(rats)
 		
 		var rat_a = init_rat(i, 0, rats)
@@ -49,10 +53,17 @@ func _ready():
 	
 	shuffle_rats()
 
+func on_dead():
+	dead_count += 1
+	if dead_count == $Controllers.get_child_count():
+		dead_count = 0
+		rpc("next")
+
 func init_rat(player_index, index, rats):
 	var rat = Rat.instance()
 	rat.init(players[player_index], index, rats)
 	$Rats.add_child(rat)
+	rat.set_physics_process(false)
 	return rat
 
 func shuffle_rats():
@@ -78,17 +89,16 @@ func next_deferred():
 			Party.end_game(end_scores)
 		return
 	for rat in $Rats.get_children():
-		rat.stop()
 		rat.disable_collision(true)
-	
-	$Rats.pause_mode = Node.PAUSE_MODE_INHERIT
 	
 	get_tree().paused = true
 	
+	# wait for the collisions to be actually disabled or something
 	yield(get_tree(), "physics_frame")
 	yield(get_tree(), "physics_frame")
 	
-	$Rats.pause_mode = Node.PAUSE_MODE_STOP
+	for rat in $Rats.get_children():
+		rat.set_physics_process(false)
 	
 	$Timer.stop()
 	$AnimationPlayer.play("fade_in")
@@ -114,6 +124,8 @@ sync func continue_next():
 	
 	for rat in $Rats.get_children():
 		rat.disable_collision(false)
+		rat.set_physics_process(true)
+		
 
 
 func _process(delta: float) -> void:
@@ -124,13 +136,13 @@ func update_timer_display(value):
 	$CanvasLayer/Timer/Label.text = str(ceil(value))
 	$CanvasLayer/Timer/Control/TextureProgress.value = value
 
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("action_a"):
-		for rat in $Rats.get_children():
-			rat.disable_collision(true)
-		call_deferred("shuffle_rats")
-		for rat in $Rats.get_children():
-			rat.disable_collision(false)
+#func _physics_process(delta: float) -> void:
+#	if Input.is_action_just_pressed("action_a"):
+#		for rat in $Rats.get_children():
+#			rat.disable_collision(true)
+#		call_deferred("shuffle_rats")
+#		for rat in $Rats.get_children():
+#			rat.disable_collision(false)
 ##		next()
 #		$AnimationPlayer.play("fade_in")
 #	if Input.is_action_just_pressed("action_b"):
