@@ -93,7 +93,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 4, 3 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=6]
 resource_name = "spiked"
 length = 0.1
 tracks/0/type = "value"
@@ -118,7 +118,7 @@ animation = "idle"
 [sub_resource type="AnimationNodeAnimation" id=9]
 animation = "run"
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "spiked"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=11]
@@ -129,26 +129,26 @@ animation = "spiked"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=14]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
 
-[sub_resource type="AnimationNodeStateMachine" id=16]
+[sub_resource type="AnimationNodeStateMachine" id=17]
 states/crushed/node = SubResource( 7 )
 states/crushed/position = Vector2( 453, 251 )
 states/idle/node = SubResource( 8 )
 states/idle/position = Vector2( 335.5, 81.5 )
 states/run/node = SubResource( 9 )
 states/run/position = Vector2( 613.5, 81.5 )
-states/spiked/node = SubResource( 20 )
+states/spiked/node = SubResource( 10 )
 states/spiked/position = Vector2( 270.345, 251 )
-transitions = [ "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "idle", "crushed", SubResource( 13 ), "run", "crushed", SubResource( 14 ), "idle", "spiked", SubResource( 21 ), "run", "spiked", SubResource( 22 ) ]
+transitions = [ "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "idle", "crushed", SubResource( 13 ), "run", "crushed", SubResource( 14 ), "idle", "spiked", SubResource( 15 ), "run", "spiked", SubResource( 16 ) ]
 start_node = "idle"
 graph_offset = Vector2( -123.655, 56 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=18]
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 22, 1 )
 
 [node name="Rat" type="KinematicBody2D" groups=[
@@ -165,7 +165,7 @@ texture = ExtResource( 1 )
 offset = Vector2( 3.5, -9.25 )
 vframes = 4
 hframes = 3
-frame = 3
+frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -8 )
@@ -179,13 +179,13 @@ shape = SubResource( 2 )
 anims/crushed = SubResource( 3 )
 anims/idle = SubResource( 4 )
 anims/run = SubResource( 5 )
-anims/spiked = SubResource( 19 )
+anims/spiked = SubResource( 6 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 16 )
+tree_root = SubResource( 17 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 17 )
+parameters/playback = SubResource( 18 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -19.0273
@@ -199,7 +199,7 @@ __meta__ = {
 
 [node name="Above" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -30 )
-shape = SubResource( 18 )
+shape = SubResource( 19 )
 disabled = true
 
 [node name="Below" type="RayCast2D" parent="."]

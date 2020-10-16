@@ -214,13 +214,13 @@ func move_sticked(delta):
 	animation()
 
 func teleport(pos):
-	stop()
-	normal()
+#	stop()
+#	normal()
 	position = pos
 	puppet_pos = pos
-	reset()
-	cheese_collected = false
-	dead = false
+#	reset()
+#	cheese_collected = false
+#	dead = false
 
 func stop():
 	target_vel = 0
