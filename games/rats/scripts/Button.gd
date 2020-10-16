@@ -2,7 +2,10 @@ extends Node2D
 
 var rats = []
 
-export var counter = 2
+export var counter = 2 setget set_counter
+func set_counter(value):
+	counter = value
+	$Label.text = "%d/%d" % [get_rats_clamped(), counter]
 
 signal pushed
 signal released

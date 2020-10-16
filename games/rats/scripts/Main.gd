@@ -8,6 +8,8 @@ var Levels = [
 	preload("res://games/rats/scenes/Level2.tscn"),
 	preload("res://games/rats/scenes/Level3.tscn"),
 	preload("res://games/rats/scenes/Level4.tscn"),
+	preload("res://games/rats/scenes/Level5.tscn"),
+	preload("res://games/rats/scenes/Level6.tscn"),
 ]
 
 var level
@@ -33,16 +35,13 @@ func _ready():
 	
 	print("ready owo")
 	get_tree().paused = true
-	level = Levels[0].instance()
-	level.connect("check_next", self, "check_next")
-	$Level.add_child(level)
 	$Timer.connect("timeout", self, "on_timeout")
 	$CanvasLayer/Timer/Control/TextureProgress.max_value = $Timer.wait_time
 	update_timer_display($Timer.wait_time)
 	
 	players = Party.get_players()
 	
-	spawn_rats()
+	spawn_level()
 
 # Due to problems now the rats are being deleted and created again
 # If you find a way to teleport them on the pause bewteen transitions
@@ -89,14 +88,17 @@ func on_timeout():
 
 func check_next():
 	var cheese_counter = level.cheese_counter
+	var go_next = true
 	for rat in $Rats.get_children():
 		if rat.cheese_collected:
 			cheese_counter -= 1
 		if cheese_counter == 0:
+			go_next = true
 			break
 		if not rat.dead and not rat.cheese_collected:
-			return
-	rpc("next")
+			go_next = false
+	if go_next:
+		rpc("next")
 
 sync func next():
 	if current + 1 == Levels.size():
@@ -114,12 +116,17 @@ sync func next():
 	level.queue_free()
 	delete_rats()
 	current += 1
+	spawn_level()
+	update_timer_display($Timer.wait_time)
+	rpc_id(1, "confirm")
+
+func spawn_level():
 	level = Levels[current].instance()
 	level.connect("check_next", self, "check_next")
 	$Level.add_child(level)
 	spawn_rats()
-	update_timer_display($Timer.wait_time)
-	rpc_id(1, "confirm")
+	if level.has_method("camera"):
+		level.camera($Rats.get_children())
 
 sync func continue_next():
 	$AnimationPlayer.play("fade_out")
