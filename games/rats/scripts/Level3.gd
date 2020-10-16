@@ -2,8 +2,10 @@ extends Node2D
 
 signal check_next
 
+onready var cheese_counter = Party.get_players().size() * 2 - 2
+
 func _ready() -> void:
-	$Cheese.counter = Party.get_players().size() * 2 - 2
+	$Cheese.counter = cheese_counter
 	if is_network_master():
 		$Cheese.connect("collected", self, "emit_check_next")
 

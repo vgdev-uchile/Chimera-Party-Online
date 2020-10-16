@@ -71,7 +71,12 @@ func on_timeout():
 		rpc("next")
 
 func check_next():
+	var cheese_counter = level.cheese_counter
 	for rat in $Rats.get_children():
+		if rat.cheese_collected:
+			cheese_counter -= 1
+		if cheese_counter == 0:
+			break
 		if not rat.dead and not rat.cheese_collected:
 			return
 	rpc("next")
