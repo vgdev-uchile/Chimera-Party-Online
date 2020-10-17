@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends StaticBody2D
 
 onready var initial_position = position
 onready var target = initial_position
@@ -8,8 +8,9 @@ onready var _button = get_node(button)
 
 func _ready() -> void:
 	if is_network_master():
-		_button.connect("pushed", self, "open")
-		_button.connect("released", self, "close")
+		if _button:
+			_button.connect("pushed", self, "open")
+			_button.connect("released", self, "close")
 
 
 func _physics_process(delta: float) -> void:
