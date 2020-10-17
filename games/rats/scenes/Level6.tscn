@@ -57,9 +57,11 @@ position = Vector2( 1408, 0 )
 
 [node name="Position2D2" type="Position2D" parent="Positions/2/Node2D2"]
 position = Vector2( 576, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Position2D3" type="Position2D" parent="Positions/2/Node2D2"]
 position = Vector2( 640, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="3" type="Node2D" parent="Positions"]
 visible = false
@@ -79,18 +81,20 @@ position = Vector2( 512, 944 )
 
 [node name="Position2D3" type="Position2D" parent="Positions/3/Node2D2"]
 position = Vector2( 1856, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Node2D3" type="Node2D" parent="Positions/3"]
 position = Vector2( 1280, 0 )
 
 [node name="Position2D3" type="Position2D" parent="Positions/3/Node2D3"]
 position = Vector2( 704, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Position2D4" type="Position2D" parent="Positions/3/Node2D3"]
 position = Vector2( 768, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="4" type="Node2D" parent="Positions"]
-visible = false
 
 [node name="Node2D" type="Node2D" parent="Positions/4"]
 
@@ -114,18 +118,22 @@ position = Vector2( 1216, 0 )
 
 [node name="Position2D3" type="Position2D" parent="Positions/4/Node2D3"]
 position = Vector2( 576, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Position2D4" type="Position2D" parent="Positions/4/Node2D3"]
 position = Vector2( 640, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Node2D4" type="Node2D" parent="Positions/4"]
 position = Vector2( 1280, 0 )
 
 [node name="Position2D4" type="Position2D" parent="Positions/4/Node2D4"]
 position = Vector2( 704, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Position2D5" type="Position2D" parent="Positions/4/Node2D4"]
 position = Vector2( 768, 944 )
+scale = Vector2( -1, 1 )
 
 [node name="Cheese" parent="." instance=ExtResource( 5 )]
 position = Vector2( 960, 1056 )

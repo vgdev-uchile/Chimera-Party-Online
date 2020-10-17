@@ -42,7 +42,11 @@ func _physics_process(delta: float) -> void:
 
 func teleport(position_node):
 	rat_a.teleport(position_node.get_child(0).global_position)
+	if position_node.get_child(0).scale.x == -1:
+		rat_a.flip()
 	rat_b.teleport(position_node.get_child(1).global_position)
+	if position_node.get_child(1).scale.x == -1:
+		rat_b.flip()
 	rat_a.rset("stopped", false)
 	rat_b.rset("stopped", true)
 

@@ -10,6 +10,9 @@ var Levels = [
 	preload("res://games/rats/scenes/Level4.tscn"),
 	preload("res://games/rats/scenes/Level5.tscn"),
 	preload("res://games/rats/scenes/Level6.tscn"),
+	preload("res://games/rats/scenes/Level7.tscn"),
+	preload("res://games/rats/scenes/Level12.tscn"),
+	preload("res://games/rats/scenes/Level13.tscn"),
 ]
 
 var level
@@ -109,6 +112,8 @@ sync func next():
 			Party.end_game(end_scores)
 		return
 	get_tree().paused = true
+	for rat in $Rats.get_children():
+		rat.set_physics_process(false)
 	$Timer.stop()
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")

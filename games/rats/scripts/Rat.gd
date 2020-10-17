@@ -185,11 +185,9 @@ func animation():
 		playback.travel("idle")
 	
 	if target_vel < 0 and facing_right:
-		facing_right = false
-		$Sprite.scale.x *= -1
+		flip()
 	if target_vel > 0 and not facing_right:
-		facing_right = true
-		$Sprite.scale.x *= -1
+		flip()
 
 func move_sticked(delta):
 	if is_network_master():
@@ -221,6 +219,10 @@ func teleport(pos):
 #	reset()
 #	cheese_collected = false
 #	dead = false
+
+func flip():
+	facing_right = !facing_right
+	$Sprite.scale.x *= -1
 
 func stop():
 	target_vel = 0
