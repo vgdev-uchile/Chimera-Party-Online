@@ -84,11 +84,20 @@ sync func crushed():
 	dead = true
 	rats.dead(self)
 	playback.travel("crushed")
+	set_physics_process(false)	
 
 sync func spiked(height):
 	dead = true
 	rats.dead(self)
 	global_position.y = height
+	playback.travel("spiked")
+	set_physics_process(false)
+
+sync func poisoned():
+	dead = true
+	collision_layer = 4
+	collision_mask = 6
+	rats.dead(self)
 	playback.travel("spiked")
 
 sync func death():
@@ -109,7 +118,11 @@ func _physics_process(delta):
 			move_sticked(delta)
 
 func move(delta):
-	if not dead:
+	if dead:
+		linear_vel.x = lerp(linear_vel.x, 0, 0.5)
+		linear_vel.y += 3 * SPEED * delta
+		linear_vel = move_and_slide(linear_vel, Vector2.UP)
+	else:
 		if is_network_master():
 			target_vel = Input.get_action_strength(move_right) - Input.get_action_strength(move_left)
 			rset("puppet_target_vel", target_vel)

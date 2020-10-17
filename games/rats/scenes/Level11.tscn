@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=1]
 [ext_resource path="res://games/rats/scenes/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://games/rats/scenes/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://games/rats/scripts/Level11.gd" type="Script" id=4]
 [ext_resource path="res://games/rats/scenes/Cheese.tscn" type="PackedScene" id=5]
-[ext_resource path="res://games/rats/scripts/Spike.gd" type="Script" id=6]
 [ext_resource path="res://games/rats/scenes/Spike.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -176,113 +175,59 @@ limit_smoothed = true
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2( -512, 1024 )
 
-[node name="Spike" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 544, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike2" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike2" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 608, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike3" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike3" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 672, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike4" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike4" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 736, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike5" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike5" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 800, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike6" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike6" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 864, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike7" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike7" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 928, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike8" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike8" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 992, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike9" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike9" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1056, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike10" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike10" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1120, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike11" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike11" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1184, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike12" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike12" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1248, 992 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike13" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike13" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1696, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike14" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike14" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1760, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike15" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike15" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1824, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike16" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike16" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1888, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike17" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike17" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 1952, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
-[node name="Spike18" type="Area2D" parent="Spikes" instance=ExtResource( 7 )]
+[node name="Spike18" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 2016, 1000 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 6 )
 
 [node name="Spike19" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 2080, 1000 )

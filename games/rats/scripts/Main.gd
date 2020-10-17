@@ -11,6 +11,7 @@ var Levels = [
 	preload("res://games/rats/scenes/Level5.tscn"),
 	preload("res://games/rats/scenes/Level6.tscn"),
 	preload("res://games/rats/scenes/Level7.tscn"),
+	preload("res://games/rats/scenes/Level10.tscn"),
 	preload("res://games/rats/scenes/Level11.tscn"),
 	preload("res://games/rats/scenes/Level12.tscn"),
 	preload("res://games/rats/scenes/Level13.tscn"),
@@ -19,7 +20,9 @@ var Levels = [
 var level
 var current = 0
 
-var players
+var players = []
+
+var player_cheese = []
 
 # used to sync the level loading
 var confirmations = 0
@@ -44,6 +47,8 @@ func _ready():
 	update_timer_display($Timer.wait_time)
 	
 	players = Party.get_players()
+	for player in players:
+		player_cheese.push_back(0)
 	
 	spawn_level()
 
@@ -62,15 +67,19 @@ func spawn_rats():
 		rats.init(players[i], rat_a, rat_b)
 		
 	shuffle_rats()
-	
 
 func delete_rats():
 	for rat in $Rats.get_children():
 		$Rats.remove_child(rat)
 		rat.queue_free()
+	add_cheese()
 	for rats in $Controllers.get_children():
 		$Controllers.remove_child(rats)
 		rats.queue_free()
+
+func add_cheese():
+	for i in $Controllers.get_child_count():
+		player_cheese[i] += $Controllers.get_child(i).cheese
 
 func init_rat(player_index, index, rats):
 	var rat = Rat.instance()
@@ -107,9 +116,10 @@ func check_next():
 sync func next():
 	if current + 1 == Levels.size():
 		if is_network_master():
+			add_cheese()
 			var end_scores = []
-			for rats in $Controllers.get_children():
-				end_scores.push_back({"player": rats._player, "points": rats.cheese})
+			for i in players.size():
+				end_scores.push_back({"player": players[i], "points": player_cheese[i]})
 			Party.end_game(end_scores)
 		return
 	get_tree().paused = true

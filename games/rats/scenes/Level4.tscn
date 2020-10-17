@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://games/rats/sprites/icon.png" type="Texture" id=1]
 [ext_resource path="res://games/rats/scripts/Level4.gd" type="Script" id=2]
@@ -31,6 +31,10 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+resource_local_to_scene = true
+extents = Vector2( 576, 32 )
 
 [node name="Level4" type="Node2D"]
 script = ExtResource( 2 )
@@ -131,6 +135,9 @@ position = Vector2( 1792, 896 )
 
 [node name="DeathArea" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1088, 1184 )
+
+[node name="CollisionShape2D" parent="DeathArea" index="0"]
+shape = SubResource( 3 )
 
 [node name="Platforms" type="Node2D" parent="."]
 
