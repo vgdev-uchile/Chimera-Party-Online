@@ -9,7 +9,6 @@ puppet var puppet_rotation = 0
 onready var length = $CollisionShape2D.shape.extents.x * 2
 
 func _ready() -> void:
-#	rotation = - PI / 4
 	$Area2D.connect("body_entered", self, "on_body_entered")
 	$Area2D.connect("body_exited", self, "on_body_exited")
 
@@ -29,7 +28,6 @@ func _physics_process(delta: float) -> void:
 		rotation = lerp(rotation, puppet_rotation, 0.5)
 		puppet_rotation = rotation
 
-
 sync func add_rat(rat):
 	rats.push_back(rat)
 
@@ -40,13 +38,11 @@ func on_body_entered(body: Node):
 	if body.is_network_master() and body.is_in_group("rat") and not body.get_path() in rats:
 		rpc("add_rat", body.get_path())
 		body.rset("on_seesaw", true)
-		
 
 func on_body_exited(body: Node):
 	if body.is_network_master() and body.is_in_group("rat") and body.get_path() in rats:
 		rpc("erase_rat", body.get_path())
 		body.rset("on_seesaw", false)
-
 
 func push(pos: Vector2):
 	var local_pos = pos - global_position
