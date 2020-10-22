@@ -11,6 +11,7 @@ var Levels = [
 	preload("res://games/rats/scenes/Level5.tscn"),
 	preload("res://games/rats/scenes/Level6.tscn"),
 	preload("res://games/rats/scenes/Level7.tscn"),
+	preload("res://games/rats/scenes/Level8.tscn"),
 	preload("res://games/rats/scenes/Level9.tscn"),
 	preload("res://games/rats/scenes/Level10.tscn"),
 	preload("res://games/rats/scenes/Level11.tscn"),

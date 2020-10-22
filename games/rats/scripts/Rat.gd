@@ -7,25 +7,33 @@ onready var playback = $AnimationTree.get("parameters/playback")
 
 enum State {
 	NORMAL, # normal movement
-	STICKED # moves with another object (no gravitiy)
+	STICKED, # moves with another object (no gravitiy)
 }
 
 var state = State.NORMAL setget set_state
 func set_state(value):
+	match state:
+		State.STICKED:
+			sticked_obj = null
 	state = value
 func normal():
-	sticked_obj = null
 	self.state = State.NORMAL
 func sticked(obj):
 	sticked_obj = obj
 	self.state = State.STICKED
+	
 
-var sticked_obj = null
+
+var sticked_obj: Node2D = null
+
+sync var on_seesaw = false
 
 var linear_vel = Vector2()
 var target_vel = 0
 var SPEED = 400
 var SPEED_SQUARED = SPEED * SPEED
+
+var INERTIA = 10
 
 var facing_right = true
 
@@ -35,9 +43,16 @@ var dead = false
 
 var cheese_collected = false
 
+var on_floor = false
+
 var can_jump = false
 var MAX_JUMP_TIME = 0.1
 var jump_time = 0
+
+var jumping = false
+var did_jump = false
+
+var snap = Vector2.DOWN * 13
 
 # networking
 puppet var puppet_pos = Vector2()
@@ -79,12 +94,14 @@ func init(player: Player, index, rats):
 
 sync func jump():
 	linear_vel.y = -1.5 * SPEED
+	jumping = true
+	position.y -= 10
 
 sync func crushed():
 	dead = true
 	rats.dead(self)
 	playback.travel("crushed")
-	set_physics_process(false)	
+	set_physics_process(false)
 
 sync func spiked(height):
 	dead = true
@@ -118,10 +135,11 @@ func _physics_process(delta):
 			move_sticked(delta)
 
 func move(delta):
+#	print(can_jump)
 	if dead:
 		linear_vel.x = lerp(linear_vel.x, 0, 0.5)
 		linear_vel.y += 3 * SPEED * delta
-		linear_vel = move_and_slide(linear_vel, Vector2.UP)
+		linear_vel = move_and_slide(linear_vel, Vector2.UP, false, 4, PI/4, false)
 	else:
 		if is_network_master():
 			target_vel = Input.get_action_strength(move_right) - Input.get_action_strength(move_left)
@@ -131,11 +149,10 @@ func move(delta):
 		
 		if stopped:
 			target_vel = 0
-		
 		linear_vel.x = lerp(linear_vel.x, target_vel * SPEED, 0.5)
 		linear_vel.y += 3 * SPEED * delta
-		linear_vel = move_and_slide(linear_vel, Vector2.UP)
-
+		linear_vel = move_and_slide_with_snap(linear_vel, snap, Vector2.UP, false, 4, PI/4, false)
+		on_floor = is_on_floor()
 		
 		# check stomp
 		if is_network_master():
@@ -146,8 +163,13 @@ func move(delta):
 				if Vector2.UP.dot(collision.normal) == 1:
 					if collision.collider.has_method("stomp"):
 						collision.collider.stomp(self)
-			
-		
+				if collision.collider is RigidBody2D:
+					var rb: RigidBody2D = collision.collider
+					rb.apply_impulse(collision.position - rb.global_position, -collision.normal * INERTIA)
+				## TODO make the condition with an area enter and not here
+				if collision.collider.is_in_group("seesaw") and on_seesaw:
+					linear_vel.y += 17 * SPEED * delta
+					collision.collider.push(collision.position)
 		# TODO? the case where a pile of rats is crushed is missing
 		# If this is addressed, the death animation must be changed
 		# now it only plays the animation and stops physics
@@ -172,16 +194,19 @@ func move(delta):
 			position = lerp(position, puppet_pos, 0.5)
 			puppet_pos = position
 		
+
+		
 		if is_network_master():
 			jump_time += delta
-			var on_floor = is_on_floor()
 			if on_floor:
 				can_jump = true
 				jump_time = 0
+				snap = Vector2.DOWN * 13
 			if jump_time > MAX_JUMP_TIME:
 				can_jump = false
 			if can_jump and Input.is_action_just_pressed(move_up) and not stopped:
 				rpc("jump")
+				snap = Vector2.ZERO
 				can_jump = false
 		
 		if dead:
@@ -192,7 +217,9 @@ func move(delta):
 
 
 func animation():
-	if abs(linear_vel.x) > 10:
+	
+	
+	if abs(target_vel) > 0:
 		playback.travel("run")
 	else:
 		playback.travel("idle")
@@ -223,6 +250,7 @@ func move_sticked(delta):
 			normal()
 	
 	animation()
+
 
 func teleport(pos):
 #	stop()
