@@ -126,7 +126,7 @@ position = Vector2( 640, 2032 )
 
 [node name="Door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 960, 576 )
-button = NodePath("../../Level5/Button")
+button = NodePath("../Button2")
 
 [node name="Button" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 960 )
@@ -137,7 +137,7 @@ points = PoolVector2Array( 160, 960, 160, 1248, 960, 1248, 960, 1664 )
 
 [node name="Door2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 960, 1664 )
-button = NodePath("../Button2")
+button = NodePath("../Button")
 
 [node name="Button2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 2048 )
