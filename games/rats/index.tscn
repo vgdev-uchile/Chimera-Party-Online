@@ -237,9 +237,9 @@ pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Level" type="Node2D" parent="."]
+pause_mode = 1
 
 [node name="Rats" type="Node2D" parent="."]
-pause_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -353,4 +353,10 @@ anims/fade_out = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 20.0
+one_shot = true
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="ShuffleTimer" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true

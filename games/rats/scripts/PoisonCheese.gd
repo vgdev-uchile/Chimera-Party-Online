@@ -7,7 +7,7 @@ signal collected
 
 var rats = []
 
-export var counter = 7 setget set_counter
+var counter = 7 setget set_counter
 func set_counter(value):
 	counter = value
 	$Label.text = "x%d" % value
@@ -20,12 +20,9 @@ func on_body_entered(body: Node):
 		rpc("add_rat", body.get_path())
 
 sync func add_rat(rat):
-
 	rats.push_back(rat)
-	self.counter -= 1
 	var rat_node = get_node(rat)
-	rat_node.rats.cheese += 1
-	rat_node.cheese_collected = true
+	rat_node.poisoned()
 	if counter == 0:
 		queue_free()
 	if is_network_master():

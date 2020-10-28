@@ -192,7 +192,11 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Loading/ColorRect/shadow_2"]
 position = Vector2( 2.28882e-05, 1.52588e-05 )
 frames = SubResource( 8 )
+<<<<<<< HEAD
 frame = 5
+=======
+frame = 2
+>>>>>>> dabff60d11c34d90edd8ea692d989661f135550b
 playing = true
 
 [node name="shadow_3" type="Sprite" parent="Loading/ColorRect"]
@@ -205,7 +209,11 @@ __meta__ = {
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Loading/ColorRect/shadow_3"]
 frames = SubResource( 15 )
+<<<<<<< HEAD
 frame = 2
+=======
+frame = 5
+>>>>>>> dabff60d11c34d90edd8ea692d989661f135550b
 playing = true
 
 [node name="shadow_4" type="Sprite" parent="Loading/ColorRect"]
@@ -218,6 +226,10 @@ __meta__ = {
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Loading/ColorRect/shadow_4"]
 frames = SubResource( 22 )
+<<<<<<< HEAD
+=======
+frame = 3
+>>>>>>> dabff60d11c34d90edd8ea692d989661f135550b
 playing = true
 
 [node name="shadow_5" type="Sprite" parent="Loading/ColorRect"]
@@ -230,7 +242,11 @@ __meta__ = {
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Loading/ColorRect/shadow_5"]
 frames = SubResource( 29 )
+<<<<<<< HEAD
 frame = 2
+=======
+frame = 5
+>>>>>>> dabff60d11c34d90edd8ea692d989661f135550b
 playing = true
 
 [node name="Fade" parent="Loading" instance=ExtResource( 3 )]
