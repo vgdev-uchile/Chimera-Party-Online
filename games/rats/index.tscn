@@ -25,7 +25,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/cutoff = 0.0
+shader_param/cutoff = 0.0555556
 shader_param/mask = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -65,7 +65,7 @@ anim_offset_random = 1.0
 gradient = SubResource( 8 )
 
 [sub_resource type="Animation" id=10]
-length = 3.0
+length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/Particles2D:emitting")
 tracks/0/interp = 1
@@ -73,7 +73,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2.5 ),
+"times": PoolRealArray( 0, 2.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -104,7 +104,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-length = 2.0
+length = 2.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/Particles2D:emitting")
 tracks/0/interp = 1
@@ -249,7 +249,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1920.0
 margin_right = -1920.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.392157, 0.243137, 0.192157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
