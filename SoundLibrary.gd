@@ -54,7 +54,7 @@ func _config():
 	# minor configurations
 	
 	#jump 
-	adjust_vol_by_type(1,-10)
+	adjust_vol_by_type(1,-20)
 	pass
 
 ## Library construction #######################
