@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/air_transition12.wav-eb4f789f77ecbd6800da6f3f89933f38.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/air_transition12.wav"
+dest_files=[ "res://.import/air_transition12.wav-eb4f789f77ecbd6800da6f3f89933f38.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

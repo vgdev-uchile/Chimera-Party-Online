@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Randomize13.wav-b79cae6806bafe42ed9f505a5975f545.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/Randomize13.wav"
+dest_files=[ "res://.import/Randomize13.wav-b79cae6806bafe42ed9f505a5975f545.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

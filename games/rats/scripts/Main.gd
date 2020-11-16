@@ -86,6 +86,7 @@ func add_cheese():
 func init_rat(player_index, index, rats):
 	var rat = Rat.instance()
 	rat.init(players[player_index], index, rats)
+	rat.SoundLibrary=$SoundLibrary
 	$Rats.add_child(rat)
 	rat.set_physics_process(false)
 	return rat

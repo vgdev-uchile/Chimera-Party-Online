@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/die5.wav-272f9f2a53698dc8eccf6666a1f5fca0.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/die5.wav"
+dest_files=[ "res://.import/die5.wav-272f9f2a53698dc8eccf6666a1f5fca0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

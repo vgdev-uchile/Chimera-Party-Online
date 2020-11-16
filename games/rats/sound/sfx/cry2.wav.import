@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cry2.wav-e13de3eab7d95b3943238b51bedc9542.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/cry2.wav"
+dest_files=[ "res://.import/cry2.wav-e13de3eab7d95b3943238b51bedc9542.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

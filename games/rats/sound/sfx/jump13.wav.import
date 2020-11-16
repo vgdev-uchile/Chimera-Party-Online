@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump13.wav-9ae49f3d649395a3e63afac49a391cab.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/jump13.wav"
+dest_files=[ "res://.import/jump13.wav-9ae49f3d649395a3e63afac49a391cab.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

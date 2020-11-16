@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/funny_feet_sound7.wav-272b17656329bb987963057e8327c2a2.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/funny_feet_sound7.wav"
+dest_files=[ "res://.import/funny_feet_sound7.wav-272b17656329bb987963057e8327c2a2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

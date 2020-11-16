@@ -3,6 +3,7 @@ extends KinematicBody2D
 var _player
 var rats
 
+var SoundLibrary 
 onready var playback = $AnimationTree.get("parameters/playback")
 
 enum State {
@@ -96,12 +97,16 @@ sync func jump():
 	linear_vel.y = -1.5 * SPEED
 	jumping = true
 	position.y -= 10
+	SoundLibrary.make_sound(1)
+	SoundLibrary.make_sound(2)
 
 sync func crushed():
 	dead = true
 	rats.dead(self)
 	playback.travel("crushed")
 	set_physics_process(false)
+	SoundLibrary.make_sound(5)
+	
 
 sync func spiked(height):
 	dead = true
@@ -109,6 +114,8 @@ sync func spiked(height):
 	global_position.y = height
 	playback.travel("spiked")
 	set_physics_process(false)
+	SoundLibrary.make_sound(5)
+	SoundLibrary.make_sound(4)
 
 sync func poisoned():
 	dead = true
@@ -116,12 +123,15 @@ sync func poisoned():
 	collision_mask = 6
 	rats.dead(self)
 	playback.travel("spiked")
+	SoundLibrary.make_sound(4)
 
 sync func death():
 	dead = true
 	rats.dead(self)
 	set_physics_process(false)
 	call_deferred("disable_collision", true)
+	SoundLibrary.make_sound(4)
+	SoundLibrary.make_sound(5)
 
 
 func test():
