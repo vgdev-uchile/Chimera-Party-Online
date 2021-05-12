@@ -55,6 +55,10 @@ func _config():
 	
 	#jump 
 	adjust_vol_by_type(1,-20)
+	#feet leaving ground
+	adjust_vol_by_type(2,-20)
+	# cry
+	adjust_vol_by_type(4,-10)
 	pass
 
 ## Library construction #######################
