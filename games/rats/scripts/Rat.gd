@@ -30,7 +30,7 @@ sync var on_seesaw = false
 
 var linear_vel = Vector2()
 var target_vel = 0
-var SPEED = 400
+var SPEED = 500
 var SPEED_SQUARED = SPEED * SPEED
 
 var INERTIA = 10
@@ -46,7 +46,7 @@ var cheese_collected = false
 var on_floor = false
 
 var can_jump = false
-var MAX_JUMP_TIME = 0.1
+var MAX_JUMP_TIME = 0.14
 var jump_time = 0
 
 var jumping = false
@@ -96,12 +96,16 @@ sync func jump():
 	linear_vel.y = -1.5 * SPEED
 	jumping = true
 	position.y -= 10
+	emit_sound(1)
+	emit_sound(2)
 
 sync func crushed():
 	dead = true
 	rats.dead(self)
 	playback.travel("crushed")
 	set_physics_process(false)
+	emit_sound(5)
+	
 
 sync func spiked(height):
 	dead = true
@@ -109,6 +113,8 @@ sync func spiked(height):
 	global_position.y = height
 	playback.travel("spiked")
 	set_physics_process(false)
+	emit_sound(5)
+	emit_sound(4)
 
 sync func poisoned():
 	dead = true
@@ -116,12 +122,15 @@ sync func poisoned():
 	collision_mask = 6
 	rats.dead(self)
 	playback.travel("spiked")
+	emit_sound(4)
 
 sync func death():
 	dead = true
 	rats.dead(self)
 	set_physics_process(false)
 	call_deferred("disable_collision", true)
+	emit_sound(4)
+	emit_sound(5)
 
 
 func test():
@@ -283,3 +292,8 @@ func disable_collision(value):
 	$CollisionShape2D2.disabled = value
 
 
+# handle sound
+
+var SoundLibrary 
+func emit_sound(value):
+	SoundLibrary.make_sound(value)

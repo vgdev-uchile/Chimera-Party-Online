@@ -1,0 +1,312 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://SoundLibrary.gd" type="Script" id=1]
+[ext_resource path="res://games/rats/sound/sfx/step3.wav" type="AudioStream" id=2]
+[ext_resource path="res://games/rats/sound/sfx/jump1.wav" type="AudioStream" id=3]
+[ext_resource path="res://games/rats/sound/sfx/step1.wav" type="AudioStream" id=4]
+[ext_resource path="res://games/rats/sound/sfx/step2.wav" type="AudioStream" id=5]
+[ext_resource path="res://games/rats/sound/sfx/jump2.wav" type="AudioStream" id=6]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound1.wav" type="AudioStream" id=7]
+[ext_resource path="res://games/rats/sound/sfx/feet_leave_ground2.wav" type="AudioStream" id=8]
+[ext_resource path="res://games/rats/sound/sfx/cry8.wav" type="AudioStream" id=9]
+[ext_resource path="res://games/rats/sound/sfx/air_transition1.wav" type="AudioStream" id=10]
+[ext_resource path="res://games/rats/sound/sfx/air_transition2.wav" type="AudioStream" id=11]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound6.wav" type="AudioStream" id=12]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound9.wav" type="AudioStream" id=13]
+[ext_resource path="res://games/rats/sound/sfx/die3.wav" type="AudioStream" id=14]
+[ext_resource path="res://games/rats/sound/sfx/cry1.wav" type="AudioStream" id=15]
+[ext_resource path="res://games/rats/sound/sfx/jump16.wav" type="AudioStream" id=16]
+[ext_resource path="res://games/rats/sound/sfx/cry3.wav" type="AudioStream" id=17]
+[ext_resource path="res://games/rats/sound/sfx/step5.wav" type="AudioStream" id=18]
+[ext_resource path="res://games/rats/sound/sfx/cry5.wav" type="AudioStream" id=19]
+[ext_resource path="res://games/rats/sound/sfx/cry6.wav" type="AudioStream" id=20]
+[ext_resource path="res://games/rats/sound/sfx/cry9.wav" type="AudioStream" id=21]
+[ext_resource path="res://games/rats/sound/sfx/die2.wav" type="AudioStream" id=22]
+[ext_resource path="res://games/rats/sound/sfx/die6.wav" type="AudioStream" id=23]
+[ext_resource path="res://games/rats/sound/sfx/die7.wav" type="AudioStream" id=24]
+[ext_resource path="res://games/rats/sound/sfx/die9.wav" type="AudioStream" id=25]
+[ext_resource path="res://games/rats/sound/sfx/die4.wav" type="AudioStream" id=26]
+[ext_resource path="res://games/rats/sound/sfx/die10.wav" type="AudioStream" id=27]
+[ext_resource path="res://games/rats/sound/sfx/step6.wav" type="AudioStream" id=28]
+[ext_resource path="res://games/rats/sound/sfx/die8.wav" type="AudioStream" id=29]
+[ext_resource path="res://games/rats/sound/sfx/die11.wav" type="AudioStream" id=30]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound10.wav" type="AudioStream" id=31]
+[ext_resource path="res://games/rats/sound/sfx/jump9.wav" type="AudioStream" id=32]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound7.wav" type="AudioStream" id=33]
+[ext_resource path="res://games/rats/sound/sfx/step8.wav" type="AudioStream" id=34]
+[ext_resource path="res://games/rats/sound/sfx/jump3.wav" type="AudioStream" id=35]
+[ext_resource path="res://games/rats/sound/sfx/cry2.wav" type="AudioStream" id=36]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound4.wav" type="AudioStream" id=37]
+[ext_resource path="res://games/rats/sound/sfx/step9.wav" type="AudioStream" id=38]
+[ext_resource path="res://games/rats/sound/sfx/jump6.wav" type="AudioStream" id=39]
+[ext_resource path="res://games/rats/sound/sfx/jump4.wav" type="AudioStream" id=40]
+[ext_resource path="res://games/rats/sound/sfx/jump12.wav" type="AudioStream" id=41]
+[ext_resource path="res://games/rats/sound/sfx/jump15.wav" type="AudioStream" id=42]
+[ext_resource path="res://games/rats/sound/sfx/jump14.wav" type="AudioStream" id=43]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound8.wav" type="AudioStream" id=44]
+[ext_resource path="res://games/rats/sound/sfx/step4.wav" type="AudioStream" id=45]
+[ext_resource path="res://games/rats/sound/sfx/cry4.wav" type="AudioStream" id=46]
+[ext_resource path="res://games/rats/sound/sfx/step7.wav" type="AudioStream" id=47]
+[ext_resource path="res://games/rats/sound/sfx/feet_leave_ground3.wav" type="AudioStream" id=48]
+[ext_resource path="res://games/rats/sound/sfx/feet_leave_ground5.wav" type="AudioStream" id=49]
+[ext_resource path="res://games/rats/sound/sfx/cry7.wav" type="AudioStream" id=50]
+[ext_resource path="res://games/rats/sound/sfx/die5.wav" type="AudioStream" id=51]
+[ext_resource path="res://games/rats/sound/sfx/jump5.wav" type="AudioStream" id=52]
+[ext_resource path="res://games/rats/sound/sfx/air_transition4.wav" type="AudioStream" id=53]
+[ext_resource path="res://games/rats/sound/sfx/jump7.wav" type="AudioStream" id=54]
+[ext_resource path="res://games/rats/sound/sfx/jump8.wav" type="AudioStream" id=55]
+[ext_resource path="res://games/rats/sound/sfx/jump10.wav" type="AudioStream" id=56]
+[ext_resource path="res://games/rats/sound/sfx/feet_leave_ground1.wav" type="AudioStream" id=57]
+[ext_resource path="res://games/rats/sound/sfx/step10.wav" type="AudioStream" id=58]
+[ext_resource path="res://games/rats/sound/sfx/jump11.wav" type="AudioStream" id=59]
+[ext_resource path="res://games/rats/sound/sfx/feet_leave_ground4.wav" type="AudioStream" id=60]
+[ext_resource path="res://games/rats/sound/sfx/jump13.wav" type="AudioStream" id=61]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound3.wav" type="AudioStream" id=62]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound2.wav" type="AudioStream" id=63]
+[ext_resource path="res://games/rats/sound/sfx/funny_feet_sound5.wav" type="AudioStream" id=64]
+[ext_resource path="res://games/rats/sound/sfx/air_transition8.wav" type="AudioStream" id=65]
+[ext_resource path="res://games/rats/sound/sfx/air_transition5.wav" type="AudioStream" id=66]
+[ext_resource path="res://games/rats/sound/sfx/air_transition12.wav" type="AudioStream" id=67]
+[ext_resource path="res://games/rats/sound/sfx/air_transition6.wav" type="AudioStream" id=68]
+[ext_resource path="res://games/rats/sound/sfx/air_transition11.wav" type="AudioStream" id=69]
+[ext_resource path="res://games/rats/sound/sfx/air_transition7.wav" type="AudioStream" id=70]
+[ext_resource path="res://games/rats/sound/sfx/air_transition10.wav" type="AudioStream" id=71]
+[ext_resource path="res://games/rats/sound/sfx/air_transition13.wav" type="AudioStream" id=72]
+[ext_resource path="res://games/rats/sound/sfx/air_transition3.wav" type="AudioStream" id=73]
+[ext_resource path="res://games/rats/sound/sfx/air_transition9.wav" type="AudioStream" id=74]
+
+[node name="SoundLibrary" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="000step" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 4 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 5 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 2 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 45 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 18 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 28 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 47 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 34 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 38 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="000step"]
+stream = ExtResource( 58 )
+
+[node name="001jump" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 6 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 35 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 40 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 52 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 39 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 54 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 55 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 32 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 56 )
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 59 )
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 41 )
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 61 )
+
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 43 )
+
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 42 )
+
+[node name="AudioStreamPlayer16" type="AudioStreamPlayer" parent="001jump"]
+stream = ExtResource( 16 )
+
+[node name="002feet_leaving_ground" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="002feet_leaving_ground"]
+stream = ExtResource( 57 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="002feet_leaving_ground"]
+stream = ExtResource( 8 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="002feet_leaving_ground"]
+stream = ExtResource( 48 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="002feet_leaving_ground"]
+stream = ExtResource( 60 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="002feet_leaving_ground"]
+stream = ExtResource( 49 )
+
+[node name="003funny_feet_sound" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 7 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 63 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 62 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 37 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 64 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 33 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 44 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 13 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="003funny_feet_sound"]
+stream = ExtResource( 31 )
+
+[node name="004cry" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 15 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 36 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 17 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 46 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 19 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 20 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 50 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 9 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="004cry"]
+stream = ExtResource( 21 )
+
+[node name="005die" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 22 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 14 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 26 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 51 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 23 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 24 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 29 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 25 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 27 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="005die"]
+stream = ExtResource( 30 )
+
+[node name="006transition_air_effect" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 10 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 73 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 53 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 66 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 68 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 70 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 65 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 74 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 71 )
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 69 )
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 67 )
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="006transition_air_effect"]
+stream = ExtResource( 72 )

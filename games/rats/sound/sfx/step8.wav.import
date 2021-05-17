@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/step8.wav-855abe60e573a1b698fcb2395a5f8c68.sample"
+
+[deps]
+
+source_file="res://games/rats/sound/sfx/step8.wav"
+dest_files=[ "res://.import/step8.wav-855abe60e573a1b698fcb2395a5f8c68.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
