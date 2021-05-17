@@ -30,7 +30,7 @@ sync var on_seesaw = false
 
 var linear_vel = Vector2()
 var target_vel = 0
-var SPEED = 400
+var SPEED = 500
 var SPEED_SQUARED = SPEED * SPEED
 
 var INERTIA = 10
@@ -46,7 +46,7 @@ var cheese_collected = false
 var on_floor = false
 
 var can_jump = false
-var MAX_JUMP_TIME = 0.1
+var MAX_JUMP_TIME = 0.14
 var jump_time = 0
 
 var jumping = false
