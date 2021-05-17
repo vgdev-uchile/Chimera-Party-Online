@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.mp3-c0fe74e38f4cdee32d0a0fb87a7a4d79.mp3str"
+
+[deps]
+
+source_file="res://games/hexfall/music/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/hillbilly-swing-by-kevin-macleod-from-filmmusic-io.mp3-c0fe74e38f4cdee32d0a0fb87a7a4d79.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
