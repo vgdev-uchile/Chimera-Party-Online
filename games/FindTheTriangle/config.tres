@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Config.gd" type="Script" id=1]
+[ext_resource path="res://scripts/GameModeFFA.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+display_name = "Find The Triangle"
+description = "Rota e inclina la cámara para encontrar el triángulo antes que el resto de jugadores!"
+input_0 = 3
+description_0 = "rotar horizontalmente"
+input_1 = 12
+description_1 = "rotar verticalmente"
+input_2 = 48
+description_2 = "inclinarse"
+input_3 = 0
+description_3 = ""
+input_4 = 0
+description_4 = ""
+input_5 = 0
+description_5 = ""
+input_6 = 0
+description_6 = ""
+input_7 = 0
+description_7 = ""
+
+[resource]
+script = ExtResource( 1 )
+modes = [ SubResource( 1 ) ]
