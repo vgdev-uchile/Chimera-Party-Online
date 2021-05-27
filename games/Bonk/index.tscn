@@ -1,3 +1,83 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="Spatial" type="Spatial"]
+[ext_resource path="res://games/Bonk/files/concrete_floor_painted_1k_jpg/concrete_floor_painted_ao_1k.jpg" type="Texture" id=1]
+[ext_resource path="res://games/Bonk/index.gd" type="Script" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="Environment" id=4]
+ambient_light_color = Color( 0.145098, 0.0862745, 0.00784314, 1 )
+glow_intensity = 1.51
+
+[node name="Index" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Earth" type="StaticBody" parent="."]
+transform = Transform( 100, 0, 0, 0, 64.2788, 76.6044, 0, -76.6044, 64.2788, 0, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="EarthMesh" type="MeshInstance" parent="Earth"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="EarthCollision" type="CollisionShape" parent="Earth"]
+shape = SubResource( 3 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="Luces" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.890904, -0.454193, 0, 0.454193, -0.890904, 0, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Luces"]
+transform = Transform( 1, 0, 0, 0, -0.866322, 0.499486, 0, -0.499486, -0.866322, 0, 123.611, 13.3684 )
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="Luces"]
+transform = Transform( 1, 0, 0, 0, 0.852896, -0.522082, 0, 0.522082, 0.852896, 0, -134.325, -118.13 )
+light_energy = 0.13
+
+[node name="PlayerContainer" type="Spatial" parent="."]
+
+[node name="PositionContainer" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100.102, 0 )
+
+[node name="Position3D1" type="Position3D" parent="PositionContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="PositionContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+
+[node name="Position3D3" type="Position3D" parent="PositionContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0 )
+
+[node name="Position3D4" type="Position3D" parent="PositionContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
+
+[node name="CameraContainer" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 101.712, 20.7694 )
+current = true
+far = 8192.0
+
+[node name="Start" type="Position3D" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 101.712, 20.7694 )
+
+[node name="End" type="Position3D" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 0.987125, 0.15995, 0, -0.15995, 0.987125, 0, 121.743, 111.076 )
+
+[node name="AimStart" type="Position3D" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100.023, 0 )
+
+[node name="AimEnd" type="Position3D" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 120.19, 0 )
