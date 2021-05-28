@@ -284,3 +284,8 @@ Para compartir tu juego basta con enviar la carpeta del minijuego a tus amigos; 
 * Usa \*.ogg para tus archivos de música: Si añades música en formato \*.wav, estarás añadiendo mucho peso al juego, limítate a usar \*.wav para efectos de sonido cortos y usa \*.ogg para la música de fondo.
 * Intenta no usar `class_name` en tus scripts, especialmente si quieres usar un nombre muy genérico, ya que podría acabar generando conflictos si dos personas quieren usar el mismo `class_name`, o alguien quiere nombrar una variable igual que tu clase; incluso podrías intentar usar uno de los nombres definidos por Chimera Party y romper el juego.
 * Dale un nombre distintivo a la carpeta de tu minijuego: sería terrible tener la carpeta `games` llena de `Nueva carpeta`, `Nueva carpeta 1`, `Nueva carpeta 2`, ...; o `Mi juego`, `Mi juego 2`, `Mi otro juego`, ...; además, para probar tu juego es mucho más fácil encontrarlo en el menú si le das un nombre descriptivo.
+
+### Referencias
+
+[Documentación High Level Multiplayer en inglés](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html)
+[Documentación High Level Multiplayer en español](https://docs.godotengine.org/es/stable/tutorials/networking/high_level_multiplayer.html)
