@@ -288,4 +288,6 @@ Para compartir tu juego basta con enviar la carpeta del minijuego a tus amigos; 
 ### Referencias
 
 [Documentación High Level Multiplayer en inglés](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html)
+
+
 [Documentación High Level Multiplayer en español](https://docs.godotengine.org/es/stable/tutorials/networking/high_level_multiplayer.html)
