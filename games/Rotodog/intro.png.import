@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intro.png-16c4f955bfd2d5ccabfcad2476a9e993.stex"
+path="res://.import/intro.png-b131b89bb6e4845451d183d856a2177a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://games/MothFight/intro.png"
-dest_files=[ "res://.import/intro.png-16c4f955bfd2d5ccabfcad2476a9e993.stex" ]
+source_file="res://games/Rotodog/intro.png"
+dest_files=[ "res://.import/intro.png-b131b89bb6e4845451d183d856a2177a.stex" ]
 
 [params]
 
