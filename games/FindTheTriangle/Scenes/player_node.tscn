@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://games/FindTheTriangle/Scripts/CameraPlayer.gd" type="Script" id=1]
+
+[node name="player_node" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Gimbal_rot" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Gimbal_rot"]
+
+[node name="Front" type="RayCast" parent="Gimbal_rot"]
+enabled = true
+cast_to = Vector3( 0, 0, -30 )
+
+[node name="Up" type="RayCast" parent="Gimbal_rot"]
+enabled = true
+cast_to = Vector3( 0, 30, 0 )

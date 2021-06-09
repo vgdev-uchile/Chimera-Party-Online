@@ -6,7 +6,7 @@ var color_names = ["Verde", "Rojo", "Amarillo", "Azul", "Blanco"]
 var available_colors = [Color("00ff00"), Color("ff0000"), Color("ffff00"), Color("0000ff")]
 var possible_colors = [4]
 
-sync var color_order = []
+remotesync var color_order = []
 
 export var game_length = 30
 var time = 0
@@ -61,7 +61,7 @@ func _ready():
 	yield(get_node("../CanvasLayer/CountDownLabel/AnimationPlayer"), "animation_finished")
 	start_game()
 
-sync func activate_lightbulb(n):
+remotesync func activate_lightbulb(n):
 	var col = color_order.pop_back()
 	var light = $Lights.get_child(n)
 	light.color = col
@@ -74,7 +74,7 @@ func lights_on():
 			c += 1
 	return c
 	
-sync func add_score(moth_color, light_col):
+remotesync func add_score(moth_color, light_col):
 	if light_col == 4:
 		scores[color_names[moth_color]] += 1
 		score_counters[moth_color].add_score(1)
@@ -145,12 +145,12 @@ func final_score():
 				i += 1
 	return final_scores
 
-sync func start_game():
+remotesync func start_game():
 	$GameOverTimer.start(1)
 	$Timer.start(2)
 	$AudioStreamPlayer.play()
 
-sync func start_timer():
+remotesync func start_timer():
 	if $Timer.is_stopped():
 		$Timer.start(4)
 

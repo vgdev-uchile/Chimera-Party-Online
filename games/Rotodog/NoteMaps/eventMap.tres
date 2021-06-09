@@ -1,0 +1,63 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://games/Rotodog/CustomResources/EventNote.gd" type="Script" id=1]
+[ext_resource path="res://games/Rotodog/CustomResources/NoteArray.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+time = 142.0
+duration = 0.125
+color = 0
+anim_event = true
+animation_name = "transition"
+anim_player_path = "../../TransitionAP"
+meth_event = true
+method_name = "change_phase"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+time = 144.0
+duration = 2.0
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = true
+method_name = "universe_poses"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+time = 176.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = true
+method_name = "dogDimensionDance"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+time = 322.0
+duration = 1.0
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = true
+method_name = "win_poses"
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+time = 322.0
+duration = 1.0
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = true
+method_name = "cam_to_origin"
+
+[resource]
+script = ExtResource( 2 )
+notes = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]

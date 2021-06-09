@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/perfect.wav-37c6b56ecbf73f07fd788f8d1c5200ac.sample"
+
+[deps]
+
+source_file="res://games/Rotodog/Sound/perfect.wav"
+dest_files=[ "res://.import/perfect.wav-37c6b56ecbf73f07fd788f8d1c5200ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

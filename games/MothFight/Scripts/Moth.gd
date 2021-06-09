@@ -76,7 +76,7 @@ func _integrate_forces(state: Physics2DDirectBodyState):
 func _on_Moth_body_entered(body):
 	if linear_velocity.length() > 150 and abs(linear_velocity.y) > 11:
 		$HitSound.play()
-	if body.has_method("switch") and body.on:
+	if is_network_master() and body.has_method("switch") and body.on:
 		body.rpc("switch", false)
 		body.controller.rpc("add_score", player.color, body.color)
 		body.controller.rpc("start_timer")
