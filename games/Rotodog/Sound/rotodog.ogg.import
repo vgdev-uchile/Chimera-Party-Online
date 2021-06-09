@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rotodog.ogg-1c3ed71137848ce0709507c90871aad4.oggstr"
+
+[deps]
+
+source_file="res://games/Rotodog/Sound/rotodog.ogg"
+dest_files=[ "res://.import/rotodog.ogg-1c3ed71137848ce0709507c90871aad4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

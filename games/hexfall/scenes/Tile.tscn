@@ -3,6 +3,7 @@
 [ext_resource path="res://games/hexfall/sprites/Hex/fantasyhextiles_v3.png" type="Texture" id=1]
 [ext_resource path="res://games/hexfall/scripts/Tile.gd" type="Script" id=2]
 
+
 [node name="Tile" type="StaticBody2D"]
 input_pickable = true
 collision_layer = 2

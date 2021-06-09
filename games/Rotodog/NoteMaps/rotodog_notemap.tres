@@ -1,0 +1,6619 @@
+[gd_resource type="Resource" load_steps=604 format=2]
+
+[ext_resource path="res://games/Rotodog/CustomResources/EventNote.gd" type="Script" id=1]
+[ext_resource path="res://games/Rotodog/CustomResources/NoteArray.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+time = 8.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+time = 10.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+time = 12.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+time = 12.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+time = 14.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 1 )
+time = 14.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 1 )
+time = 16.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 1 )
+time = 18.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 1 )
+time = 18.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 1 )
+time = 20.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 1 )
+time = 22.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 1 )
+time = 22.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 1 )
+time = 24.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 1 )
+time = 25.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 1 )
+time = 26.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 1 )
+time = 27.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 1 )
+time = 28.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 1 )
+time = 29.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 1 )
+time = 30.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 1 )
+time = 31.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 1 )
+time = 32.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 1 )
+time = 33.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 1 )
+time = 34.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 1 )
+time = 35.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 1 )
+time = 36.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 1 )
+time = 37.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 1 )
+time = 38.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 1 )
+time = 39.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 1 )
+time = 40.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 1 )
+time = 40.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 1 )
+time = 41.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 1 )
+time = 41.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 1 )
+time = 42.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 1 )
+time = 42.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 1 )
+time = 43.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 1 )
+time = 43.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 1 )
+time = 44.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 1 )
+time = 44.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 1 )
+time = 45.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 1 )
+time = 45.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 1 )
+time = 46.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 1 )
+time = 46.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 1 )
+time = 48.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 1 )
+time = 48.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 1 )
+time = 49.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 1 )
+time = 49.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 1 )
+time = 50.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 1 )
+time = 50.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 1 )
+time = 51.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=50]
+script = ExtResource( 1 )
+time = 51.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 1 )
+time = 52.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=52]
+script = ExtResource( 1 )
+time = 52.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=53]
+script = ExtResource( 1 )
+time = 53.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=54]
+script = ExtResource( 1 )
+time = 53.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=55]
+script = ExtResource( 1 )
+time = 54.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=56]
+script = ExtResource( 1 )
+time = 54.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=57]
+script = ExtResource( 1 )
+time = 55.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=58]
+script = ExtResource( 1 )
+time = 55.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=59]
+script = ExtResource( 1 )
+time = 56.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=60]
+script = ExtResource( 1 )
+time = 56.625
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=61]
+script = ExtResource( 1 )
+time = 57.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=62]
+script = ExtResource( 1 )
+time = 57.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=63]
+script = ExtResource( 1 )
+time = 58.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=64]
+script = ExtResource( 1 )
+time = 58.625
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=65]
+script = ExtResource( 1 )
+time = 59.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=66]
+script = ExtResource( 1 )
+time = 59.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=67]
+script = ExtResource( 1 )
+time = 60.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=68]
+script = ExtResource( 1 )
+time = 60.625
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=69]
+script = ExtResource( 1 )
+time = 61.125
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=70]
+script = ExtResource( 1 )
+time = 61.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=71]
+script = ExtResource( 1 )
+time = 62.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=72]
+script = ExtResource( 1 )
+time = 62.625
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=73]
+script = ExtResource( 1 )
+time = 63.125
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=74]
+script = ExtResource( 1 )
+time = 63.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=75]
+script = ExtResource( 1 )
+time = 64.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=76]
+script = ExtResource( 1 )
+time = 64.25
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=77]
+script = ExtResource( 1 )
+time = 64.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=78]
+script = ExtResource( 1 )
+time = 64.875
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=79]
+script = ExtResource( 1 )
+time = 65.125
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=80]
+script = ExtResource( 1 )
+time = 65.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=81]
+script = ExtResource( 1 )
+time = 65.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=82]
+script = ExtResource( 1 )
+time = 66.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=83]
+script = ExtResource( 1 )
+time = 66.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=84]
+script = ExtResource( 1 )
+time = 67.125
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=85]
+script = ExtResource( 1 )
+time = 67.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=86]
+script = ExtResource( 1 )
+time = 67.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=87]
+script = ExtResource( 1 )
+time = 68.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=88]
+script = ExtResource( 1 )
+time = 68.25
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=89]
+script = ExtResource( 1 )
+time = 68.625
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=90]
+script = ExtResource( 1 )
+time = 68.875
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=91]
+script = ExtResource( 1 )
+time = 69.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=92]
+script = ExtResource( 1 )
+time = 70.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=93]
+script = ExtResource( 1 )
+time = 70.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=94]
+script = ExtResource( 1 )
+time = 70.625
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=95]
+script = ExtResource( 1 )
+time = 70.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=96]
+script = ExtResource( 1 )
+time = 71.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=97]
+script = ExtResource( 1 )
+time = 72.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=98]
+script = ExtResource( 1 )
+time = 72.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=99]
+script = ExtResource( 1 )
+time = 73.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=100]
+script = ExtResource( 1 )
+time = 73.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=101]
+script = ExtResource( 1 )
+time = 74.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=102]
+script = ExtResource( 1 )
+time = 74.625
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=103]
+script = ExtResource( 1 )
+time = 75.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=104]
+script = ExtResource( 1 )
+time = 75.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=105]
+script = ExtResource( 1 )
+time = 76.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=106]
+script = ExtResource( 1 )
+time = 76.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=107]
+script = ExtResource( 1 )
+time = 76.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=108]
+script = ExtResource( 1 )
+time = 77.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=109]
+script = ExtResource( 1 )
+time = 78.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=110]
+script = ExtResource( 1 )
+time = 78.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=111]
+script = ExtResource( 1 )
+time = 78.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=112]
+script = ExtResource( 1 )
+time = 79.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=113]
+script = ExtResource( 1 )
+time = 80.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=114]
+script = ExtResource( 1 )
+time = 80.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=115]
+script = ExtResource( 1 )
+time = 80.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=116]
+script = ExtResource( 1 )
+time = 81.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=117]
+script = ExtResource( 1 )
+time = 81.75
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=118]
+script = ExtResource( 1 )
+time = 82.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=119]
+script = ExtResource( 1 )
+time = 82.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=120]
+script = ExtResource( 1 )
+time = 82.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=121]
+script = ExtResource( 1 )
+time = 83.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=122]
+script = ExtResource( 1 )
+time = 84.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=123]
+script = ExtResource( 1 )
+time = 84.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=124]
+script = ExtResource( 1 )
+time = 84.875
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=125]
+script = ExtResource( 1 )
+time = 85.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=126]
+script = ExtResource( 1 )
+time = 85.75
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=127]
+script = ExtResource( 1 )
+time = 86.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=128]
+script = ExtResource( 1 )
+time = 86.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=129]
+script = ExtResource( 1 )
+time = 86.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=130]
+script = ExtResource( 1 )
+time = 87.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=131]
+script = ExtResource( 1 )
+time = 87.75
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=132]
+script = ExtResource( 1 )
+time = 88.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=133]
+script = ExtResource( 1 )
+time = 88.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=134]
+script = ExtResource( 1 )
+time = 89.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=135]
+script = ExtResource( 1 )
+time = 89.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=136]
+script = ExtResource( 1 )
+time = 90.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=137]
+script = ExtResource( 1 )
+time = 90.25
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=138]
+script = ExtResource( 1 )
+time = 90.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=139]
+script = ExtResource( 1 )
+time = 91.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=140]
+script = ExtResource( 1 )
+time = 91.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=141]
+script = ExtResource( 1 )
+time = 92.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=142]
+script = ExtResource( 1 )
+time = 92.25
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=143]
+script = ExtResource( 1 )
+time = 92.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=144]
+script = ExtResource( 1 )
+time = 93.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=145]
+script = ExtResource( 1 )
+time = 93.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=146]
+script = ExtResource( 1 )
+time = 94.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=147]
+script = ExtResource( 1 )
+time = 94.25
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=148]
+script = ExtResource( 1 )
+time = 94.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=149]
+script = ExtResource( 1 )
+time = 95.125
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=150]
+script = ExtResource( 1 )
+time = 95.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=151]
+script = ExtResource( 1 )
+time = 96.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=152]
+script = ExtResource( 1 )
+time = 96.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=153]
+script = ExtResource( 1 )
+time = 96.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=154]
+script = ExtResource( 1 )
+time = 97.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=155]
+script = ExtResource( 1 )
+time = 97.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=156]
+script = ExtResource( 1 )
+time = 97.75
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=157]
+script = ExtResource( 1 )
+time = 98.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=158]
+script = ExtResource( 1 )
+time = 98.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=159]
+script = ExtResource( 1 )
+time = 98.875
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=160]
+script = ExtResource( 1 )
+time = 99.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=161]
+script = ExtResource( 1 )
+time = 99.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=162]
+script = ExtResource( 1 )
+time = 99.75
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=163]
+script = ExtResource( 1 )
+time = 100.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=164]
+script = ExtResource( 1 )
+time = 100.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=165]
+script = ExtResource( 1 )
+time = 100.875
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=166]
+script = ExtResource( 1 )
+time = 101.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=167]
+script = ExtResource( 1 )
+time = 101.75
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=168]
+script = ExtResource( 1 )
+time = 102.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=169]
+script = ExtResource( 1 )
+time = 102.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=170]
+script = ExtResource( 1 )
+time = 102.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=171]
+script = ExtResource( 1 )
+time = 103.375
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=172]
+script = ExtResource( 1 )
+time = 103.75
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=173]
+script = ExtResource( 1 )
+time = 104.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=174]
+script = ExtResource( 1 )
+time = 104.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=175]
+script = ExtResource( 1 )
+time = 105.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=176]
+script = ExtResource( 1 )
+time = 105.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=177]
+script = ExtResource( 1 )
+time = 106.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=178]
+script = ExtResource( 1 )
+time = 106.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=179]
+script = ExtResource( 1 )
+time = 107.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=180]
+script = ExtResource( 1 )
+time = 107.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=181]
+script = ExtResource( 1 )
+time = 108.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=182]
+script = ExtResource( 1 )
+time = 108.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=183]
+script = ExtResource( 1 )
+time = 109.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=184]
+script = ExtResource( 1 )
+time = 109.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=185]
+script = ExtResource( 1 )
+time = 110.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=186]
+script = ExtResource( 1 )
+time = 110.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=187]
+script = ExtResource( 1 )
+time = 111.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=188]
+script = ExtResource( 1 )
+time = 111.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=189]
+script = ExtResource( 1 )
+time = 112.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=190]
+script = ExtResource( 1 )
+time = 112.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=191]
+script = ExtResource( 1 )
+time = 114.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=192]
+script = ExtResource( 1 )
+time = 114.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=193]
+script = ExtResource( 1 )
+time = 116.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=194]
+script = ExtResource( 1 )
+time = 116.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=195]
+script = ExtResource( 1 )
+time = 117.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=196]
+script = ExtResource( 1 )
+time = 117.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=197]
+script = ExtResource( 1 )
+time = 118.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=198]
+script = ExtResource( 1 )
+time = 118.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=199]
+script = ExtResource( 1 )
+time = 119.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=200]
+script = ExtResource( 1 )
+time = 119.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=201]
+script = ExtResource( 1 )
+time = 120.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=202]
+script = ExtResource( 1 )
+time = 120.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=203]
+script = ExtResource( 1 )
+time = 121.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=204]
+script = ExtResource( 1 )
+time = 121.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=205]
+script = ExtResource( 1 )
+time = 122.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=206]
+script = ExtResource( 1 )
+time = 122.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=207]
+script = ExtResource( 1 )
+time = 122.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=208]
+script = ExtResource( 1 )
+time = 123.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=209]
+script = ExtResource( 1 )
+time = 123.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=210]
+script = ExtResource( 1 )
+time = 124.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=211]
+script = ExtResource( 1 )
+time = 124.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=212]
+script = ExtResource( 1 )
+time = 124.875
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=213]
+script = ExtResource( 1 )
+time = 125.375
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=214]
+script = ExtResource( 1 )
+time = 125.75
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=215]
+script = ExtResource( 1 )
+time = 126.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=216]
+script = ExtResource( 1 )
+time = 126.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=217]
+script = ExtResource( 1 )
+time = 126.875
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=218]
+script = ExtResource( 1 )
+time = 127.375
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=219]
+script = ExtResource( 1 )
+time = 127.5
+duration = 3.0
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=220]
+script = ExtResource( 1 )
+time = 128.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=221]
+script = ExtResource( 1 )
+time = 128.5
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=222]
+script = ExtResource( 1 )
+time = 129.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=223]
+script = ExtResource( 1 )
+time = 129.625
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=224]
+script = ExtResource( 1 )
+time = 130.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=225]
+script = ExtResource( 1 )
+time = 130.25
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=226]
+script = ExtResource( 1 )
+time = 131.0
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=227]
+script = ExtResource( 1 )
+time = 131.625
+duration = 0.125
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=228]
+script = ExtResource( 1 )
+time = 132.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=229]
+script = ExtResource( 1 )
+time = 132.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=230]
+script = ExtResource( 1 )
+time = 133.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=231]
+script = ExtResource( 1 )
+time = 133.5
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=232]
+script = ExtResource( 1 )
+time = 134.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=233]
+script = ExtResource( 1 )
+time = 134.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=234]
+script = ExtResource( 1 )
+time = 135.0
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=235]
+script = ExtResource( 1 )
+time = 135.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=236]
+script = ExtResource( 1 )
+time = 136.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=237]
+script = ExtResource( 1 )
+time = 138.0
+duration = 0.125
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=238]
+script = ExtResource( 1 )
+time = 138.5
+duration = 0.125
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=239]
+script = ExtResource( 1 )
+time = 176.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=240]
+script = ExtResource( 1 )
+time = 176.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=241]
+script = ExtResource( 1 )
+time = 176.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=242]
+script = ExtResource( 1 )
+time = 177.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=243]
+script = ExtResource( 1 )
+time = 177.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=244]
+script = ExtResource( 1 )
+time = 177.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=245]
+script = ExtResource( 1 )
+time = 177.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=246]
+script = ExtResource( 1 )
+time = 178.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=247]
+script = ExtResource( 1 )
+time = 178.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=248]
+script = ExtResource( 1 )
+time = 179.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=249]
+script = ExtResource( 1 )
+time = 179.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=250]
+script = ExtResource( 1 )
+time = 179.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=251]
+script = ExtResource( 1 )
+time = 180.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=252]
+script = ExtResource( 1 )
+time = 180.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=253]
+script = ExtResource( 1 )
+time = 180.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=254]
+script = ExtResource( 1 )
+time = 181.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=255]
+script = ExtResource( 1 )
+time = 181.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=256]
+script = ExtResource( 1 )
+time = 181.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=257]
+script = ExtResource( 1 )
+time = 181.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=258]
+script = ExtResource( 1 )
+time = 182.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=259]
+script = ExtResource( 1 )
+time = 182.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=260]
+script = ExtResource( 1 )
+time = 183.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=261]
+script = ExtResource( 1 )
+time = 183.25
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=262]
+script = ExtResource( 1 )
+time = 183.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=263]
+script = ExtResource( 1 )
+time = 184.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=264]
+script = ExtResource( 1 )
+time = 184.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=265]
+script = ExtResource( 1 )
+time = 185.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=266]
+script = ExtResource( 1 )
+time = 185.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=267]
+script = ExtResource( 1 )
+time = 186.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=268]
+script = ExtResource( 1 )
+time = 186.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=269]
+script = ExtResource( 1 )
+time = 187.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=270]
+script = ExtResource( 1 )
+time = 187.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=271]
+script = ExtResource( 1 )
+time = 188.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=272]
+script = ExtResource( 1 )
+time = 188.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=273]
+script = ExtResource( 1 )
+time = 189.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=274]
+script = ExtResource( 1 )
+time = 189.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=275]
+script = ExtResource( 1 )
+time = 190.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=276]
+script = ExtResource( 1 )
+time = 190.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=277]
+script = ExtResource( 1 )
+time = 191.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=278]
+script = ExtResource( 1 )
+time = 191.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=279]
+script = ExtResource( 1 )
+time = 192.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=280]
+script = ExtResource( 1 )
+time = 192.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=281]
+script = ExtResource( 1 )
+time = 192.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=282]
+script = ExtResource( 1 )
+time = 193.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=283]
+script = ExtResource( 1 )
+time = 193.25
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=284]
+script = ExtResource( 1 )
+time = 193.625
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=285]
+script = ExtResource( 1 )
+time = 194.125
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=286]
+script = ExtResource( 1 )
+time = 194.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=287]
+script = ExtResource( 1 )
+time = 194.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=288]
+script = ExtResource( 1 )
+time = 195.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=289]
+script = ExtResource( 1 )
+time = 195.25
+duration = 0.375
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=290]
+script = ExtResource( 1 )
+time = 195.625
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=291]
+script = ExtResource( 1 )
+time = 196.125
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=292]
+script = ExtResource( 1 )
+time = 196.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=293]
+script = ExtResource( 1 )
+time = 196.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=294]
+script = ExtResource( 1 )
+time = 197.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=295]
+script = ExtResource( 1 )
+time = 197.25
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=296]
+script = ExtResource( 1 )
+time = 197.625
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=297]
+script = ExtResource( 1 )
+time = 198.125
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=298]
+script = ExtResource( 1 )
+time = 198.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=299]
+script = ExtResource( 1 )
+time = 198.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=300]
+script = ExtResource( 1 )
+time = 199.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=301]
+script = ExtResource( 1 )
+time = 199.25
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=302]
+script = ExtResource( 1 )
+time = 199.625
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=303]
+script = ExtResource( 1 )
+time = 200.125
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=304]
+script = ExtResource( 1 )
+time = 200.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=305]
+script = ExtResource( 1 )
+time = 200.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=306]
+script = ExtResource( 1 )
+time = 201.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=307]
+script = ExtResource( 1 )
+time = 201.25
+duration = 0.375
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=308]
+script = ExtResource( 1 )
+time = 201.625
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=309]
+script = ExtResource( 1 )
+time = 202.125
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=310]
+script = ExtResource( 1 )
+time = 202.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=311]
+script = ExtResource( 1 )
+time = 202.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=312]
+script = ExtResource( 1 )
+time = 203.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=313]
+script = ExtResource( 1 )
+time = 203.25
+duration = 0.375
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=314]
+script = ExtResource( 1 )
+time = 203.625
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=315]
+script = ExtResource( 1 )
+time = 204.125
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=316]
+script = ExtResource( 1 )
+time = 204.375
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=317]
+script = ExtResource( 1 )
+time = 204.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=318]
+script = ExtResource( 1 )
+time = 205.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=319]
+script = ExtResource( 1 )
+time = 205.25
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=320]
+script = ExtResource( 1 )
+time = 205.625
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=321]
+script = ExtResource( 1 )
+time = 206.125
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=322]
+script = ExtResource( 1 )
+time = 206.375
+duration = 0.375
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=323]
+script = ExtResource( 1 )
+time = 206.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=324]
+script = ExtResource( 1 )
+time = 207.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=325]
+script = ExtResource( 1 )
+time = 207.25
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=326]
+script = ExtResource( 1 )
+time = 207.625
+duration = 0.375
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=327]
+script = ExtResource( 1 )
+time = 208.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=328]
+script = ExtResource( 1 )
+time = 208.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=329]
+script = ExtResource( 1 )
+time = 208.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=330]
+script = ExtResource( 1 )
+time = 209.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=331]
+script = ExtResource( 1 )
+time = 209.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=332]
+script = ExtResource( 1 )
+time = 209.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=333]
+script = ExtResource( 1 )
+time = 209.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=334]
+script = ExtResource( 1 )
+time = 210.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=335]
+script = ExtResource( 1 )
+time = 210.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=336]
+script = ExtResource( 1 )
+time = 211.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=337]
+script = ExtResource( 1 )
+time = 211.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=338]
+script = ExtResource( 1 )
+time = 211.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=339]
+script = ExtResource( 1 )
+time = 212.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=340]
+script = ExtResource( 1 )
+time = 212.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=341]
+script = ExtResource( 1 )
+time = 212.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=342]
+script = ExtResource( 1 )
+time = 213.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=343]
+script = ExtResource( 1 )
+time = 213.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=344]
+script = ExtResource( 1 )
+time = 213.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=345]
+script = ExtResource( 1 )
+time = 213.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=346]
+script = ExtResource( 1 )
+time = 214.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=347]
+script = ExtResource( 1 )
+time = 214.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=348]
+script = ExtResource( 1 )
+time = 215.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=349]
+script = ExtResource( 1 )
+time = 215.25
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=350]
+script = ExtResource( 1 )
+time = 215.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=351]
+script = ExtResource( 1 )
+time = 216.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=352]
+script = ExtResource( 1 )
+time = 216.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=353]
+script = ExtResource( 1 )
+time = 216.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=354]
+script = ExtResource( 1 )
+time = 216.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=355]
+script = ExtResource( 1 )
+time = 217.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=356]
+script = ExtResource( 1 )
+time = 217.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=357]
+script = ExtResource( 1 )
+time = 217.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=358]
+script = ExtResource( 1 )
+time = 217.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=359]
+script = ExtResource( 1 )
+time = 218.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=360]
+script = ExtResource( 1 )
+time = 218.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=361]
+script = ExtResource( 1 )
+time = 218.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=362]
+script = ExtResource( 1 )
+time = 218.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=363]
+script = ExtResource( 1 )
+time = 219.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=364]
+script = ExtResource( 1 )
+time = 219.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=365]
+script = ExtResource( 1 )
+time = 219.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=366]
+script = ExtResource( 1 )
+time = 219.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=367]
+script = ExtResource( 1 )
+time = 220.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=368]
+script = ExtResource( 1 )
+time = 220.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=369]
+script = ExtResource( 1 )
+time = 220.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=370]
+script = ExtResource( 1 )
+time = 220.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=371]
+script = ExtResource( 1 )
+time = 221.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=372]
+script = ExtResource( 1 )
+time = 221.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=373]
+script = ExtResource( 1 )
+time = 221.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=374]
+script = ExtResource( 1 )
+time = 221.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=375]
+script = ExtResource( 1 )
+time = 222.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=376]
+script = ExtResource( 1 )
+time = 222.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=377]
+script = ExtResource( 1 )
+time = 222.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=378]
+script = ExtResource( 1 )
+time = 222.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=379]
+script = ExtResource( 1 )
+time = 223.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=380]
+script = ExtResource( 1 )
+time = 223.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=381]
+script = ExtResource( 1 )
+time = 223.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=382]
+script = ExtResource( 1 )
+time = 224.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=383]
+script = ExtResource( 1 )
+time = 224.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=384]
+script = ExtResource( 1 )
+time = 224.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=385]
+script = ExtResource( 1 )
+time = 225.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=386]
+script = ExtResource( 1 )
+time = 225.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=387]
+script = ExtResource( 1 )
+time = 225.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=388]
+script = ExtResource( 1 )
+time = 225.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=389]
+script = ExtResource( 1 )
+time = 228.25
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=390]
+script = ExtResource( 1 )
+time = 228.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=391]
+script = ExtResource( 1 )
+time = 229.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=392]
+script = ExtResource( 1 )
+time = 229.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=393]
+script = ExtResource( 1 )
+time = 230.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=394]
+script = ExtResource( 1 )
+time = 230.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=395]
+script = ExtResource( 1 )
+time = 231.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=396]
+script = ExtResource( 1 )
+time = 232.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=397]
+script = ExtResource( 1 )
+time = 232.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=398]
+script = ExtResource( 1 )
+time = 232.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=399]
+script = ExtResource( 1 )
+time = 233.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=400]
+script = ExtResource( 1 )
+time = 233.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=401]
+script = ExtResource( 1 )
+time = 233.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=402]
+script = ExtResource( 1 )
+time = 233.75
+duration = 1.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=403]
+script = ExtResource( 1 )
+time = 236.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=404]
+script = ExtResource( 1 )
+time = 236.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=405]
+script = ExtResource( 1 )
+time = 237.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=406]
+script = ExtResource( 1 )
+time = 237.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=407]
+script = ExtResource( 1 )
+time = 238.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=408]
+script = ExtResource( 1 )
+time = 238.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=409]
+script = ExtResource( 1 )
+time = 239.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=410]
+script = ExtResource( 1 )
+time = 240.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=411]
+script = ExtResource( 1 )
+time = 240.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=412]
+script = ExtResource( 1 )
+time = 240.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=413]
+script = ExtResource( 1 )
+time = 241.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=414]
+script = ExtResource( 1 )
+time = 241.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=415]
+script = ExtResource( 1 )
+time = 241.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=416]
+script = ExtResource( 1 )
+time = 241.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=417]
+script = ExtResource( 1 )
+time = 244.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=418]
+script = ExtResource( 1 )
+time = 244.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=419]
+script = ExtResource( 1 )
+time = 245.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=420]
+script = ExtResource( 1 )
+time = 245.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=421]
+script = ExtResource( 1 )
+time = 246.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=422]
+script = ExtResource( 1 )
+time = 246.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=423]
+script = ExtResource( 1 )
+time = 247.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=424]
+script = ExtResource( 1 )
+time = 248.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=425]
+script = ExtResource( 1 )
+time = 248.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=426]
+script = ExtResource( 1 )
+time = 248.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=427]
+script = ExtResource( 1 )
+time = 249.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=428]
+script = ExtResource( 1 )
+time = 249.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=429]
+script = ExtResource( 1 )
+time = 249.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=430]
+script = ExtResource( 1 )
+time = 249.75
+duration = 1.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=431]
+script = ExtResource( 1 )
+time = 252.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=432]
+script = ExtResource( 1 )
+time = 252.25
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=433]
+script = ExtResource( 1 )
+time = 252.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=434]
+script = ExtResource( 1 )
+time = 252.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=435]
+script = ExtResource( 1 )
+time = 253.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=436]
+script = ExtResource( 1 )
+time = 253.25
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=437]
+script = ExtResource( 1 )
+time = 253.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=438]
+script = ExtResource( 1 )
+time = 254.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=439]
+script = ExtResource( 1 )
+time = 254.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=440]
+script = ExtResource( 1 )
+time = 255.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=441]
+script = ExtResource( 1 )
+time = 255.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=442]
+script = ExtResource( 1 )
+time = 255.5
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=443]
+script = ExtResource( 1 )
+time = 256.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=444]
+script = ExtResource( 1 )
+time = 256.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=445]
+script = ExtResource( 1 )
+time = 256.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=446]
+script = ExtResource( 1 )
+time = 257.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=447]
+script = ExtResource( 1 )
+time = 257.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=448]
+script = ExtResource( 1 )
+time = 257.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=449]
+script = ExtResource( 1 )
+time = 257.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=450]
+script = ExtResource( 1 )
+time = 260.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=451]
+script = ExtResource( 1 )
+time = 260.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=452]
+script = ExtResource( 1 )
+time = 260.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=453]
+script = ExtResource( 1 )
+time = 261.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=454]
+script = ExtResource( 1 )
+time = 261.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=455]
+script = ExtResource( 1 )
+time = 261.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=456]
+script = ExtResource( 1 )
+time = 261.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=457]
+script = ExtResource( 1 )
+time = 262.25
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=458]
+script = ExtResource( 1 )
+time = 262.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=459]
+script = ExtResource( 1 )
+time = 263.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=460]
+script = ExtResource( 1 )
+time = 263.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=461]
+script = ExtResource( 1 )
+time = 263.5
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=462]
+script = ExtResource( 1 )
+time = 264.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=463]
+script = ExtResource( 1 )
+time = 264.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=464]
+script = ExtResource( 1 )
+time = 264.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=465]
+script = ExtResource( 1 )
+time = 265.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=466]
+script = ExtResource( 1 )
+time = 265.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=467]
+script = ExtResource( 1 )
+time = 265.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=468]
+script = ExtResource( 1 )
+time = 265.75
+duration = 1.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=469]
+script = ExtResource( 1 )
+time = 268.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=470]
+script = ExtResource( 1 )
+time = 268.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=471]
+script = ExtResource( 1 )
+time = 268.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=472]
+script = ExtResource( 1 )
+time = 269.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=473]
+script = ExtResource( 1 )
+time = 269.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=474]
+script = ExtResource( 1 )
+time = 269.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=475]
+script = ExtResource( 1 )
+time = 269.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=476]
+script = ExtResource( 1 )
+time = 270.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=477]
+script = ExtResource( 1 )
+time = 270.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=478]
+script = ExtResource( 1 )
+time = 271.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=479]
+script = ExtResource( 1 )
+time = 271.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=480]
+script = ExtResource( 1 )
+time = 271.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=481]
+script = ExtResource( 1 )
+time = 272.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=482]
+script = ExtResource( 1 )
+time = 272.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=483]
+script = ExtResource( 1 )
+time = 272.75
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=484]
+script = ExtResource( 1 )
+time = 273.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=485]
+script = ExtResource( 1 )
+time = 273.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=486]
+script = ExtResource( 1 )
+time = 273.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=487]
+script = ExtResource( 1 )
+time = 273.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=488]
+script = ExtResource( 1 )
+time = 276.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=489]
+script = ExtResource( 1 )
+time = 276.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=490]
+script = ExtResource( 1 )
+time = 276.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=491]
+script = ExtResource( 1 )
+time = 277.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=492]
+script = ExtResource( 1 )
+time = 277.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=493]
+script = ExtResource( 1 )
+time = 277.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=494]
+script = ExtResource( 1 )
+time = 277.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=495]
+script = ExtResource( 1 )
+time = 278.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=496]
+script = ExtResource( 1 )
+time = 278.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=497]
+script = ExtResource( 1 )
+time = 279.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=498]
+script = ExtResource( 1 )
+time = 279.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=499]
+script = ExtResource( 1 )
+time = 279.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=500]
+script = ExtResource( 1 )
+time = 280.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=501]
+script = ExtResource( 1 )
+time = 280.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=502]
+script = ExtResource( 1 )
+time = 280.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=503]
+script = ExtResource( 1 )
+time = 281.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=504]
+script = ExtResource( 1 )
+time = 281.25
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=505]
+script = ExtResource( 1 )
+time = 281.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=506]
+script = ExtResource( 1 )
+time = 281.75
+duration = 1.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=507]
+script = ExtResource( 1 )
+time = 284.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=508]
+script = ExtResource( 1 )
+time = 284.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=509]
+script = ExtResource( 1 )
+time = 284.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=510]
+script = ExtResource( 1 )
+time = 285.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=511]
+script = ExtResource( 1 )
+time = 285.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=512]
+script = ExtResource( 1 )
+time = 285.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=513]
+script = ExtResource( 1 )
+time = 285.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=514]
+script = ExtResource( 1 )
+time = 286.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=515]
+script = ExtResource( 1 )
+time = 286.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=516]
+script = ExtResource( 1 )
+time = 287.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=517]
+script = ExtResource( 1 )
+time = 287.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=518]
+script = ExtResource( 1 )
+time = 287.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=519]
+script = ExtResource( 1 )
+time = 288.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=520]
+script = ExtResource( 1 )
+time = 288.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=521]
+script = ExtResource( 1 )
+time = 288.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=522]
+script = ExtResource( 1 )
+time = 289.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=523]
+script = ExtResource( 1 )
+time = 289.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=524]
+script = ExtResource( 1 )
+time = 289.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=525]
+script = ExtResource( 1 )
+time = 289.75
+duration = 1.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=526]
+script = ExtResource( 1 )
+time = 292.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=527]
+script = ExtResource( 1 )
+time = 292.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=528]
+script = ExtResource( 1 )
+time = 292.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=529]
+script = ExtResource( 1 )
+time = 293.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=530]
+script = ExtResource( 1 )
+time = 293.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=531]
+script = ExtResource( 1 )
+time = 293.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=532]
+script = ExtResource( 1 )
+time = 293.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=533]
+script = ExtResource( 1 )
+time = 294.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=534]
+script = ExtResource( 1 )
+time = 294.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=535]
+script = ExtResource( 1 )
+time = 295.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=536]
+script = ExtResource( 1 )
+time = 295.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=537]
+script = ExtResource( 1 )
+time = 295.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=538]
+script = ExtResource( 1 )
+time = 296.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=539]
+script = ExtResource( 1 )
+time = 296.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=540]
+script = ExtResource( 1 )
+time = 296.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=541]
+script = ExtResource( 1 )
+time = 297.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=542]
+script = ExtResource( 1 )
+time = 297.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=543]
+script = ExtResource( 1 )
+time = 297.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=544]
+script = ExtResource( 1 )
+time = 297.75
+duration = 1.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=545]
+script = ExtResource( 1 )
+time = 300.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=546]
+script = ExtResource( 1 )
+time = 300.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=547]
+script = ExtResource( 1 )
+time = 300.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=548]
+script = ExtResource( 1 )
+time = 301.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=549]
+script = ExtResource( 1 )
+time = 301.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=550]
+script = ExtResource( 1 )
+time = 301.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=551]
+script = ExtResource( 1 )
+time = 301.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=552]
+script = ExtResource( 1 )
+time = 302.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=553]
+script = ExtResource( 1 )
+time = 302.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=554]
+script = ExtResource( 1 )
+time = 303.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=555]
+script = ExtResource( 1 )
+time = 303.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=556]
+script = ExtResource( 1 )
+time = 303.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=557]
+script = ExtResource( 1 )
+time = 304.0
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=558]
+script = ExtResource( 1 )
+time = 304.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=559]
+script = ExtResource( 1 )
+time = 304.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=560]
+script = ExtResource( 1 )
+time = 305.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=561]
+script = ExtResource( 1 )
+time = 305.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=562]
+script = ExtResource( 1 )
+time = 305.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=563]
+script = ExtResource( 1 )
+time = 305.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=564]
+script = ExtResource( 1 )
+time = 308.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=565]
+script = ExtResource( 1 )
+time = 308.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=566]
+script = ExtResource( 1 )
+time = 308.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=567]
+script = ExtResource( 1 )
+time = 309.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=568]
+script = ExtResource( 1 )
+time = 309.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=569]
+script = ExtResource( 1 )
+time = 309.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=570]
+script = ExtResource( 1 )
+time = 309.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=571]
+script = ExtResource( 1 )
+time = 310.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=572]
+script = ExtResource( 1 )
+time = 310.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=573]
+script = ExtResource( 1 )
+time = 311.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=574]
+script = ExtResource( 1 )
+time = 311.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=575]
+script = ExtResource( 1 )
+time = 311.5
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=576]
+script = ExtResource( 1 )
+time = 312.0
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=577]
+script = ExtResource( 1 )
+time = 312.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=578]
+script = ExtResource( 1 )
+time = 312.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=579]
+script = ExtResource( 1 )
+time = 313.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=580]
+script = ExtResource( 1 )
+time = 313.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=581]
+script = ExtResource( 1 )
+time = 313.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=582]
+script = ExtResource( 1 )
+time = 313.75
+duration = 1.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=583]
+script = ExtResource( 1 )
+time = 316.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=584]
+script = ExtResource( 1 )
+time = 316.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=585]
+script = ExtResource( 1 )
+time = 316.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=586]
+script = ExtResource( 1 )
+time = 317.0
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=587]
+script = ExtResource( 1 )
+time = 317.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=588]
+script = ExtResource( 1 )
+time = 317.5
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=589]
+script = ExtResource( 1 )
+time = 317.75
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=590]
+script = ExtResource( 1 )
+time = 318.25
+duration = 0.5
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=591]
+script = ExtResource( 1 )
+time = 318.75
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=592]
+script = ExtResource( 1 )
+time = 319.0
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=593]
+script = ExtResource( 1 )
+time = 319.25
+duration = 0.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=594]
+script = ExtResource( 1 )
+time = 319.5
+duration = 0.5
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=595]
+script = ExtResource( 1 )
+time = 320.0
+duration = 0.5
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=596]
+script = ExtResource( 1 )
+time = 320.5
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=597]
+script = ExtResource( 1 )
+time = 320.75
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=598]
+script = ExtResource( 1 )
+time = 321.0
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=599]
+script = ExtResource( 1 )
+time = 321.25
+duration = 0.25
+color = 0
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=600]
+script = ExtResource( 1 )
+time = 321.5
+duration = 0.25
+color = 1
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[sub_resource type="Resource" id=601]
+script = ExtResource( 1 )
+time = 321.75
+duration = 1.25
+color = 3
+anim_event = false
+animation_name = ""
+anim_player_path = ""
+meth_event = false
+method_name = ""
+
+[resource]
+script = ExtResource( 2 )
+notes = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ), SubResource( 128 ), SubResource( 129 ), SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ), SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ), SubResource( 141 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ), SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ), SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ), SubResource( 166 ), SubResource( 167 ), SubResource( 168 ), SubResource( 169 ), SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), SubResource( 174 ), SubResource( 175 ), SubResource( 176 ), SubResource( 177 ), SubResource( 178 ), SubResource( 179 ), SubResource( 180 ), SubResource( 181 ), SubResource( 182 ), SubResource( 183 ), SubResource( 184 ), SubResource( 185 ), SubResource( 186 ), SubResource( 187 ), SubResource( 188 ), SubResource( 189 ), SubResource( 190 ), SubResource( 191 ), SubResource( 192 ), SubResource( 193 ), SubResource( 194 ), SubResource( 195 ), SubResource( 196 ), SubResource( 197 ), SubResource( 198 ), SubResource( 199 ), SubResource( 200 ), SubResource( 201 ), SubResource( 202 ), SubResource( 203 ), SubResource( 204 ), SubResource( 205 ), SubResource( 206 ), SubResource( 207 ), SubResource( 208 ), SubResource( 209 ), SubResource( 210 ), SubResource( 211 ), SubResource( 212 ), SubResource( 213 ), SubResource( 214 ), SubResource( 215 ), SubResource( 216 ), SubResource( 217 ), SubResource( 218 ), SubResource( 219 ), SubResource( 220 ), SubResource( 221 ), SubResource( 222 ), SubResource( 223 ), SubResource( 224 ), SubResource( 225 ), SubResource( 226 ), SubResource( 227 ), SubResource( 228 ), SubResource( 229 ), SubResource( 230 ), SubResource( 231 ), SubResource( 232 ), SubResource( 233 ), SubResource( 234 ), SubResource( 235 ), SubResource( 236 ), SubResource( 237 ), SubResource( 238 ), SubResource( 239 ), SubResource( 240 ), SubResource( 241 ), SubResource( 242 ), SubResource( 243 ), SubResource( 244 ), SubResource( 245 ), SubResource( 246 ), SubResource( 247 ), SubResource( 248 ), SubResource( 249 ), SubResource( 250 ), SubResource( 251 ), SubResource( 252 ), SubResource( 253 ), SubResource( 254 ), SubResource( 255 ), SubResource( 256 ), SubResource( 257 ), SubResource( 258 ), SubResource( 259 ), SubResource( 260 ), SubResource( 261 ), SubResource( 262 ), SubResource( 263 ), SubResource( 264 ), SubResource( 265 ), SubResource( 266 ), SubResource( 267 ), SubResource( 268 ), SubResource( 269 ), SubResource( 270 ), SubResource( 271 ), SubResource( 272 ), SubResource( 273 ), SubResource( 274 ), SubResource( 275 ), SubResource( 276 ), SubResource( 277 ), SubResource( 278 ), SubResource( 279 ), SubResource( 280 ), SubResource( 281 ), SubResource( 282 ), SubResource( 283 ), SubResource( 284 ), SubResource( 285 ), SubResource( 286 ), SubResource( 287 ), SubResource( 288 ), SubResource( 289 ), SubResource( 290 ), SubResource( 291 ), SubResource( 292 ), SubResource( 293 ), SubResource( 294 ), SubResource( 295 ), SubResource( 296 ), SubResource( 297 ), SubResource( 298 ), SubResource( 299 ), SubResource( 300 ), SubResource( 301 ), SubResource( 302 ), SubResource( 303 ), SubResource( 304 ), SubResource( 305 ), SubResource( 306 ), SubResource( 307 ), SubResource( 308 ), SubResource( 309 ), SubResource( 310 ), SubResource( 311 ), SubResource( 312 ), SubResource( 313 ), SubResource( 314 ), SubResource( 315 ), SubResource( 316 ), SubResource( 317 ), SubResource( 318 ), SubResource( 319 ), SubResource( 320 ), SubResource( 321 ), SubResource( 322 ), SubResource( 323 ), SubResource( 324 ), SubResource( 325 ), SubResource( 326 ), SubResource( 327 ), SubResource( 328 ), SubResource( 329 ), SubResource( 330 ), SubResource( 331 ), SubResource( 332 ), SubResource( 333 ), SubResource( 334 ), SubResource( 335 ), SubResource( 336 ), SubResource( 337 ), SubResource( 338 ), SubResource( 339 ), SubResource( 340 ), SubResource( 341 ), SubResource( 342 ), SubResource( 343 ), SubResource( 344 ), SubResource( 345 ), SubResource( 346 ), SubResource( 347 ), SubResource( 348 ), SubResource( 349 ), SubResource( 350 ), SubResource( 351 ), SubResource( 352 ), SubResource( 353 ), SubResource( 354 ), SubResource( 355 ), SubResource( 356 ), SubResource( 357 ), SubResource( 358 ), SubResource( 359 ), SubResource( 360 ), SubResource( 361 ), SubResource( 362 ), SubResource( 363 ), SubResource( 364 ), SubResource( 365 ), SubResource( 366 ), SubResource( 367 ), SubResource( 368 ), SubResource( 369 ), SubResource( 370 ), SubResource( 371 ), SubResource( 372 ), SubResource( 373 ), SubResource( 374 ), SubResource( 375 ), SubResource( 376 ), SubResource( 377 ), SubResource( 378 ), SubResource( 379 ), SubResource( 380 ), SubResource( 381 ), SubResource( 382 ), SubResource( 383 ), SubResource( 384 ), SubResource( 385 ), SubResource( 386 ), SubResource( 387 ), SubResource( 388 ), SubResource( 389 ), SubResource( 390 ), SubResource( 391 ), SubResource( 392 ), SubResource( 393 ), SubResource( 394 ), SubResource( 395 ), SubResource( 396 ), SubResource( 397 ), SubResource( 398 ), SubResource( 399 ), SubResource( 400 ), SubResource( 401 ), SubResource( 402 ), SubResource( 403 ), SubResource( 404 ), SubResource( 405 ), SubResource( 406 ), SubResource( 407 ), SubResource( 408 ), SubResource( 409 ), SubResource( 410 ), SubResource( 411 ), SubResource( 412 ), SubResource( 413 ), SubResource( 414 ), SubResource( 415 ), SubResource( 416 ), SubResource( 417 ), SubResource( 418 ), SubResource( 419 ), SubResource( 420 ), SubResource( 421 ), SubResource( 422 ), SubResource( 423 ), SubResource( 424 ), SubResource( 425 ), SubResource( 426 ), SubResource( 427 ), SubResource( 428 ), SubResource( 429 ), SubResource( 430 ), SubResource( 431 ), SubResource( 432 ), SubResource( 433 ), SubResource( 434 ), SubResource( 435 ), SubResource( 436 ), SubResource( 437 ), SubResource( 438 ), SubResource( 439 ), SubResource( 440 ), SubResource( 441 ), SubResource( 442 ), SubResource( 443 ), SubResource( 444 ), SubResource( 445 ), SubResource( 446 ), SubResource( 447 ), SubResource( 448 ), SubResource( 449 ), SubResource( 450 ), SubResource( 451 ), SubResource( 452 ), SubResource( 453 ), SubResource( 454 ), SubResource( 455 ), SubResource( 456 ), SubResource( 457 ), SubResource( 458 ), SubResource( 459 ), SubResource( 460 ), SubResource( 461 ), SubResource( 462 ), SubResource( 463 ), SubResource( 464 ), SubResource( 465 ), SubResource( 466 ), SubResource( 467 ), SubResource( 468 ), SubResource( 469 ), SubResource( 470 ), SubResource( 471 ), SubResource( 472 ), SubResource( 473 ), SubResource( 474 ), SubResource( 475 ), SubResource( 476 ), SubResource( 477 ), SubResource( 478 ), SubResource( 479 ), SubResource( 480 ), SubResource( 481 ), SubResource( 482 ), SubResource( 483 ), SubResource( 484 ), SubResource( 485 ), SubResource( 486 ), SubResource( 487 ), SubResource( 488 ), SubResource( 489 ), SubResource( 490 ), SubResource( 491 ), SubResource( 492 ), SubResource( 493 ), SubResource( 494 ), SubResource( 495 ), SubResource( 496 ), SubResource( 497 ), SubResource( 498 ), SubResource( 499 ), SubResource( 500 ), SubResource( 501 ), SubResource( 502 ), SubResource( 503 ), SubResource( 504 ), SubResource( 505 ), SubResource( 506 ), SubResource( 507 ), SubResource( 508 ), SubResource( 509 ), SubResource( 510 ), SubResource( 511 ), SubResource( 512 ), SubResource( 513 ), SubResource( 514 ), SubResource( 515 ), SubResource( 516 ), SubResource( 517 ), SubResource( 518 ), SubResource( 519 ), SubResource( 520 ), SubResource( 521 ), SubResource( 522 ), SubResource( 523 ), SubResource( 524 ), SubResource( 525 ), SubResource( 526 ), SubResource( 527 ), SubResource( 528 ), SubResource( 529 ), SubResource( 530 ), SubResource( 531 ), SubResource( 532 ), SubResource( 533 ), SubResource( 534 ), SubResource( 535 ), SubResource( 536 ), SubResource( 537 ), SubResource( 538 ), SubResource( 539 ), SubResource( 540 ), SubResource( 541 ), SubResource( 542 ), SubResource( 543 ), SubResource( 544 ), SubResource( 545 ), SubResource( 546 ), SubResource( 547 ), SubResource( 548 ), SubResource( 549 ), SubResource( 550 ), SubResource( 551 ), SubResource( 552 ), SubResource( 553 ), SubResource( 554 ), SubResource( 555 ), SubResource( 556 ), SubResource( 557 ), SubResource( 558 ), SubResource( 559 ), SubResource( 560 ), SubResource( 561 ), SubResource( 562 ), SubResource( 563 ), SubResource( 564 ), SubResource( 565 ), SubResource( 566 ), SubResource( 567 ), SubResource( 568 ), SubResource( 569 ), SubResource( 570 ), SubResource( 571 ), SubResource( 572 ), SubResource( 573 ), SubResource( 574 ), SubResource( 575 ), SubResource( 576 ), SubResource( 577 ), SubResource( 578 ), SubResource( 579 ), SubResource( 580 ), SubResource( 581 ), SubResource( 582 ), SubResource( 583 ), SubResource( 584 ), SubResource( 585 ), SubResource( 586 ), SubResource( 587 ), SubResource( 588 ), SubResource( 589 ), SubResource( 590 ), SubResource( 591 ), SubResource( 592 ), SubResource( 593 ), SubResource( 594 ), SubResource( 595 ), SubResource( 596 ), SubResource( 597 ), SubResource( 598 ), SubResource( 599 ), SubResource( 600 ), SubResource( 601 ) ]
