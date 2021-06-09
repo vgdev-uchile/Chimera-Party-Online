@@ -12,7 +12,7 @@ const colors = [
 ]
 var r = 0
 
-var note_duration = 3.0
+var note_duration = 2.0
 var note_spawn = 0.0
 var frame_time = 1.0/60.0
 var miss_time = 10 * frame_time

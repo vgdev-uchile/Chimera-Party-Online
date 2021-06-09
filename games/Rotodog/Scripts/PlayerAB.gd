@@ -129,7 +129,7 @@ func check_note_hit(action):
 		hits += 1
 		if hits == swap_dance_on:
 			hits = 0
-			dog.swap_dance(phase)
+			dog.change_dance(phase)
 		add_score(push_delay)
 	else:
 		add_score(time_windows[acc.MISS] * frame_time)

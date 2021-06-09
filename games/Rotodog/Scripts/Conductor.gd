@@ -32,7 +32,7 @@ func _ready():
 	notes = level.notes.duplicate()
 	events = event_map.notes.duplicate()
 	for i in range(level.notes.size()):
-		notes[i].time -= 3
+		notes[i].time -= 2
 	crotchet = 60 / bpm
 	max_notes = notes.size() - 1
 	max_events = events.size() - 1
