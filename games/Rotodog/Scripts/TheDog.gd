@@ -71,6 +71,7 @@ func init(p: Player):
 	name_label.parse_bbcode(
 		"[center][rainbow freq=0.1 sat=0.7 val=1]{name}[/rainbow][/center]".format(
 			{"name": p.name}))
+	name = p.nid
 	material.albedo_color = color
 	if is_network_master():
 		playerNode.init(p, self)
