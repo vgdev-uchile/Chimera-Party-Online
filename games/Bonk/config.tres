@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 display_name = ""
-description = "Nunca seas el segundo"
+description = "Mashea botones para crecer! Nunca seas el segundo más grande x_x"
 input_0 = 63
 description_0 = "Hazte grandecito"
 input_1 = 0
