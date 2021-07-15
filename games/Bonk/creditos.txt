@@ -1,0 +1,210 @@
+####### TEXTURES #######################################
+
+Concrete Floor Painted
+https://polyhaven.com/a/concrete_floor_painted
+
+Author: Rob Tuytel - https://www.artstation.com/tuytel
+
+License: CC0 (public domain)
+
+####### FONTS  #########################################
+
+Bony Font
+
+Bony is a creative handmade font of bones with unique characters. Free version includes regular weight,
+the full typeface also contains Light and Bold versions.
+
+Bony font is perfect for Halloween designs, games, t-shirts, posters and other artworks.
+
+Designed by TimXez - https://www.behance.net/timxez
+License: Free for commercial use
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+https://opengameart.org/content/lowpoly-rigged-skeleton-with-ik-blend
+
+LowPoly (Stylized) Skeleton with rig and ik configuration 
+Copyright/Attribution Notice: 
+AstroDev; Fernando Ferreira
+File(s): 
+Skeleton_a.zip Skeleton_a.zip 229.8 Kb [142 download(s)]
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/opendungeons-floating-skull
+
+My submission for The OpenDungeons Weekly Challenge
+
+3D floating skull model based on the 3D model on this page:
+
+http://opengameart.org/content/skeleton-warrior
+
+    Rigged spine and skinned
+    Bone material (from the model mentioned above), but no texture.
+    266 vertices
+    278 faces
+
+ 
+---------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/flying-skull
+
+Made for Open Dungeons,
+
+Original model by: Gord Goodwin
+
+http://opengameart.org/content/skeleton-with-rig
+
+Bone texture and normals by: p0ss
+
+http://opengameart.org/content/bone-texture-pack
+
+Modifications, rigging and animation by Danimal (thats me ;) )
+
+4824 VERTEX AND 5958 FACES
+
+FRAMES:
+
+1-40 FLYING
+41-60 ATTACK
+61-110 IDLE(TAIL UP AND DOWN)/GUARDING(75-95)
+111-120 DEATH
+121 COILED/RESTING (just a pose, not a real animation)
+
+My first real try at animation, im sure there is a lot to improve in many areas, constructive criticism is welcome. Eyes and "nose" are joined inside skull to avoid normal problems on Unity3D, empty them if you need it.
+
+Also, i will be thankfull if someone can explain to me how should i do to make an animation in which parts of a skeleton fall apart without messing the whole animation.
+File(s): 
+FGC_Skeleton.blend FGC_Skeleton.blend 1.1 Mb [425 download(s)]
+
+---------------------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/human-skull
+
+There are four models in this collection, a medium resolution model and a low resolution model each with two textures.
+
+The medium resolution model is  1080 triangles, 540 vertices.
+
+The low resolution model is  364 triangles, 186 vertices.
+
+Each model comes with two textures, "clean" and "aged". Each texture has diffuse, specular, normal and ambient occusion maps.
+
+The textures for the medium resolution model are 1024 x 1024 pixels.
+
+The textures for the low resolution model are 512 x 512 pixels.
+
+The lower jaw on all models is rigged with constraints.
+
+All textures are original and created by myself.
+Copyright/Attribution Notice: 
+Model and textures by Ulf
+File(s): 
+human_skull_medium_res.zip human_skull_medium_res.zip 4.9 Mb [348 download(s)]
+human_skull_low_res.zip human_skull_low_res.zip 1.6 Mb [352 download(s)]
+
+
+
+---------------------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/poorly-made-bone
+
+It's a bad bone I made once
+File(s): 
+bone.blend bone.blend 511.4 Kb [101 download(s)]
+####### MODELOS ########################################
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+https://opengameart.org/content/lowpoly-rigged-skeleton-with-ik-blend
+
+
+LowPoly (Stylized) Skeleton with rig and ik configuration 
+Copyright/Attribution Notice: 
+AstroDev; Fernando Ferreira
+File(s): 
+Skeleton_a.zip Skeleton_a.zip 229.8 Kb [142 download(s)]
+
+--------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/opendungeons-floating-skull
+
+My submission for The OpenDungeons Weekly Challenge
+
+3D floating skull model based on the 3D model on this page:
+
+http://opengameart.org/content/skeleton-warrior
+
+    Rigged spine and skinned
+    Bone material (from the model mentioned above), but no texture.
+    266 vertices
+    278 faces
+
+ 
+---------------------------------------------------------
+--------------------------------------------------------
+
+https://opengameart.org/content/flying-skull
+
+Made for Open Dungeons,
+
+Original model by: Gord Goodwin
+
+http://opengameart.org/content/skeleton-with-rig
+
+Bone texture and normals by: p0ss
+
+http://opengameart.org/content/bone-texture-pack
+
+Modifications, rigging and animation by Danimal (thats me ;) )
+
+4824 VERTEX AND 5958 FACES
+
+FRAMES:
+
+1-40 FLYING
+41-60 ATTACK
+61-110 IDLE(TAIL UP AND DOWN)/GUARDING(75-95)
+111-120 DEATH
+121 COILED/RESTING (just a pose, not a real animation)
+
+My first real try at animation, im sure there is a lot to improve in many areas, constructive criticism is welcome. Eyes and "nose" are joined inside skull to avoid normal problems on Unity3D, empty them if you need it.
+
+Also, i will be thankfull if someone can explain to me how should i do to make an animation in which parts of a skeleton fall apart without messing the whole animation.
+File(s): 
+FGC_Skeleton.blend FGC_Skeleton.blend 1.1 Mb [425 download(s)]
+
+---------------------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/human-skull
+
+There are four models in this collection, a medium resolution model and a low resolution model each with two textures.
+
+The medium resolution model is  1080 triangles, 540 vertices.
+
+The low resolution model is  364 triangles, 186 vertices.
+
+Each model comes with two textures, "clean" and "aged". Each texture has diffuse, specular, normal and ambient occusion maps.
+
+The textures for the medium resolution model are 1024 x 1024 pixels.
+
+The textures for the low resolution model are 512 x 512 pixels.
+
+The lower jaw on all models is rigged with constraints.
+
+All textures are original and created by myself.
+Copyright/Attribution Notice: 
+Model and textures by Ulf
+File(s): 
+human_skull_medium_res.zip human_skull_medium_res.zip 4.9 Mb [348 download(s)]
+human_skull_low_res.zip human_skull_low_res.zip 1.6 Mb [352 download(s)]
+
+---------------------------------------------------------------------
+--------------------------------------------------------
+https://opengameart.org/content/poorly-made-bone
+
+It's a bad bone I made once
+File(s): 
+bone.blend bone.blend 511.4 Kb [101 download(s)]
