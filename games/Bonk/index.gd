@@ -9,6 +9,12 @@ onready var camera : Camera = $CameraContainer/Camera
 signal unfreeze
 signal freeze
 
+func get_player_by_nid(nid):
+	for p in Party.get_players().duplicate():
+		if p.nid == nid:
+			return p
+
+
 func _ready():
 	camera.make_current()
 	
@@ -27,10 +33,8 @@ func _ready():
 
 func _process(delta):
 	_get_bigness()
-	_lambda_update()
 	_vector_update()
-	if _cycle_var!=_cycles.entrance:
-		_camera_update()
+	rpc("_camera_update")
 	#print(cycle_timer.time_left)
 
 var bigness_array : PoolRealArray = [1.0,1.0,1.0,1.0,0.0]
@@ -54,24 +58,25 @@ onready var end_aim : Vector3 = $CameraContainer/AimEnd.global_transform.origin
 onready var target_pos : Vector3 = $CameraContainer/Start.global_transform.origin
 onready var target_aim : Vector3 = $CameraContainer/AimStart.global_transform.origin
 
-func _camera_update():
+remotesync func _camera_update():
 	camera.global_transform.origin = lerp(camera.global_transform.origin,target_pos,0.5)
 	# camera look at
 
 var pos_lambda : float = 0.0
 var aim_lambda : float = 0.0
 
-export var play_time : float = 20.0
+export var play_time : float = 40.0
 export var result_time : float = 5.0
 export var reasonable_key_presses : float = 1000.0 # TODO: ESTIMATE THIS
+
+func _vector_update():
+	_lambda_update()
+	target_pos =  (1-pos_lambda)*start_pos  + pos_lambda*end_pos
+	target_aim =  (1-aim_lambda)*start_aim  + aim_lambda*end_aim
 
 func _lambda_update():
 	pos_lambda = min(pow((2*max_big-1),1.1)/pow(reasonable_key_presses,1.1),1)
 	aim_lambda = min(pow((2*max_big-1),1.1)/pow(reasonable_key_presses,1.1),1)
-
-func _vector_update():
-	target_pos =  (1-pos_lambda)*start_pos  + pos_lambda*end_pos
-	target_aim =  (1-aim_lambda)*start_aim  + aim_lambda*end_aim
 
 func _override_camera_pos(pos):
 	target_pos = pos
@@ -90,7 +95,7 @@ func _cycle():
 	match _cycle_var:
 		_cycles.entrance:
 			printg(["entrance"])
-			cycle_timer.wait_time = 3.0
+			cycle_timer.wait_time = 1.0
 			rpc("_cycle_entrance")
 			cycle_timer.start()
 		_cycles.countdown:
@@ -108,9 +113,10 @@ func _cycle():
 			cycle_timer.start()
 		_cycles.stop:
 			printg(["stop"])
+			results = _get_results() # tiene efecto secundario
+			# de mutar los player_scores ! 
 			rpc("_cycle_stop")
 			cycle_timer.wait_time = result_time
-			results = _get_results()
 			cycle_timer.start()
 		_cycles.end:
 			rpc("_cycle_end")
@@ -175,8 +181,11 @@ func _countdown():
 			"[center][rainbow]%d[/rainbow][/center]"%_remaining_countdown
 			)
 	else:
-		countdown_label.bbcode_text = "[center][rainbow]START[/rainbow][/center]"
-	countdown_label.show()
+		countdown_label.bbcode_text = ""
+	if _remaining_countdown>=0:
+		countdown_label.show()
+	else:
+		countdown_label.hide()
 	if _remaining_countdown>=0:
 		countdown_timer.start()
 	_remaining_countdown -= 1
@@ -193,19 +202,43 @@ func _setup_countdown_timer():
 func _start():
 	emit_signal("unfreeze")
 	countdown_label.hide()
+	$"UI Overlay/Contenedor/Start".show()
 
 func _game():
+	$"UI Overlay/Contenedor/Start".hide()
+	$"UI Overlay/Contenedor/Game/AnimationPlayer".play("move_text")
 	pass
 
 func _stop():
 	emit_signal("freeze")
+	$"UI Overlay/Contenedor/Stop".show()
 	pass
+
 
 func _end():
-	pass
+	# ya existen los puntajes:
+	var score_string = get_score_string()
+	if len(score_string)==0:
+		score_string = "AAA POR LA CHUCHA"
+	$"UI Overlay/Contenedor/End".bbcode_text = score_string
+	$"UI Overlay/Contenedor/Stop".hide()
+	$"UI Overlay/Contenedor/End".show()
+
 
 func _exit():
+	$"UI Overlay/Contenedor/End".hide()
 	pass
+
+func get_score_string() -> String:
+	var resultado = "[center]"
+	for row in player_scores:
+		var player_p  : Player = row["player"]
+		var score_p = row["points"]
+		resultado+=player_p.name
+		resultado+="  "
+		resultado+=str(score_p)
+		resultado+="\n"
+	return resultado
 
 ###################################################
 
@@ -276,38 +309,43 @@ func _draw(firsts,greatest):
 	var _draw_score : int = _draw_score_function(greatest)
 	for p in players:
 		if firsts.find(p)!=-1: # drawer
-			player_scores.push_back({"player":p,"points":_draw_score})
+			rpc("push_into_player_scores",p.nid,_draw_score)
 		else:
-			player_scores.push_back({"player":p,"points":simp_scores})
+			rpc("push_into_player_scores",p.nid,simp_scores)
 	return
 
 # writes player scores
-export var simp_scores : int = 10
+export var simp_scores : int = 11
 func _bonk(best,seconds,elses,max_bigness,weak_bigness):
 	var bonk_strength = max_bigness-weak_bigness
 	
 	# winner gets bonk energy
 	var winner_score : int = _winner_score_function(bonk_strength,max_bigness)
-	player_scores.push_back({"player":best,"points":winner_score})
+	rpc("push_into_player_scores",best.nid,winner_score)
 	
 	# bonk the losers
 	var loser_score : int = _loser_score_function(bonk_strength,max_bigness)
 	for loser in seconds:
-		player_scores.push_back({"player":loser,"points":loser_score})
+		rpc("push_into_player_scores",loser.nid,loser_score)
 	
 	# everyone else is just meh
 	for simp in elses:
-		player_scores.push_back({"player":simp,"points":simp_scores})
+		rpc("push_into_player_scores",simp.nid,simp_scores)
 	return
 
+remotesync func push_into_player_scores(pnid,score):
+	var pp = get_player_by_nid(pnid)
+	var row = {"player":pp,"points":score}
+	player_scores.push_back(row)
+
 func _winner_score_function(strength,greatest):
-	return int(70*(strength+greatest)/reasonable_key_presses)
+	return int(300*(strength+greatest)/reasonable_key_presses)
 
 func _loser_score_function(strength,greatest):
-	return -int(90*(strength+greatest)/reasonable_key_presses)
+	return -int(300*(strength+greatest)/reasonable_key_presses)
 
 func _draw_score_function(greatest):
-	return min(-20,-int(50*(greatest)/reasonable_key_presses))
+	return min(-100,-int(100*(greatest)/reasonable_key_presses))
 
 ## utilities
 
