@@ -61,7 +61,6 @@ func init(p, d):
 	move_down = "move_down_" + spi
 	action_a = "action_a_" + spi
 	action_b = "action_b_" + spi
-	#arrow_order = [move_left, move_up, move_right, move_down]
 
 
 func _draw():
@@ -70,25 +69,21 @@ func _draw():
 
 func _input(event):
 	if event.is_action_pressed(move_right):
-		print("left")
 		check_note_hit(0)
 		get_tree().set_input_as_handled()
 		return
 	
 	if event.is_action_pressed(move_up):
-		print("up")
 		check_note_hit(1)
 		get_tree().set_input_as_handled()
 		return
 	
 	if event.is_action_pressed(move_left):
-		print("right")
 		check_note_hit(2)
 		get_tree().set_input_as_handled()
 		return
 	
 	if event.is_action_pressed(move_down):
-		print("down")
 		check_note_hit(3)
 		get_tree().set_input_as_handled()
 	
@@ -135,18 +130,12 @@ func check_note_hit(action):
 		add_score(time_windows[acc.MISS] * frame_time)
 	
 	next_note.queue_free()
-		
-	print("note time: {nt}; song pos: {sp} {hit}".format({
-		"nt": next_note.note_time,
-		"sp": song_pos,
-		"hit": "Hit" if hit else ""
-	}))
 
 
 func set_label_text(n):
 	var t
 	var c
-	"[center][rainbow freq=0.1 sat=0.7 value=1 ]↑↓→←AB[/rainbow][/center]"
+	
 	match n:
 		-1:
 			t = ""

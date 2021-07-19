@@ -40,13 +40,11 @@ func _ready():
 
 
 remotesync func end_game():
-	
 	Party.end_game(final_scores)
 
 
 func cam_to_origin():
 	$Plane/AnimationPlayer.stop()
-	#$ddcamera/RigidBody.mode = RigidBody.MODE_KINEMATIC
 	$ddcamera/RigidBody.linear_velocity = Vector3.ZERO
 	$ddcamera/RigidBody.gravity_scale = 3
 	$ddcamera/RigidBody/Timer.start(2)
@@ -62,8 +60,8 @@ func _on_BGM_finished():
 	for i in range(rhythm_scores.size()):
 		if rhythm_scores[i][1] < next_max_score:
 			next_points -= 25
-			next_max_score = rhythm_scores[i][1]
-		final_scores.append({"player": rhythm_scores[i][0], "points": rhythm_scores[i][1]})
+			next_max_score = next_points
+		final_scores.append({"player": rhythm_scores[i][0], "points": next_points})
 	for dog in player_container.get_children():
 		if dog.player == rhythm_scores[0][0]:
 			dog.change_dance(4)

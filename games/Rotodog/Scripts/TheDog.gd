@@ -8,30 +8,21 @@ var score = 0
 remotesync var current_dance = 0
 var dances_1 = [
 	"Rumba",
-	"CanCan",
-	"Salsa",
-	"Samba",
-	"Samba2",
 	"Samba3",
-	"Samba4",
 	"Swing"
 ]
 var n_dances_1 = dances_1.size()
 
 var dances_2 = [
-	"BellyDancing",
-	"ArmsHipHop",
 	"BreakDanceFreeze",
 	"BreakDanceFreeze3",
-	"RoboHipHop",
-	"SnakeHipHop"
+	"RoboHipHop"
 ]
 var n_dances_2 = dances_2.size()
 
 var end_poses = [
 	"FemalePose1",
 	"FemalePose2",
-	"FemalePose3",
 	"FemalePose4",
 	"FemalePose5",
 	"BreakDanceEnding1"
@@ -71,7 +62,7 @@ func init(p: Player):
 	name_label.parse_bbcode(
 		"[center][rainbow freq=0.1 sat=0.7 val=1]{name}[/rainbow][/center]".format(
 			{"name": p.name}))
-	name = p.nid
+	name = p.name + "_" + str(p.nid)
 	material.albedo_color = color
 	if is_network_master():
 		playerNode.init(p, self)
@@ -102,7 +93,7 @@ func change_dance(n):
 				rpc("dance", dances_1[randi() % n_dances_1])
 			1:
 				if $RootNode/AnimationPlayer.current_animation in end_poses:
-					rpc("dance", "BellyDancing")
+					rpc("dance", "RoboHipHop")
 				else:
 					rpc("dance", dances_2[randi() % n_dances_2])
 			2:

@@ -49,7 +49,6 @@ func _process(delta):
 		new_note.color = notes[next_note].get_color_index()
 		new_note.note_spawn = notes[next_note].time
 		note_container.add_child(new_note)
-		#if next_note < max_notes:
 		next_note += 1
 
 	if note_container.get_child_count() > 0:
@@ -71,8 +70,6 @@ func _process(delta):
 		var ev = events.pop_front()
 		ev.conductor = self
 		ev.play_event()
-		#if next_event < max_events:
-		#	next_event += 1
 
 
 func miss():
