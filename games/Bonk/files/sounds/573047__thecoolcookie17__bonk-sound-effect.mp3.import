@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/573047__thecoolcookie17__bonk-sound-effect.mp3-79e7364e6432e3c83e76ff086a0680d8.mp3str"
+
+[deps]
+
+source_file="res://games/Bonk/files/sounds/573047__thecoolcookie17__bonk-sound-effect.mp3"
+dest_files=[ "res://.import/573047__thecoolcookie17__bonk-sound-effect.mp3-79e7364e6432e3c83e76ff086a0680d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
