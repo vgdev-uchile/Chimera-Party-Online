@@ -4,13 +4,11 @@ extends Node
 
 ## How does it work:
 
-
-
-const continue_cycle_signal : String = "continue_cycle"
+const continue_cycle_signal : String = "TimeManager_continue_cycle"
 export(bool) var autostart = true # se iniciará en ready.
 export(Array,String) var target_node_names : Array = ["TimeManager"]
 export(Array,String) var target_methods    : Array = ["test"]
-export(Array,float)  var wait_times        : Array = ["1.0"]
+export(Array,float)  var wait_times        : Array = [1.0]
 export(int,"TIMER_PROCESS_PHYSICS","TIMER_PROCESS_IDLE") var TimerProcessMode = 0
 
 ## main functionality #####################################################
@@ -75,7 +73,7 @@ func setup() -> void:
 	timer.name      = "TimeManagerTimer"
 	timer.one_shot  = true
 	timer.autostart = autostart
-	timer.connect("timeout",timer,"cycle")
+	timer.connect("timeout",self,"cycle")
 	add_child(timer)
 
 # timer_setup_at_step: This method changes timer setup as well as 
@@ -94,16 +92,17 @@ func timer_setup_at_step(index : int) -> void:
 		timer.wait_time = wait_times[index]
 	
 	## Setup incoming "continue_cycle" signal
-	# gets target node/method information to connect the signal
+	# gets target node information to connect the signal
 	var target_node   : Node   = get_target_node(target_node_names[index])
-	var target_method : String = target_methods[index]
+	
 	# connect an external node to continue cycle signal.
-	var external_incoming_connection_result =(
-		target_node.connect(continue_cycle_signal,self,"continue_cycle") )
-	# saves the external incoming signal for disconnection later
-	# (at cycle() -> cleanup).
-	if external_incoming_connection_result==OK:
-		last_external_incoming_connection_node = target_node
+	if target_node.has_signal(continue_cycle_signal):
+		var external_incoming_connection_result =(
+			target_node.connect(continue_cycle_signal,self,"continue_cycle") )
+		# saves the external incoming signal for disconnection later
+		# (at cycle() -> cleanup).
+		if external_incoming_connection_result==OK:
+			last_external_incoming_connection_node = target_node
 
 # get_target_node : finds a node in the node hierarchy, that is
 # equal or descendant to the TimeManager parent.
