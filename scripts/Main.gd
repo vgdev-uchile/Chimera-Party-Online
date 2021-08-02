@@ -142,6 +142,10 @@ func load_games():
 			if directory.current_is_dir():
 				print(game + "/", "found")
 				var config: Config = load("res://games/"+game+"/config.tres")
+				if not config.playable:
+					print(game, " is not playable")
+					game = directory.get_next()
+					continue
 				# Saving game modes for quick access
 				for mode in config.modes:
 					if mode is GameMode1v3:
