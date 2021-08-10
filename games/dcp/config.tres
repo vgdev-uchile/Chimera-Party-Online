@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Config.gd" type="Script" id=1]
+[ext_resource path="res://scripts/GameModeFFA.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+display_name = "DCP: Delfines con patas"
+description = "Delfines con patas"
+input_0 = 15
+description_0 = "A"
+input_1 = 16
+description_1 = "uwu"
+input_2 = 32
+description_2 = "òwó"
+input_3 = 0
+description_3 = ""
+input_4 = 0
+description_4 = ""
+input_5 = 0
+description_5 = ""
+input_6 = 0
+description_6 = ""
+input_7 = 0
+description_7 = ""
+
+[resource]
+script = ExtResource( 1 )
+modes = [ SubResource( 1 ) ]
+playable = false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/buenas_tardes.ogg-1e2d39fad0b1c0d2b654fbc7cfb6a7f8.oggstr"
+
+[deps]
+
+source_file="res://games/dcp/Music/buenas_tardes.ogg"
+dest_files=[ "res://.import/buenas_tardes.ogg-1e2d39fad0b1c0d2b654fbc7cfb6a7f8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=9.6

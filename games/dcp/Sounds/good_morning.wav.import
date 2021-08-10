@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/good_morning.wav-04bf457ead57e1bbbfe5ab598caa948f.sample"
+
+[deps]
+
+source_file="res://games/dcp/Sounds/good_morning.wav"
+dest_files=[ "res://.import/good_morning.wav-04bf457ead57e1bbbfe5ab598caa948f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
