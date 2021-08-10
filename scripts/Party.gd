@@ -113,7 +113,7 @@ func _get_teams_data():
 		for player in team:
 			team_data.push_back({"nid": player.nid, "local": player.local})
 		teams_data.push_back(team_data)
-	print(teams_data)
+	print("Teams data: ", teams_data)
 	return teams_data
 
 func _set_teams_data(teams_data):
@@ -138,6 +138,7 @@ remote func _update_game_data(current_game, game_type, teams_data):
 func _next_game():
 	Main.choose_random_game()
 	_make_teams()
+	print("Teams: ", _teams)
 	Main.confirmations += 0.5
 	rpc("_update_game_data", Party._current_game, Party._game_type, Party._get_teams_data())
 

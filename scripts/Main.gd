@@ -174,8 +174,8 @@ func choose_random_game():
 		games = games_ffa
 	else:
 		games = games_ffa + games_1v3 + games_2v2
-		print(games)
 		# Remove duplicates
+		print("Games: ", games)
 		var index = 0
 		while index < games.size():
 			var found = games.rfind(games[index])
@@ -183,7 +183,7 @@ func choose_random_game():
 				index += 1
 			else:
 				games.remove(found)
-		print(games)
+		print("Games: ", games)
 
 	var choosen = randf()
 	var weight_sum = 0
@@ -206,13 +206,20 @@ func choose_random_game():
 				var config: Config = load("res://games/"+game+"/config.tres")
 				var mode_index = randi() % config.modes.size()
 				var game_type = config.modes[mode_index]
-				match game_type:
-					GameModeFFA:
-						Party._game_type = Party.GameType.FREE_FOR_ALL
-					GameMode1v3:
+				print("1v3: ", game_type is GameMode1v3, ". 2v2: ", game_type is GameMode2v2)
+				if game_type is GameMode1v3:
+						print("Juego 1v3")
 						Party._game_type = Party.GameType.ONE_VS_THREE
-					GameMode2v2:
+				elif game_type is GameMode2v2:
+						print("Juego 2v2")
 						Party._game_type = Party.GameType.TWO_VS_TWO
+				elif game_type is GameModeFFA:
+						print("Juego FFA")
+						Party._game_type = Party.GameType.FREE_FOR_ALL
+				else:
+					print("No se econtró el modo de juego, esto no debería pasar.")
+			else:
+				Party._game_type = Party.GameType.FREE_FOR_ALL
 			
 			return
 	
