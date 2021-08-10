@@ -27,3 +27,4 @@ description_7 = ""
 [resource]
 script = ExtResource( 1 )
 modes = [ SubResource( 1 ) ]
+playable = true

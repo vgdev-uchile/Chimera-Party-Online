@@ -166,17 +166,24 @@ func load_games():
 		weights[game] = game_weight
 
 func choose_random_game():
-#	Party._current_game = "rats"
-#	return
 	randomize()
 	var games = []
-	match Party._game_type:
-		Party.GameType.FREE_FOR_ALL:
-			games = games_ffa
-		Party.GameType.ONE_VS_THREE:
-			games = games_1v3
-		Party.GameType.TWO_VS_TWO:
-			games = games_2v2
+	var only_ffa = Party._players.size() != 4
+	
+	if only_ffa:
+		games = games_ffa
+	else:
+		games = games_ffa + games_1v3 + games_2v2
+		print(games)
+		# Remove duplicates
+		var index = 0
+		while index < games.size():
+			var found = games.rfind(games[index])
+			if found == index:
+				index += 1
+			else:
+				games.remove(found)
+		print(games)
 
 	var choosen = randf()
 	var weight_sum = 0
@@ -194,7 +201,21 @@ func choose_random_game():
 			
 			
 			Party._current_game = game
+			
+			if not only_ffa:
+				var config: Config = load("res://games/"+game+"/config.tres")
+				var mode_index = randi() % config.modes.size()
+				var game_type = config.modes[mode_index]
+				match game_type:
+					GameModeFFA:
+						Party._game_type = Party.GameType.FREE_FOR_ALL
+					GameMode1v3:
+						Party._game_type = Party.GameType.ONE_VS_THREE
+					GameMode2v2:
+						Party._game_type = Party.GameType.TWO_VS_TWO
+			
 			return
+	
 	print("No game found, this should never happened")
 
 

@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/pac_player.png-9e71d2d4e2c37afe1761001465675a1a.image"
+
+[deps]
+
+source_file="res://games/Pac-Party/sprites/pac_player.png"
+dest_files=[ "res://.import/pac_player.png-9e71d2d4e2c37afe1761001465675a1a.image" ]
+
+[params]
+

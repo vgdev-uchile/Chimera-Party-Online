@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/ghost.png-3b36a9e93af3fb5bbf80cf9c64c0af2b.image"
+
+[deps]
+
+source_file="res://games/Pac-Party/sprites/ghost.png"
+dest_files=[ "res://.import/ghost.png-3b36a9e93af3fb5bbf80cf9c64c0af2b.image" ]
+
+[params]
+

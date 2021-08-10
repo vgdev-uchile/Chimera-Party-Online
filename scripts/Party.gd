@@ -21,7 +21,9 @@ enum GameType {
 # Current game info
 var _current_game = ""
 
-var _game_type = GameType.FREE_FOR_ALL setget , get_game_type
+var _game_type = GameType.FREE_FOR_ALL setget set_game_type, get_game_type
+func set_game_type(value):
+	_game_type = value
 func get_game_type():
 	return _game_type
 
@@ -48,14 +50,32 @@ var _teams = [] setget , get_teams
 func get_teams():
 	return _teams
 
-func load_test():
+func load_test(mode: String):
 	var player0 = Player.new()
 	player0.init("angry", 1, 0, 0, 1, 1)
+	var player1 = Player.new()
+	player1.init("OwO", 42, 1, 1, 2, 0)
 	var player2 = Player.new()
 	player2.init("troll69", 1, 1, 2, 0, 3)
 	var player3 = Player.new()
 	player3.init("HAF", 6489451867861349, 0, 3, 1, 2)
-	_players = [player0, player2, player3]
+	print(mode)
+	match mode:
+		"ffa":
+			_game_type = GameType.FREE_FOR_ALL
+			_players = [player0, player2, player3]
+			print(_players.size())
+		"1v3":
+			_game_type = GameType.ONE_VS_THREE
+			_players = [player0, player1, player2, player3]
+			_teams = [[player0], [player1, player2, player3]]
+			print(_players.size())
+		"2v2":
+			_game_type = GameType.TWO_VS_TWO
+			_players = [player0, player1, player2, player3]
+			_teams = [[player0, player1], [player2, player3]]
+			print(_players.size())
+	# TODO: buscar forma de enviar por rpc los datos del modo de juego y teams
 
 func _action_add_key(action, player_index: int, key):
 	var ike: InputEventKey
@@ -93,6 +113,7 @@ func _get_teams_data():
 		for player in team:
 			team_data.push_back({"nid": player.nid, "local": player.local})
 		teams_data.push_back(team_data)
+	print(teams_data)
 	return teams_data
 
 func _set_teams_data(teams_data):
@@ -108,8 +129,9 @@ func _set_teams_data(teams_data):
 			team.push_back(player)
 		_teams.push_back(team)
 
-remote func _update_game_data(current_game, teams_data):
+remote func _update_game_data(current_game, game_type, teams_data):
 	_current_game = current_game
+	Party._game_type = game_type
 	_set_teams_data(teams_data)
 	Main.rpc_id(1, "confirm", 0.5)
 
@@ -117,7 +139,7 @@ func _next_game():
 	Main.choose_random_game()
 	_make_teams()
 	Main.confirmations += 0.5
-	rpc("_update_game_data", Party._current_game, Party._get_teams_data())
+	rpc("_update_game_data", Party._current_game, Party._game_type, Party._get_teams_data())
 
 # [{player, points}]
 func end_game(score):
