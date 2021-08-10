@@ -22,7 +22,7 @@ func _ready() -> void:
 	# Players Init
 	for i in range(players_size):
 		player_nodes.push_back(players_scene.instance())
-		player_nodes[i].init(players[i], test_init_positions[i])
+		player_nodes[i].init(players[i], test_init_positions[i], i==0)
 		self.add_child(player_nodes[i])
 #		player_nodes[i].connect("win",self,"on_player_win")
 #		end_scores.push_back({"player": players[i], "points": 0})

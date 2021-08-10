@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
+# Misc
+export (bool) var is_pac = false
 
 # API
 var _player
 var slot
 
-# Movement
+# Movement Input
 var move_left  = "move_left"
 var move_right = "move_right"
 var move_up    = "move_up"
@@ -17,7 +19,11 @@ var action_b   = "action_b"
 puppet var puppet_mov = Vector2(0,0)
 var _init_position
 
-func init(player: Player, init_position: Vector2):
+# Properties
+const SPEED = 1
+
+
+func init(player: Player, init_position: Vector2, should_be_pac):
 	_player = player
 	set_network_master(player.nid)
 	var ks = str(player.keyset)
@@ -30,6 +36,7 @@ func init(player: Player, init_position: Vector2):
 	name = "%d - %d" % [player.nid, player.local]
 	slot = player.slot
 	_init_position = init_position
+	is_pac = should_be_pac
 	# cambiar color
 	$Sprite.modulate = Party.get_colors()[_player.color]
 
@@ -46,7 +53,7 @@ func _physics_process(delta: float) -> void:
 		target_mov = puppet_mov
 	# Procesar input
 	target_mov = target_mov.normalized()
-	move_and_collide(target_mov)
+	move_and_collide(target_mov * SPEED * delta)
 #	rotate_cam(delta,target_rot[0],target_rot[1],target_rot[2])
 	# Revisar si gana
 	if is_network_master():
