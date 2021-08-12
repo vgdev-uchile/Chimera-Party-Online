@@ -59,23 +59,21 @@ func load_test(mode: String):
 	player2.init("troll69", 1, 1, 2, 0, 3)
 	var player3 = Player.new()
 	player3.init("HAF", 6489451867861349, 0, 3, 1, 2)
-	print(mode)
 	match mode:
 		"ffa":
 			_game_type = GameType.FREE_FOR_ALL
 			_players = [player0, player2, player3]
-			print(_players.size())
 		"1v3":
 			_game_type = GameType.ONE_VS_THREE
 			_players = [player0, player1, player2, player3]
 			_teams = [[player0], [player1, player2, player3]]
-			print(_players.size())
 		"2v2":
 			_game_type = GameType.TWO_VS_TWO
 			_players = [player0, player1, player2, player3]
 			_teams = [[player0, player1], [player2, player3]]
-			print(_players.size())
 	# TODO: buscar forma de enviar por rpc los datos del modo de juego y teams
+#	rpc("_update_game_data", _current_game, _game_type, _get_teams_data())
+	
 
 func _action_add_key(action, player_index: int, key):
 	var ike: InputEventKey

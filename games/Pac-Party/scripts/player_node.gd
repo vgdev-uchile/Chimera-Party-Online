@@ -20,7 +20,10 @@ puppet var puppet_mov = Vector2(0,0)
 var _init_position
 
 # Properties
-const SPEED = 1
+const SPEED = 100
+
+# State
+var mov_direction
 
 
 func init(player: Player, init_position: Vector2, should_be_pac):
@@ -37,11 +40,15 @@ func init(player: Player, init_position: Vector2, should_be_pac):
 	slot = player.slot
 	_init_position = init_position
 	is_pac = should_be_pac
+	# cambiar sprite
+	if is_pac:
+		$Sprite.texture = preload("res://games/Pac-Party/sprites/player_spritesheet.png")
 	# cambiar color
 	$Sprite.modulate = Party.get_colors()[_player.color]
 
 func _ready() -> void:
 	position = _init_position
+
 
 func _physics_process(delta: float) -> void:
 	# Obtener input
@@ -54,7 +61,6 @@ func _physics_process(delta: float) -> void:
 	# Procesar input
 	target_mov = target_mov.normalized()
 	move_and_collide(target_mov * SPEED * delta)
-#	rotate_cam(delta,target_rot[0],target_rot[1],target_rot[2])
 	# Revisar si gana
 	if is_network_master():
 		pass
