@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://games/dcp/Scripts/ball.gd" type="Script" id=1]
+[ext_resource path="res://games/dcp/Sounds/397353__plasterbrain__tada-fanfare-g.wav" type="AudioStream" id=2]
 [ext_resource path="res://games/dcp/Music/buenas_tardes.ogg" type="AudioStream" id=3]
 [ext_resource path="res://games/dcp/Scripts/index.gd" type="Script" id=4]
 [ext_resource path="res://games/dcp/Scenes/Duck.tscn" type="PackedScene" id=5]
@@ -13,15 +14,6 @@
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
-
-[sub_resource type="PlaneMesh" id=3]
-size = Vector2( 36, 36 )
-
-[sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 0, 0, 1, 1 )
-
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 18, 1, 18 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 16, 5, 1 )
@@ -52,7 +44,7 @@ height = 1.0
 extents = Vector3( 2, 1, 2 )
 
 [sub_resource type="CylinderShape" id=14]
-radius = 1.5
+radius = 1.7
 height = 4.0
 
 [sub_resource type="DynamicFont" id=15]
@@ -68,6 +60,34 @@ outline_size = 16
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 9 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "owo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("StartLabel:bbcode_text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "[center][color=#40cffd]¿Todos ganan?[/color][/center]" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StartLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "start"
@@ -99,6 +119,7 @@ tracks/1/keys = {
 
 [node name="Index" type="Spatial"]
 script = ExtResource( 4 )
+seconds_left = 10
 
 [node name="Altar" type="StaticBody" parent="."]
 
@@ -110,19 +131,6 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Altar"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shape = SubResource( 2 )
-
-[node name="Floor" type="StaticBody" parent="."]
-visible = false
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0705214, -0.0351064, 0.0651393 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 4 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 5 )
-disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -249,11 +257,13 @@ depth = 4.0
 [node name="CSGCylinder" type="CSGCylinder" parent="CSGCombiner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 3 )
 operation = 2
-radius = 1.5
+radius = 1.7
 height = 6.0
 sides = 16
 
-[node name="Sphere" type="RigidBody" parent="."]
+[node name="Sphere" type="RigidBody" parent="." groups=[
+"Ball",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, -17 )
 collision_layer = 5
 mass = 10.0
@@ -272,6 +282,7 @@ material/0 = null
 
 [node name="DuckBlocker" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+input_ray_pickable = false
 collision_layer = 2
 collision_mask = 0
 __meta__ = {
@@ -292,7 +303,7 @@ spot_angle = 41.9143
 [node name="BallCatcher" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 3 )
 collision_layer = 0
-collision_mask = 4
+collision_mask = 5
 __meta__ = {
 "_edit_group_": true
 }
@@ -331,7 +342,6 @@ __meta__ = {
 }
 
 [node name="StartLabel" type="RichTextLabel" parent="CanvasLayer"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -343,15 +353,21 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 0, 200 )
 custom_fonts/normal_font = SubResource( 16 )
 bbcode_enabled = true
+bbcode_text = "[center][color=#40cffd]¿Todos ganan?[/color][/center]"
+text = "¿Todos ganan?"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+anims/owo = SubResource( 18 )
 anims/start = SubResource( 17 )
 
 [node name="TimerSeconds" type="Timer" parent="CanvasLayer"]
+
+[node name="Tada" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 2 )
 
 [node name="PlayerContainer" type="Spatial" parent="."]
 
@@ -360,6 +376,8 @@ transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 3.2, 0
 environment = ExtResource( 10 )
 
 [node name="EndTimer" type="Timer" parent="."]
+
+[node name="OwoTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="BallCatcher" to="." method="_on_BallCatcher_body_entered"]
 [connection signal="timeout" from="CanvasLayer/TimerSeconds" to="." method="_on_TimerSeconds_timeout"]

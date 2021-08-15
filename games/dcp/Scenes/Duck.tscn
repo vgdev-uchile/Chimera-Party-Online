@@ -49,7 +49,9 @@ surfaces/0 = {
 [sub_resource type="SphereShape" id=3]
 radius = 0.5
 
-[node name="Duck" type="RigidBody"]
+[node name="Duck" type="RigidBody" groups=[
+"Duck",
+]]
 input_ray_pickable = false
 collision_mask = 3
 

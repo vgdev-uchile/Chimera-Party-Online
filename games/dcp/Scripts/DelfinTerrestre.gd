@@ -43,7 +43,6 @@ func _ready():
 	$delfin_con_patas/AnimationPlayer.play("Idle")
 	name_label.set("custom_fonts/normal_font", name_label.get_font("normal_font").duplicate())
 
-
 func init(p: Player):
 	player = p
 	set_network_master(p.nid)
@@ -58,9 +57,7 @@ func init(p: Player):
 	name_label.get("custom_fonts/normal_font").outline_color = Party.get_colors()[p.color]
 	#name_label.set("custom_fonts/normal_font/outline_color", Party.get_colors()[p.color])
 	name_label.parse_bbcode("[center]" + p.name + "[/center]")
-	#if is_network_master():
-	#	name_label.visible = false
-	
+	update_name_label_pos()
 
 master func swap_camera():
 	$CamPivot/Camera2.current = true
@@ -71,7 +68,6 @@ master func swap_camera():
 
 remotesync func talk(n):
 	voices.get_child(n).play()
-	print(main_scene.ball.translation)
 
 remotesync func buenas_tardes():
 	if main_scene.buenas_tardes: return
@@ -113,22 +109,12 @@ func _physics_process(delta):
 		rset("puppet_pos", translation)
 		rset_unreliable("moving", moving)
 	else:
-		rotation.y = puppet_rot
+		rotation.y = lerp(rotation.y, puppet_rot, 0.2)
 		velocity = puppet_linear_vel
 		moving = puppet_moving
 		move_and_slide(velocity, Vector3.UP)
-		#translation = lerp(translation, puppet_pos, 0.5)
-	
-	# Name label position fix
-	#if not is_network_master():
-	if $VisibilityNotifier.is_on_screen():
-		label_holder.visible = true
-		var pos = label_holder.global_transform.origin
-		var cam = get_tree().get_root().get_camera()
-		var screenpos = cam.unproject_position(pos)
-		label_holder.get_node("PlayerLabel").set_position(screenpos)
-	else:
-		label_holder.visible = false
+
+	update_name_label_pos()
 	
 	if moving:
 		$delfin_con_patas/AnimationPlayer.play("Run")
@@ -137,6 +123,16 @@ func _physics_process(delta):
 			$delfin_con_patas/AnimationPlayer.play("Static")
 		else:
 			$delfin_con_patas/AnimationPlayer.play("Idle")
+
+func update_name_label_pos():
+	if $VisibilityNotifier.is_on_screen():
+		label_holder.visible = true
+		var pos = label_holder.global_transform.origin
+		var cam = get_tree().get_root().get_camera()
+		var screenpos = cam.unproject_position(pos)
+		label_holder.get_node("PlayerLabel").set_position(screenpos)
+	else:
+		label_holder.visible = false
 
 func _input(event):
 	if not is_network_master(): return
@@ -158,5 +154,9 @@ func _on_HuntArea_body_entered(body):
 remotesync func fucking_die(n):
 	voices_ohno.get_child(n).play()
 	ded = true
+	visible = false
+	name_label.visible = false
 	if is_network_master():
 		main_scene.get_node("PatoRealPOV").current = true
+	translate(Vector3(0, -3, 0))
+	main_scene.rpc("ded_check")
