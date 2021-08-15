@@ -166,6 +166,10 @@ func load_games():
 		weights[game] = game_weight
 
 func choose_random_game():
+	# Para testear a la mala un juego, Descomentar las siguientes líneas:
+#	Party._current_game = " " #Nombre de la carpeta del juego 
+#	Party._game_type = Party.GameType.FREE_FOR_ALL #Modo de juego, puede ser FREE_FOR_ALL, ONE_VS_THREE o TWO_VS_TWO
+#	return
 	randomize()
 	var games = []
 	var only_ffa = Party._players.size() != 4

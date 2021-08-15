@@ -164,7 +164,6 @@ points = PoolVector2Array( 0, 0, 9, 0, 9, 7, 16, 7, 16, 16, 7, 16, 7, 9, 0, 9 )
 0/z_index = 0
 
 [node name="Map2" type="TileMap"]
-scale = Vector2( 2, 2 )
 tile_set = SubResource( 16 )
 cell_size = Vector2( 16, 16 )
 format = 1
