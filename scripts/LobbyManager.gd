@@ -46,6 +46,7 @@ func _player_connected(id):
 		for player in players:
 			players_data.push_back(player.get_data())
 		rpc_id(id, "load_players", players_data, Party._testing, Party._current_game)
+		Party.rpc_id(id, "_update_game_data", Party._current_game, Party._game_type, Party._get_teams_data())
 	emit_signal("player_connected", id)
 
 remote func load_players(players_data, testing, current_game):

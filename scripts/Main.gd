@@ -166,17 +166,28 @@ func load_games():
 		weights[game] = game_weight
 
 func choose_random_game():
-#	Party._current_game = "rats"
+	# Para testear a la mala un juego, Descomentar las siguientes líneas:
+#	Party._current_game = " " #Nombre de la carpeta del juego 
+#	Party._game_type = Party.GameType.FREE_FOR_ALL #Modo de juego, puede ser FREE_FOR_ALL, ONE_VS_THREE o TWO_VS_TWO
 #	return
 	randomize()
 	var games = []
-	match Party._game_type:
-		Party.GameType.FREE_FOR_ALL:
-			games = games_ffa
-		Party.GameType.ONE_VS_THREE:
-			games = games_1v3
-		Party.GameType.TWO_VS_TWO:
-			games = games_2v2
+	var only_ffa = Party._players.size() != 4
+	
+	if only_ffa:
+		games = games_ffa
+	else:
+		games = games_ffa + games_1v3 + games_2v2
+		# Remove duplicates
+		print("Games: ", games)
+		var index = 0
+		while index < games.size():
+			var found = games.rfind(games[index])
+			if found == index:
+				index += 1
+			else:
+				games.remove(found)
+		print("Games: ", games)
 
 	var choosen = randf()
 	var weight_sum = 0
@@ -194,7 +205,28 @@ func choose_random_game():
 			
 			
 			Party._current_game = game
+			
+			if not only_ffa:
+				var config: Config = load("res://games/"+game+"/config.tres")
+				var mode_index = randi() % config.modes.size()
+				var game_type = config.modes[mode_index]
+				print("1v3: ", game_type is GameMode1v3, ". 2v2: ", game_type is GameMode2v2)
+				if game_type is GameMode1v3:
+						print("Juego 1v3")
+						Party._game_type = Party.GameType.ONE_VS_THREE
+				elif game_type is GameMode2v2:
+						print("Juego 2v2")
+						Party._game_type = Party.GameType.TWO_VS_TWO
+				elif game_type is GameModeFFA:
+						print("Juego FFA")
+						Party._game_type = Party.GameType.FREE_FOR_ALL
+				else:
+					print("No se econtró el modo de juego, esto no debería pasar.")
+			else:
+				Party._game_type = Party.GameType.FREE_FOR_ALL
+			
 			return
+	
 	print("No game found, this should never happened")
 
 

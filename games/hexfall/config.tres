@@ -79,3 +79,4 @@ team_b_name = ""
 [resource]
 script = ExtResource( 1 )
 modes = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+playable = true
