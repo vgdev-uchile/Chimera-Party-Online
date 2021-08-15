@@ -1,124 +1,366 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://games/dcp/Scenes/DelfinTerrestre.tscn" type="PackedScene" id=1]
-[ext_resource path="res://games/dcp/Models/delfin_con_patas.glb" type="PackedScene" id=2]
+[ext_resource path="res://games/dcp/Scripts/ball.gd" type="Script" id=1]
 [ext_resource path="res://games/dcp/Music/buenas_tardes.ogg" type="AudioStream" id=3]
 [ext_resource path="res://games/dcp/Scripts/index.gd" type="Script" id=4]
 [ext_resource path="res://games/dcp/Scenes/Duck.tscn" type="PackedScene" id=5]
-[ext_resource path="res://games/dcp/Scripts/DuckMaker.gd" type="Script" id=6]
+[ext_resource path="res://games/dcp/Scenes/DuckMaker.tscn" type="PackedScene" id=6]
+[ext_resource path="res://games/dcp/Scenes/PatoReal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://games/dcp/Models/Crown.material" type="Material" id=8]
+[ext_resource path="res://games/Rotodog/Fonts/DelaGothicOne-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://games/dcp/Resources/env_bt.tres" type="Environment" id=10]
 
-[sub_resource type="PlaneMesh" id=1]
-size = Vector2( 100, 100 )
+[sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 50, 1, 50 )
 
-[sub_resource type="CubeMesh" id=3]
+[sub_resource type="PlaneMesh" id=3]
+size = Vector2( 36, 36 )
 
-[sub_resource type="ProceduralSky" id=4]
-sky_top_color = Color( 0.764706, 0.0941176, 0.0941176, 1 )
-sky_horizon_color = Color( 0.980392, 0.839216, 0.839216, 1 )
-sky_curve = 0.0499306
-ground_bottom_color = Color( 0, 0, 0, 1 )
-ground_horizon_color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
-sun_color = Color( 1, 0.568627, 0.568627, 1 )
-sun_curve = 0.103527
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0, 1, 1 )
 
-[sub_resource type="Environment" id=5]
-background_mode = 2
-background_sky = SubResource( 4 )
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 18, 1, 18 )
 
-[sub_resource type="CapsuleShape" id=6]
-radius = 1.5
-height = 0.5
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 16, 5, 1 )
 
 [sub_resource type="CubeMesh" id=7]
-size = Vector3( 2, 20, 100 )
+size = Vector3( 32, 10, 2 )
 
 [sub_resource type="CubeMesh" id=8]
-size = Vector3( 102, 20, 2 )
+size = Vector3( 36, 2, 36 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0, 0, 1, 1 )
+
+[sub_resource type="PhysicsMaterial" id=10]
+rough = true
+bounce = 0.5
+absorbent = true
+
+[sub_resource type="SphereShape" id=11]
+radius = 0.5
+
+[sub_resource type="SphereMesh" id=12]
+material = ExtResource( 8 )
+radius = 0.5
+height = 1.0
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 2, 1, 2 )
+
+[sub_resource type="CylinderShape" id=14]
+radius = 1.5
+height = 4.0
+
+[sub_resource type="DynamicFont" id=15]
+size = 100
+outline_size = 18
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 128
+outline_size = 16
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="Animation" id=17]
+resource_name = "start"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("StartLabel:bbcode_text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "[center][color=#40cffd]3[/color][/center]", "[center][color=#40cffd]2[/color][/center]", "[center][color=#40cffd]1[/color][/center]", "[center][color=#40cffd]¡Delfines con patas![/color][/center]" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StartLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 1.5, 1.9, 2, 2.5, 2.9, 3, 3.5, 3.9, 4, 5.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="Index" type="Spatial"]
 script = ExtResource( 4 )
 
-[node name="DCP" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
-speed = 10.0
-rot_speed = 3.142
+[node name="Altar" type="StaticBody" parent="."]
 
-[node name="StaticBody" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0705214, -0.0351064, 0.0651393 )
+[node name="MeshInstance2" type="MeshInstance" parent="Altar"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+[node name="CollisionShape" type="CollisionShape" parent="Altar"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shape = SubResource( 2 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.179, 1.06098, -5.61177 )
+[node name="Floor" type="StaticBody" parent="."]
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0705214, -0.0351064, 0.0651393 )
 mesh = SubResource( 3 )
-material/0 = null
+material/0 = SubResource( 4 )
 
-[node name="delfin_con_patas2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.081, 0, 5.405 )
-
-[node name="Camera" type="Camera" parent="delfin_con_patas2"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.38419e-07, 1.91398, 1.39351 )
-
-[node name="Camera2" type="Camera" parent="delfin_con_patas2"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.38419e-07, 1.91398, 1.39351 )
-environment = SubResource( 5 )
-current = true
-
-[node name="KinematicBody" type="KinematicBody" parent="delfin_con_patas2"]
-
-[node name="CollisionShape" type="CollisionShape" parent="delfin_con_patas2/KinematicBody"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
-shape = SubResource( 6 )
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 5 )
+disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="Spatial2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57207, -0.0110086, -1.10474 )
-
 [node name="Walls" type="Spatial" parent="."]
 
-[node name="MeshInstance3" type="MeshInstance" parent="Walls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 10, 0 )
+[node name="StaticBody" type="StaticBody" parent="Walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Walls/StaticBody"]
 mesh = SubResource( 7 )
 material/0 = null
 
-[node name="MeshInstance4" type="MeshInstance" parent="Walls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 10, 0 )
+[node name="StaticBody3" type="StaticBody" parent="Walls"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/StaticBody3"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Walls/StaticBody3"]
 mesh = SubResource( 7 )
 material/0 = null
 
-[node name="MeshInstance5" type="MeshInstance" parent="Walls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 51 )
-mesh = SubResource( 8 )
+[node name="StaticBody4" type="StaticBody" parent="Walls"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/StaticBody4"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Walls/StaticBody4"]
+mesh = SubResource( 7 )
 material/0 = null
 
-[node name="MeshInstance6" type="MeshInstance" parent="Walls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -51 )
-mesh = SubResource( 8 )
+[node name="StaticBody2" type="StaticBody" parent="Walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/StaticBody2"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Walls/StaticBody2"]
+mesh = SubResource( 7 )
 material/0 = null
 
 [node name="Ducks" type="Spatial" parent="."]
 
 [node name="Duck" parent="Ducks" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07832, 6.22547, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 0 )
 
-[node name="DuckMaker" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56716, 1.53927, 0.377024 )
-script = ExtResource( 6 )
-max_ducks = 1000
+[node name="Duck2" parent="Ducks" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0 )
 
-[node name="Timer" type="Timer" parent="DuckMaker"]
-wait_time = 0.5
-autostart = true
+[node name="PatoReal" parent="." instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 0 )
 
-[connection signal="timeout" from="DuckMaker/Timer" to="DuckMaker" method="_on_Timer_timeout"]
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.790893, 0.611955, 0, -0.611955, -0.790893, 0, 9.18645, 0 )
+light_energy = 0.7
+
+[node name="DuckMakers" type="Spatial" parent="."]
+
+[node name="DuckMaker" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 20, 8 )
+max_ducks = 83
+
+[node name="DuckMaker2" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 20, -8 )
+max_ducks = 83
+
+[node name="DuckMaker3" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, 8 )
+max_ducks = 83
+
+[node name="DuckMaker4" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, -8 )
+max_ducks = 83
+
+[node name="DuckMaker5" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -8 )
+max_ducks = 83
+
+[node name="DuckMaker6" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, 0 )
+max_ducks = 83
+
+[node name="DuckMaker7" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 8 )
+max_ducks = 83
+
+[node name="DuckMaker8" parent="DuckMakers" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 20, 0 )
+max_ducks = 83
+
+[node name="StartingPoints" type="Spatial" parent="."]
+
+[node name="Position1" type="Position3D" parent="StartingPoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14 )
+
+[node name="Position2" type="Position3D" parent="StartingPoints"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -14 )
+
+[node name="Position3" type="Position3D" parent="StartingPoints"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, 0 )
+
+[node name="Position4" type="Position3D" parent="StartingPoints"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 0, 0 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="CSGMesh" type="CSGMesh" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+mesh = SubResource( 8 )
+material = SubResource( 9 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3 )
+width = 4.0
+height = 4.0
+depth = 4.0
+
+[node name="CSGCylinder" type="CSGCylinder" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 3 )
+operation = 2
+radius = 1.5
+height = 6.0
+sides = 16
+
+[node name="Sphere" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, -17 )
+collision_layer = 5
+mass = 10.0
+physics_material_override = SubResource( 10 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Sphere"]
+shape = SubResource( 11 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Sphere"]
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="DuckBlocker" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="DuckBlocker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 13 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -2, 3 )
+light_color = Color( 0.835294, 0.627451, 0.0784314, 1 )
+light_energy = 20.0
+spot_range = 6.0
+spot_angle = 41.9143
+
+[node name="BallCatcher" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 3 )
+collision_layer = 0
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="BallCatcher"]
+shape = SubResource( 14 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_right = 773.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+custom_fonts/normal_font = SubResource( 15 )
+bbcode_enabled = true
+bbcode_text = "[center]Puntos: 0 [/center]"
+text = "Puntos: 0 "
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -360.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+custom_fonts/normal_font = SubResource( 15 )
+bbcode_enabled = true
+bbcode_text = "[center]1:00[/center]"
+text = "1:00"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartLabel" type="RichTextLabel" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -100.0
+margin_right = 960.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 200 )
+custom_fonts/normal_font = SubResource( 16 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+anims/start = SubResource( 17 )
+
+[node name="TimerSeconds" type="Timer" parent="CanvasLayer"]
+
+[node name="PlayerContainer" type="Spatial" parent="."]
+
+[node name="PatoRealPOV" type="Camera" parent="."]
+transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 3.2, 0.55 )
+environment = ExtResource( 10 )
+
+[node name="EndTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="BallCatcher" to="." method="_on_BallCatcher_body_entered"]
+[connection signal="timeout" from="CanvasLayer/TimerSeconds" to="." method="_on_TimerSeconds_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]

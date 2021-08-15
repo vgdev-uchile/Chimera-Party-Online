@@ -5,7 +5,7 @@ const duck_scene = preload("res://games/dcp/Scenes/Duck.tscn")
 
 export (int) var max_ducks = 100
 var duck_count = 0
-onready var duck_container = get_parent().get_node("Ducks")
+onready var duck_container = get_parent().get_node("../Ducks")
 
 
 

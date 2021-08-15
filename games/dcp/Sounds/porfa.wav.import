@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/porfa.wav-3424915573db7fa0c1fd46a29de5940c.sample"
+
+[deps]
+
+source_file="res://games/dcp/Sounds/porfa.wav"
+dest_files=[ "res://.import/porfa.wav-3424915573db7fa0c1fd46a29de5940c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -6,17 +6,17 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 display_name = "DCP: Delfines con patas"
-description = "Delfines con patas"
-input_0 = 15
-description_0 = "A"
-input_1 = 16
-description_1 = "uwu"
-input_2 = 32
-description_2 = "òwó"
-input_3 = 0
-description_3 = ""
-input_4 = 0
-description_4 = ""
+description = "En este juego todos ganan, patea la pelota dorada hasta el hoyo tantas veces como puedas, pero ese delfín que está al frente... ¿eres tú?"
+input_0 = 3
+description_0 = "Girar"
+input_1 = 4
+description_1 = "Avanzar"
+input_2 = 8
+description_2 = "Retroceder"
+input_3 = 16
+description_3 = "Saludar"
+input_4 = 32
+description_4 = "òwó"
 input_5 = 0
 description_5 = ""
 input_6 = 0
@@ -27,4 +27,4 @@ description_7 = ""
 [resource]
 script = ExtResource( 1 )
 modes = [ SubResource( 1 ) ]
-playable = false
+playable = true
