@@ -2,6 +2,9 @@ extends CanvasLayer
 
 var testing = false
 
+var games = [Party.Main.games_ffa, Party.Main.games_1v3, Party.Main.games_2v2]
+var games_count = []
+
 func _ready():
 	$Panel/CenterContainer/Main/Start.grab_focus()
 	$Panel/CenterContainer/Main/Start.connect("pressed", self, "_on_start_pressed")
@@ -17,8 +20,10 @@ func _ready():
 	if OS.has_environment("USERNAME"):
 		$Panel/CenterContainer/Start/HBoxContainer/Name.text = OS.get_environment("USERNAME")
 	
-	for game in Party.Main.games_ffa:
-		$Panel/CenterContainer/Main/TestContainer/Games.add_item(game)
+	for mode in games:
+		for game in mode:
+			$Panel/CenterContainer/Main/TestContainer/Games.add_item(game)
+		games_count.append(mode.size())
 
 func _on_start_pressed():
 	$Panel/CenterContainer/Main.hide() 
@@ -55,8 +60,21 @@ func _on_host_pressed():
 	if LobbyManager.host_game(name, testing) == OK:
 		if testing:
 			Party._testing = true
-			Party.load_test()
-			Party._current_game = Party.Main.games_ffa[$Panel/CenterContainer/Main/TestContainer/Games.selected]
+			var selected_game = $Panel/CenterContainer/Main/TestContainer/Games.selected
+			if selected_game < games_count[0]:
+				Party._current_game = Party.Main.games_ffa[selected_game]
+				Party.load_test("ffa")
+			else:
+				selected_game -= games_count[0]
+				if selected_game < games_count[1]:
+					Party._current_game = Party.Main.games_1v3[selected_game]
+					Party.load_test("1v3")
+				else:
+					selected_game -= games_count[1]
+					if selected_game < games_count[2]:
+						Party._current_game = Party.Main.games_2v2[selected_game]
+						Party.load_test("2v2")
+
 			$Panel/CenterContainer/Start/HBoxContainer/Host.disabled = true
 		else:
 			Party._next()
