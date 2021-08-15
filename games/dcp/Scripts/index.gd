@@ -42,7 +42,7 @@ func _ready():
 	if is_network_master():
 		rpc("spawn_ball", randi() % duck_makers.get_child_count())
 	
-	time_label.parse_bbcode("[center]0:00[/center]")
+	time_label.parse_bbcode("[center]%d:%02d[/center]" % [(seconds_left / 60), (seconds_left % 60)])
 	
 	$CanvasLayer/AnimationPlayer.play("start")
 	yield($CanvasLayer/AnimationPlayer, "animation_finished")

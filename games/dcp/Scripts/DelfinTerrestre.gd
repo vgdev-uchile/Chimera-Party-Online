@@ -109,7 +109,7 @@ func _physics_process(delta):
 		rset("puppet_pos", translation)
 		rset_unreliable("moving", moving)
 	else:
-		rotation.y = lerp(rotation.y, puppet_rot, 0.2)
+		rotation.y = lerp_angle(rotation.y, puppet_rot, 0.2)
 		velocity = puppet_linear_vel
 		moving = puppet_moving
 		move_and_slide(velocity, Vector3.UP)

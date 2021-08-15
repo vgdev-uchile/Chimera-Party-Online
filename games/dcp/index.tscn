@@ -119,7 +119,6 @@ tracks/1/keys = {
 
 [node name="Index" type="Spatial"]
 script = ExtResource( 4 )
-seconds_left = 10
 
 [node name="Altar" type="StaticBody" parent="."]
 
