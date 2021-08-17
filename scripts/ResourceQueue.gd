@@ -9,18 +9,28 @@ var time_max = 100 # Milliseconds.
 var queue = []
 var pending = {}
 
+# _lock: str -> None
+# mutex lock
+# https://es.wikipedia.org/wiki/Exclusi%C3%B3n_mutua_(inform%C3%A1tica)
 func _lock(_caller):
 	mutex.lock()
 
-
+# _unlock: str -> None
+# mutex unlock
+# https://es.wikipedia.org/wiki/Exclusi%C3%B3n_mutua_(inform%C3%A1tica)
 func _unlock(_caller):
 	mutex.unlock()
 
 
+# _post: str -> None
+# sem post
+# https://es.wikipedia.org/wiki/Sem%C3%A1foro_(inform%C3%A1tica)
 func _post(_caller):
 	sem.post()
 
-
+# _wait: str -> None
+# sem wait
+# https://es.wikipedia.org/wiki/Sem%C3%A1foro_(inform%C3%A1tica)
 func _wait(_caller):
 	sem.wait()
 
@@ -45,6 +55,7 @@ func queue_resource(path, p_in_front = false):
 		pending[path] = res
 		_post("queue_resource")
 		_unlock("queue_resource")
+		print("a")
 		return
 
 
@@ -135,11 +146,14 @@ func thread_process():
 	_unlock("process")
 
 
+# thread_func: ??? -> None
+# funcion que corre un _process() para el thread definido en start()
 func thread_func(_u):
 	while true:
 		thread_process()
 
-
+# start: None -> None
+# inicializa las herramientas de sincronizacion de threading
 func start():
 	mutex = Mutex.new()
 	sem = Semaphore.new()
